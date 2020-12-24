@@ -1,0 +1,100 @@
+$textColor1: #ffffff;
+$textColor2: #2c2c2c;
+$textShadowColor: #747171;
+$textShadowColorSoft: #868686;
+
+@mixin textShadow($x, $y, $blue, $color) {
+  text-shadow: $x $y $blue $color;
+}
+
+.header {
+  position: fixed;
+  width: fit-content;
+  left: 2%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  #logo {
+    padding-top: calc(5%);
+    font-size: 1.8em;
+    margin-bottom: auto;
+  }
+
+  a {
+    font-size: 1.275em;
+    width: fit-content;
+    display: inline-block;
+    margin-right: 2rem;
+    color: $textColor2;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+    transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
+
+    &:hover {
+      transform: translateY(10px);
+    }
+
+    &:not(.selected) {
+      @include textShadow(-1px, 1px, 1px, $textShadowColorSoft);
+      opacity: 0.2;
+
+      &:hover {
+        opacity: 1;
+        @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+      }
+    }
+  }
+
+  nav {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    padding-left: 3vw;
+  }
+}
+
+.buttonHeader {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  button#heartBtn,
+  button#powerBtn {
+    cursor: pointer;
+    margin: 0 2em;
+    width: 1.2em;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    z-index: 5;
+
+    &:focus {
+      outline: none;
+    }
+
+    .heart,
+    .power {
+      fill: $textColor2;
+      transform: scale(2);
+      transform-origin: left;
+    }
+
+    .heartChange {
+      fill: #fdd6f5;
+      transform: scale(2);
+      transform-origin: left;
+    }
+
+    .powerChange {
+      fill: #ffe9b1;
+      transform: scale(2);
+      transform-origin: left;
+    }
+  }
+}

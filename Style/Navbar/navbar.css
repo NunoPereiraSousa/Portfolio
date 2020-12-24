@@ -1,0 +1,122 @@
+.header {
+  position: fixed;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 2%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header #logo {
+  padding-top: calc(5%);
+  font-size: 1.8em;
+  margin-bottom: auto;
+}
+
+.header a {
+  font-size: 1.275em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  margin-right: 2rem;
+  color: #2c2c2c;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: -1px 3px 3px #868686;
+  -webkit-transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
+  transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
+}
+
+.header a:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.header a:not(.selected) {
+  text-shadow: -1px 1px 1px #868686;
+  opacity: 0.2;
+}
+
+.header a:not(.selected):hover {
+  opacity: 1;
+  text-shadow: -1px 3px 3px #868686;
+}
+
+.header nav {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  padding-left: 3vw;
+}
+
+.buttonHeader {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.buttonHeader button#heartBtn,
+.buttonHeader button#powerBtn {
+  cursor: pointer;
+  margin: 0 2em;
+  width: 1.2em;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 5;
+}
+
+.buttonHeader button#heartBtn:focus,
+.buttonHeader button#powerBtn:focus {
+  outline: none;
+}
+
+.buttonHeader button#heartBtn .heart,
+.buttonHeader button#heartBtn .power,
+.buttonHeader button#powerBtn .heart,
+.buttonHeader button#powerBtn .power {
+  fill: #2c2c2c;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.buttonHeader button#heartBtn .heartChange,
+.buttonHeader button#powerBtn .heartChange {
+  fill: #fdd6f5;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.buttonHeader button#heartBtn .powerChange,
+.buttonHeader button#powerBtn .powerChange {
+  fill: #ffe9b1;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,982 @@
+@mixin textShadow($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textShadowCategories($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textStrokeCategories($stroke, $color) {
+  -webkit-text-stroke: $stroke $color;
+}
+
+@mixin boxShadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+$textColor1: #ffffff;
+$textColor2: #2c2c2c;
+$textShadowColor: #747171;
+$textShadowColorSoft: #868686;
+$fontTitle: "Montserrat";
+$fontText: "Raleway";
+$feColor: #4a8aaf;
+$beColor: #808080;
+$uiUxColor: #b44e81;
+$teachingColor: #beae4e;
+$mobileDevColor: #4e9c6b;
+$storyColor: #c54f4e;
+
+body {
+  margin: 0;
+  font-family: $fontTitle;
+  color: #121212;
+  user-select: none;
+  background-image: linear-gradient(260deg, #cdd2e4, #cdd2e4, #ffe9b1);
+  background-size: 400% 400%;
+  // animation: gradient 60s ease infinite;
+  overflow-x: hidden;
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  // overflow: hidden;
+  position: relative;
+  transition: all 1s ease;
+
+  // .notification {
+  //   position: absolute;
+  //   z-index: 500;
+  //   top: 10%;
+  //   right: 2%;
+  //   width: 10em;
+  //   height: 2em;
+  //   border-radius: 8px;
+  //   background-color: #000;
+  //   color: #fff;
+  //   text-align: center;
+  //   line-height: 2em;
+  //   font-size: 0.7vw;
+  // }
+
+  .middleText {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 6vw;
+    letter-spacing: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    /* animation: blinking 1s linear infinite; */
+  }
+
+  .heyText {
+    font-size: 22vw;
+    font-weight: 600;
+    letter-spacing: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: moveHey 1.5s ease-in-out infinite;
+  }
+
+  .commonText {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    letter-spacing: 10px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .introText {
+    padding: 5.6vw 0 0 16vw;
+    letter-spacing: 0.15vw;
+    color: $textColor2;
+    @include textShadow(-1px, 11px, 10px, $textShadowColor);
+
+    #fall {
+      display: inline-block;
+      transform-origin: top center;
+      animation: fragile 3s linear infinite;
+    }
+
+    #emoji {
+      font-size: calc(24px + 2.4vw);
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0.35em;
+    }
+
+    h2#name,
+    h2#name2 {
+      font-size: calc(24px + 4.4vw);
+      // overflow: hidden;
+      // background: transparent;
+      width: fit-content;
+      // padding: 0 0 6vw 0;
+      // text-transform: uppercase;
+      font-weight: 800;
+      margin: 0;
+
+      // #text_name,
+      // #text_name2 {
+      //   transform: translateY(100%);
+      //   text-shadow: -1px 11px 10px #4d4d4d;
+      // }
+    }
+  }
+
+  #hide_arrow {
+    // overflow: hidden;
+    // background: transparent;
+    position: absolute;
+    right: 6.25vw;
+    bottom: 0;
+    font-size: 2vw;
+    @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+
+    #arrowDown {
+      color: $textColor2;
+      transform: translateY(-100%);
+    }
+  }
+
+  .circle_wrap {
+    padding: 12.6vw 0 0 16vw;
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    .circ {
+      position: relative;
+      width: 24vw;
+      height: 24vw;
+      transition: all 0.4s ease-in-out;
+
+      svg {
+        fill: none;
+      }
+
+      .path {
+        stroke-width: 3px;
+        stroke: rgba(0, 0, 0, 0.5);
+        stroke-dasharray: 1060;
+        // stroke-dashoffset: 1030;
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+      }
+
+      &:hover .path {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+
+      &:hover .center_text {
+        opacity: 1;
+      }
+
+      &:hover #description {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+
+      &:hover .img_card {
+        transform: translateY(50%);
+        opacity: 1;
+      }
+
+      .center_text {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        color: $textColor2;
+        opacity: 0.3;
+        font-size: 1.25vw;
+        line-height: 1.5vw;
+        letter-spacing: 0.25vw;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-align: left;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          @include textShadow(-1px, 4px, 4px, $textShadowColor);
+        }
+
+        .hide_categories {
+          // overflow: hidden;
+          // background: transparent;
+          font-weight: 600;
+
+          // .text_category {
+          //   transform: translateY(100%);
+          // }
+        }
+      }
+
+      .date {
+        position: absolute;
+        left: 75%;
+        top: 5%;
+        white-space: nowrap;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .day {
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 2px #000;
+          font-weight: 800;
+          // text-shadow: -1px 5px 5px #525252;
+          background-size: 0 100%;
+          font-size: 5vw;
+          letter-spacing: 0.25vw;
+          height: fit-content;
+          width: fit-content;
+          // transform: translateY(100%);
+          // opacity: 0;
+          transition: all 0.5s ease-in-out;
+        }
+
+        #month {
+          font-weight: 800;
+          font-size: 1.2vw;
+          // transform: translateX(20%);
+          // opacity: 0;
+          @include textShadow(-1px, 4px, 4px, $textShadowColorSoft);
+          // margin-bottom: 1vw;
+        }
+
+        #status {
+          font-family: "Raleway";
+          font-weight: 500;
+          font-size: 1.2vw;
+          padding: 0.35vw 0 0 0;
+          // transform: translateX(20%);
+          // opacity: 0;
+          @include textShadow(-1px, 4px, 4px, $textShadowColorSoft);
+        }
+
+        .info_date {
+          text-align: left;
+          // line-height: 1.8vw;
+          // opacity: 0;
+          letter-spacing: 0.25vw;
+          color: $textColor2;
+        }
+      }
+
+      .img_card {
+        opacity: 0;
+        position: absolute;
+        right: -34vw;
+        bottom: -25vw;
+        height: 30vw;
+        width: 20vw;
+        transform: translateY(70%);
+        border-radius: 4px;
+        background-image: url("/Assets/Images/MeSunGlasses.jpeg");
+        background-size: cover;
+        background-position: 40% 100%;
+        transition: all 1s ease-in-out;
+        @include boxShadow(-8px, 8px, 14px, #999);
+
+        .img_container {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    #description {
+      font-family: $fontText;
+      align-self: center;
+      margin-left: 10vw;
+      text-align: left;
+      position: relative;
+      opacity: 0.5;
+      font-weight: 900;
+      transform: translateY(30%);
+      color: $textColor2;
+      transition: all 1s ease-in-out;
+
+      h6 {
+        margin: 0;
+      }
+
+      a {
+        position: absolute;
+        top: 50%;
+        left: -4vw;
+        font-size: 1.4vw;
+        color: $textColor2;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          // -webkit-text-fill-color: transparent;
+          // -webkit-text-stroke: 1px #eea47fff;
+          // -moz-background-clip: text;
+          // -moz-text-fill-color: transparent;
+          @include textShadow(-2px, 3px, 3px, $textShadowColor);
+          color: #e89931;
+        }
+      }
+
+      div {
+        font-size: 1.05vw;
+        letter-spacing: 0.1vw;
+        line-height: 2.05vw;
+      }
+
+      #go_right {
+        padding-left: 4.2vw;
+      }
+    }
+  }
+}
+
+.dark {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: none;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.2s linear;
+  overflow: hidden;
+
+  &::before {
+    content: "Enjoy your day 🤟";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: #fff;
+    white-space: nowrap;
+    width: fit-content;
+  }
+}
+
+.whatIdo {
+  height: auto;
+  position: relative;
+  padding: 0;
+
+  .categories {
+    position: relative;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    h2.mainTitles {
+      margin: 20vw 0 0 16vw;
+      font-family: $fontTitle;
+      color: $textColor2;
+      font-size: calc(24px + 4.4vw);
+      width: fit-content;
+      transition: all 1s ease-in-out;
+      mix-blend-mode: difference;
+      height: fit-content;
+      @include textShadow(-1px, 11px, 10px, $textShadowColor);
+      // text-shadow: -1px 10px 16px #4d4d4d;
+
+      .stroke {
+        @include textShadow(-20px, 20px, 10px, rgba(238, 164, 127, 0.6));
+        text-shadow: inset 2px 16px #eea47fff;
+      }
+
+      #what {
+        writing-mode: rl-tb;
+      }
+    }
+
+    .slider {
+      margin: 6vw 0 14vw 0;
+
+      .slide-track {
+        animation: categoriesCarousel 14s linear infinite;
+        display: flex;
+        width: calc(43.3vw * 14);
+
+        .slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40vh;
+          width: 43.3vw;
+          padding: 0;
+          position: relative;
+
+          h3 {
+            font-family: $fontText;
+            display: block;
+            font-size: calc(20px + 0.01vw);
+            text-align: center;
+
+            a {
+              height: fit-content;
+              width: fit-content;
+              text-decoration: none;
+              font-size: calc(24px + 2vw);
+              letter-spacing: -0.005em;
+              -webkit-text-fill-color: transparent;
+              transition: all 0.5s ease-out;
+            }
+          }
+
+          .group_skills_fe,
+          .group_skills_be,
+          .group_skills_uiux,
+          .group_skills_tt,
+          .group_skills_mdev,
+          .group_skills_supp,
+          .group_skills_st {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+
+            .fe_wrap,
+            .be_wrap,
+            .uiux_wrap,
+            .tt_wrap,
+            .mdev_wrap,
+            .supp_wrap,
+            .st_wrap {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              margin: 0;
+              opacity: 0.075;
+              transition: all 0.4s ease-in-out;
+            }
+
+            .fe_wrap {
+              background: $feColor;
+            }
+
+            .be_wrap {
+              background: $beColor;
+            }
+
+            .uiux_wrap {
+              background: $uiUxColor;
+            }
+
+            .tt_wrap {
+              background: $teachingColor;
+            }
+
+            .mdev_wrap {
+              background: $mobileDevColor;
+            }
+
+            .st_wrap {
+              background: $storyColor;
+            }
+
+            .fe a {
+              -webkit-text-stroke: 1.8px $feColor;
+              @include textShadow(-2px, 2px, 0, $feColor);
+            }
+
+            .be a {
+              -webkit-text-stroke: 1.8px $beColor;
+              @include textShadow(-2px, 2px, 0, $beColor);
+            }
+
+            .uiux a {
+              -webkit-text-stroke: 1.8px $uiUxColor;
+              @include textShadow(-2px, 2px, 0, $uiUxColor);
+            }
+
+            .tt a {
+              -webkit-text-stroke: 1.8px $teachingColor;
+              @include textShadow(-2px, 2px, 0, $teachingColor);
+            }
+
+            .mdev a {
+              -webkit-text-stroke: 1.8px $mobileDevColor;
+              @include textShadow(-2px, 2px, 0, $mobileDevColor);
+            }
+
+            .st a {
+              -webkit-text-stroke: 1.8px $storyColor;
+              @include textShadow(-2px, 2px, 0, $storyColor);
+            }
+
+            .fe,
+            .be,
+            .uiux,
+            .tt,
+            .mdev,
+            .supp,
+            .st {
+              -webkit-text-fill-color: transparent;
+              -webkit-text-stroke: 1px $textColor1;
+              transition: all 0.5s ease-out;
+            }
+
+            &:hover .fe_wrap {
+              opacity: 0.8;
+              background: $feColor;
+            }
+
+            &:hover .fe {
+              transform: scale(1.07);
+            }
+
+            &:hover .fe a {
+              @include textStrokeCategories(1.8px, rgba(255, 255, 255, 0.2));
+              @include textShadowCategories(10px, -6px, 0, $textColor1);
+              transform: scale(1.02);
+            }
+
+            &:hover .be_wrap {
+              opacity: 0.8;
+              background: $beColor;
+            }
+
+            &:hover .be {
+              transform: scale(1.07);
+            }
+
+            &:hover .fe a,
+            &:hover .be a,
+            &:hover .uiux a,
+            &:hover .tt a,
+            &:hover .mdev a,
+            &:hover .supp a,
+            &:hover .st a {
+              @include textStrokeCategories(1.8px, rgba(255, 255, 255, 0.2));
+              @include textShadowCategories(10px, -6px, 0, #fff);
+              transform: scale(1.02);
+            }
+
+            &:hover .uiux_wrap {
+              opacity: 0.8;
+              background: $uiUxColor;
+            }
+
+            &:hover .uiux {
+              transform: scale(1.07);
+            }
+
+            &:hover .tt_wrap {
+              opacity: 0.8;
+              background: $teachingColor;
+            }
+
+            &:hover .tt {
+              transform: scale(1.07);
+            }
+
+            &:hover .mdev_wrap {
+              opacity: 0.8;
+
+              background: $mobileDevColor;
+            }
+
+            &:hover .mdev {
+              transform: scale(1.07);
+            }
+
+            &:hover .supp {
+              transform: scale(1.07);
+            }
+
+            &:hover .st_wrap {
+              opacity: 0.8;
+
+              background: $storyColor;
+            }
+
+            &:hover .st {
+              transform: scale(1.07);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.skills {
+  // margin: 14vw 0 14vw 0;
+  // overflow: hidden;
+  height: auto;
+
+  h2.mainTitles {
+    margin: 16vw 0 2vw 10vw;
+    font-family: $fontTitle;
+    color: $textColor2;
+    text-shadow: -1px 16px 16px #4d4d4d;
+    text-transform: uppercase;
+    font-size: calc(24px + 4.4vw);
+    width: fit-content;
+    transition: all 1s ease-in-out;
+    mix-blend-mode: difference;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+
+    line {
+      // stroke-dasharray: 50;
+      // stroke-dashoffset: 50;
+      // animation: dash 10s linear infinite;
+    }
+  }
+
+  hr {
+    background-color: $textColor2;
+  }
+
+  .slider2 {
+    padding: 6vw 0 3vw 0;
+
+    .slide-track2 {
+      animation: carrousel 20s linear infinite;
+      display: flex;
+      width: calc(30vw * 18);
+
+      .slide2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 30vw;
+
+        // div {
+        //     transition: all 0.5s ease;
+
+        //     &:hover {
+        //         transform: scale(1.1);
+        //     }
+
+        //     img {
+        //         filter: grayscale(0.5);
+        //         filter: opacity(0.5);
+        //     }
+
+        //     h3 {
+        //         font-family: "Univia Pro";
+        //         padding-top: 2vw;
+        //         display: block;
+        //         color: #fcf6f4;
+        //         font-size: calc(20px + 0.01vw);
+        //         text-align: center;
+        //     }
+        // }
+
+        h3 {
+          font-family: $fontText;
+          padding: 2vw 0;
+          display: block;
+          color: $textColor2;
+          font-size: calc(20px + 3vw);
+          text-align: center;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  #line {
+    stroke: $textColor2;
+    stroke-width: 4px;
+  }
+
+  .slider3 {
+    padding: 3vw 0 4vw 0;
+
+    #reverse {
+      animation: carrouselReverse 20s linear infinite;
+      animation-direction: reverse;
+      display: flex;
+      width: calc(30vw * 16);
+
+      .slide3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 30vw;
+
+        h3 {
+          font-family: $fontText;
+          padding: 2vw 0;
+          display: block;
+          font-size: calc(20px + 3vw);
+          text-align: center;
+          font-weight: 400;
+          letter-spacing: -0.005em;
+          color: transparent;
+          @include textStrokeCategories(1.8px, $textColor2);
+        }
+      }
+    }
+  }
+}
+
+.talkToMe {
+  position: relative;
+  margin-bottom: 12vw;
+  h2#longText {
+    padding: 5.6vw 0 0 10vw;
+    font-family: $fontTitle;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    color: $textColor2;
+    text-transform: uppercase;
+    line-height: 1.14;
+    font-size: 4.5vw;
+    letter-spacing: 0.2vw;
+    transition: all 1s ease-in-out;
+    mix-blend-mode: difference;
+
+    #talk {
+      padding-left: 0.85vw;
+      transform-origin: top center;
+      transform: rotate(90deg) translateX(50%);
+
+      span#talkWord {
+        color: transparent;
+        @include textStrokeCategories(2.5px, $textColor2);
+      }
+    }
+
+    #talk_btn {
+      text-decoration: none;
+      color: #fcf7da;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 90%;
+        right: 0;
+        background: #fcf7da;
+        width: 0%;
+        height: 16px;
+        border-radius: 1px;
+        transition: all 0.6s ease-in-out 0.1s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  button#arrowUp {
+    color: $textColor2;
+    position: absolute;
+    right: 6.25vw;
+    bottom: -20%;
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-family: $fontText;
+    mix-blend-mode: difference;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15%;
+      left: 0%;
+      background: $textColor2;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: 20%;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+footer {
+  background: transparent;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  box-shadow: 0 1px 6px $textColor2;
+  font-family: $fontText;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+      text-decoration: none;
+
+      i {
+        color: $textColor2;
+        padding: 0 2vw 0 2vw;
+        font-size: 1.5vw;
+        transition: all 0.2s ease-in-out;
+
+        // &.fa-instagram:hover:before {
+        //     background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+        //     background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+        //     -webkit-background-clip: text;
+        //     -webkit-text-fill-color: transparent;
+        // }
+
+        // &.fa-facebook:hover:before {
+        //     color: #4267B2;
+        // }
+
+        // &.fa-linkedin-in:hover:before {
+        //     color: #2867B2;
+        // }
+
+        // &.fa-github:hover:before {
+        //     color: #24292e;
+        // }
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .footer-copyright {
+      padding: 50px 0 30px 0;
+
+      p {
+        font-size: 18px;
+        color: $textColor2;
+        letter-spacing: 1px;
+        font-weight: 600;
+        mix-blend-mode: difference;
+
+        span {
+          color: $textColor2;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blinking {
+  0%,
+  9%,
+  20%,
+  29%,
+  40%,
+  49% {
+    opacity: 0;
+  }
+  10%,
+  19%,
+  30%,
+  39%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fragile {
+  0%,
+  9%,
+  20%,
+  29%,
+  40%,
+  50% {
+    transform: translateX(10%) rotate(4deg);
+  }
+  10%,
+  19%,
+  30%,
+  39%,
+  50%,
+  100% {
+    transform: translateX(25%) rotate(0deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes categoriesCarousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-43.3vw * 7));
+  }
+}
+
+@keyframes carrousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-30vw * 9));
+  }
+}
+
+@keyframes carrouselReverse {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-30vw * 8));
+  }
+}
