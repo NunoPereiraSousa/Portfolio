@@ -320,7 +320,6 @@ body {
       text-align: left;
       position: relative;
       opacity: 0.5;
-      font-weight: 900;
       transform: translateY(30%);
       color: $textColor2;
       transition: all 1s ease-in-out;
@@ -354,6 +353,7 @@ body {
         font-size: 1.05vw;
         letter-spacing: 0.1vw;
         line-height: 2.05vw;
+        font-weight: 500;
       }
 
       #go_right {
@@ -374,19 +374,33 @@ body {
   background-color: rgb(0, 0, 0);
   transition: all 0.2s linear;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &::before {
-    content: "Enjoy your day 🤟";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  // &::before {
+  //   content: "Enjoy your day 🤟";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   font-size: 6vw;
+  //   font-weight: 600;
+  //   letter-spacing: 10px;
+  //   color: #fff;
+  //   white-space: nowrap;
+  //   width: fit-content;
+  // }
+
+  h1 {
+    margin: 0;
     font-size: 6vw;
     font-weight: 600;
     letter-spacing: 10px;
     color: #fff;
     white-space: nowrap;
     width: fit-content;
+    cursor: pointer;
   }
 }
 
@@ -397,8 +411,6 @@ body {
 
   .categories {
     position: relative;
-    text-transform: uppercase;
-    white-space: nowrap;
 
     h2.mainTitles {
       margin: 20vw 0 0 10vw;
@@ -407,9 +419,11 @@ body {
       font-size: calc(24px + 4.4vw);
       width: fit-content;
       transition: all 1s ease-in-out;
-      mix-blend-mode: difference;
       height: fit-content;
+      text-transform: uppercase;
+      font-weight: 300;
       @include textShadow(-1px, 11px, 10px, $textShadowColor);
+      mix-blend-mode: difference;
       // text-shadow: -1px 10px 16px #4d4d4d;
 
       .stroke {
@@ -417,10 +431,6 @@ body {
         @include textShadow(-20px, 20px, 10px, rgba(238, 164, 127, 0.6));
         text-shadow: inset 2px 16px #eea47fff;
         @include textStrokeCategories(2.5px, $textColor2);
-      }
-
-      #what {
-        writing-mode: rl-tb;
       }
     }
 
@@ -463,7 +473,6 @@ body {
           .group_skills_uiux,
           .group_skills_tt,
           .group_skills_mdev,
-          .group_skills_supp,
           .group_skills_st {
             display: flex;
             justify-content: center;
@@ -477,7 +486,6 @@ body {
             .uiux_wrap,
             .tt_wrap,
             .mdev_wrap,
-            .supp_wrap,
             .st_wrap {
               position: absolute;
               top: 0;
@@ -493,7 +501,6 @@ body {
             .uiux a,
             .tt a,
             .mdev a,
-            .supp a,
             .st a {
               color: transparent;
               @include textShadow(-1px, 11px, 10px, $textShadowColor);
@@ -504,7 +511,6 @@ body {
             .uiux,
             .tt,
             .mdev,
-            .supp,
             .st {
               color: $textColor2;
               transition: all 0.5s ease-out;
@@ -528,15 +534,37 @@ body {
               transform: scale(1.07);
             }
 
-            &:hover .fe a,
-            &:hover .be a,
-            &:hover .uiux a,
-            &:hover .tt a,
-            &:hover .mdev a,
-            &:hover .supp a,
+            &:hover .fe a {
+              color: $feColor;
+              @include textShadowCategories(10px, -6px, 0, $textColor2);
+              transform: scale(1.02);
+            }
+
+            &:hover .be a {
+              color: $beColor;
+              @include textShadowCategories(10px, -6px, 0, $textColor2);
+              transform: scale(1.02);
+            }
+
+            &:hover .uiux a {
+              color: $uiUxColor;
+              @include textShadowCategories(10px, -6px, 0, $textColor2);
+              transform: scale(1.02);
+            }
+
+            &:hover .tt a {
+              color: $teachingColor;
+              @include textShadowCategories(10px, -6px, 0, $textColor2);
+              transform: scale(1.02);
+            }
+            &:hover .mdev a {
+              color: $mobileDevColor;
+              @include textShadowCategories(10px, -6px, 0, $textColor2);
+              transform: scale(1.02);
+            }
+
             &:hover .st a {
-              color: transparent;
-              @include textStrokeCategories(1.8px, $uiUxColor);
+              color: $storyColor;
               @include textShadowCategories(10px, -6px, 0, $textColor2);
               transform: scale(1.02);
             }
@@ -561,15 +589,10 @@ body {
 
             &:hover .mdev_wrap {
               opacity: 0.8;
-
               background: $mobileDevColor;
             }
 
             &:hover .mdev {
-              transform: scale(1.07);
-            }
-
-            &:hover .supp {
               transform: scale(1.07);
             }
 
@@ -595,10 +618,11 @@ body {
   height: auto;
 
   h2.mainTitles {
-    margin: 16vw 0 2vw 10vw;
+    margin: 10vw 0 2vw 10vw;
     font-family: $fontTitle;
     color: $textColor2;
-    text-shadow: -1px 16px 16px #4d4d4d;
+    font-weight: 300;
+    @include textShadow(-1px, 11px, 10px, $textShadowColor);
     text-transform: uppercase;
     font-size: calc(24px + 4.4vw);
     width: fit-content;
@@ -660,14 +684,20 @@ body {
         //     }
         // }
 
+        &:hover h3 {
+          color: $textColor2;
+        }
+
         h3 {
           font-family: $fontText;
           padding: 2vw 0;
           display: block;
-          color: $textColor2;
+          color: transparent;
+          @include textShadow(-1px, 11px, 10px, $textShadowColor);
           font-size: calc(20px + 3vw);
           text-align: center;
           font-weight: 400;
+          transition: all 0.3s ease-in-out;
         }
       }
     }
@@ -694,6 +724,10 @@ body {
         height: 100px;
         width: 30vw;
 
+        &:hover h3 {
+          color: $textColor2;
+        }
+
         h3 {
           font-family: $fontText;
           padding: 2vw 0;
@@ -703,7 +737,8 @@ body {
           font-weight: 400;
           letter-spacing: -0.005em;
           color: transparent;
-          @include textStrokeCategories(1.8px, $textColor2);
+          @include textShadow(-1px, 11px, 10px, $textShadowColor);
+          transition: all 0.3s ease-in-out;
         }
       }
     }

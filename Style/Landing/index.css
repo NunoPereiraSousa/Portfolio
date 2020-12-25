@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
   font-family: "Montserrat";
@@ -285,7 +284,6 @@ body {
   text-align: left;
   position: relative;
   opacity: 0.5;
-  font-weight: 900;
   -webkit-transform: translateY(30%);
           transform: translateY(30%);
   color: #2c2c2c;
@@ -319,6 +317,7 @@ body {
   font-size: 1.05vw;
   letter-spacing: 0.1vw;
   line-height: 2.05vw;
+  font-weight: 500;
 }
 
 .loading .circle_wrap #description #go_right {
@@ -337,15 +336,19 @@ body {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.dark::before {
-  content: "Enjoy your day 🤟";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.dark h1 {
+  margin: 0;
   font-size: 6vw;
   font-weight: 600;
   letter-spacing: 10px;
@@ -354,6 +357,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  cursor: pointer;
 }
 
 .whatIdo {
@@ -364,8 +368,6 @@ body {
 
 .whatIdo .categories {
   position: relative;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .whatIdo .categories h2.mainTitles {
@@ -378,11 +380,13 @@ body {
   width: fit-content;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  mix-blend-mode: difference;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  text-transform: uppercase;
+  font-weight: 300;
   text-shadow: -1px 11px 10px #747171;
+  mix-blend-mode: difference;
 }
 
 .whatIdo .categories h2.mainTitles .stroke {
@@ -390,12 +394,6 @@ body {
   text-shadow: -20px 20px 10px rgba(238, 164, 127, 0.6);
   text-shadow: inset 2px 16px #eea47fff;
   -webkit-text-stroke: 2.5px #2c2c2c;
-}
-
-.whatIdo .categories h2.mainTitles #what {
-  -webkit-writing-mode: rl-tb;
-      -ms-writing-mode: rl-tb;
-          writing-mode: rl-tb;
 }
 
 .whatIdo .categories .slider {
@@ -454,7 +452,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -475,49 +472,36 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .supp_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .supp_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .supp_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .supp_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .supp_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .supp_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .supp_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .st_wrap {
   position: absolute;
   top: 0;
@@ -534,49 +518,36 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .fe a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .be a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .tt a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .be a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .supp a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .fe a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .be a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .tt a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .st a {
   color: transparent;
   text-shadow: -1px 11px 10px #747171;
@@ -587,49 +558,36 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .supp,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .st {
   color: #2c2c2c;
   -webkit-transition: all 0.5s ease-out;
@@ -641,7 +599,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .fe_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe_wrap {
   opacity: 0.8;
   background: #4a8aaf;
@@ -652,7 +609,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .fe,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
@@ -663,7 +619,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .be_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .be_wrap {
   opacity: 0.8;
   background: #808080;
@@ -674,63 +629,78 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .be,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .be {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
 
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .supp a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .supp a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .supp a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .supp a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .fe a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe a {
+  color: #4a8aaf;
+  text-shadow: 10px -6px 0 #2c2c2c;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .be a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .be a {
+  color: #808080;
+  text-shadow: 10px -6px 0 #2c2c2c;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .uiux a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .uiux a {
+  color: #b44e81;
+  text-shadow: 10px -6px 0 #2c2c2c;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .tt a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .tt a {
+  color: #beae4e;
+  text-shadow: 10px -6px 0 #2c2c2c;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .mdev a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .supp a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev a {
+  color: #4e9c6b;
+  text-shadow: 10px -6px 0 #2c2c2c;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .st a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .supp a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .st a {
-  color: transparent;
-  -webkit-text-stroke: 1.8px #b44e81;
+  color: #c54f4e;
   text-shadow: 10px -6px 0 #2c2c2c;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -741,7 +711,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .uiux_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .uiux_wrap {
   opacity: 0.8;
   background: #b44e81;
@@ -752,7 +721,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .uiux,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .uiux {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
@@ -763,7 +731,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .tt_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .tt_wrap {
   opacity: 0.8;
   background: #beae4e;
@@ -774,7 +741,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .tt,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .tt {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
@@ -785,7 +751,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .mdev_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .mdev_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .mdev_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev_wrap {
   opacity: 0.8;
   background: #4e9c6b;
@@ -796,19 +761,7 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .mdev,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .mdev,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .mdev,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .supp,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .supp,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .supp,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .supp,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .supp,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .supp,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .supp {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
@@ -818,7 +771,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .st_wrap,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .st_wrap {
   opacity: 0.8;
   background: #c54f4e;
@@ -829,7 +781,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .st,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .st {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
@@ -840,10 +791,11 @@ body {
 }
 
 .skills h2.mainTitles {
-  margin: 16vw 0 2vw 10vw;
+  margin: 10vw 0 2vw 10vw;
   font-family: "Montserrat";
   color: #2c2c2c;
-  text-shadow: -1px 16px 16px #4d4d4d;
+  font-weight: 300;
+  text-shadow: -1px 11px 10px #747171;
   text-transform: uppercase;
   font-size: calc(24px + 4.4vw);
   width: -webkit-fit-content;
@@ -892,14 +844,21 @@ body {
   width: 30vw;
 }
 
+.skills .slider2 .slide-track2 .slide2:hover h3 {
+  color: #2c2c2c;
+}
+
 .skills .slider2 .slide-track2 .slide2 h3 {
   font-family: "Raleway";
   padding: 2vw 0;
   display: block;
-  color: #2c2c2c;
+  color: transparent;
+  text-shadow: -1px 11px 10px #747171;
   font-size: calc(20px + 3vw);
   text-align: center;
   font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .skills #line {
@@ -935,6 +894,10 @@ body {
   width: 30vw;
 }
 
+.skills .slider3 #reverse .slide3:hover h3 {
+  color: #2c2c2c;
+}
+
 .skills .slider3 #reverse .slide3 h3 {
   font-family: "Raleway";
   padding: 2vw 0;
@@ -944,7 +907,9 @@ body {
   font-weight: 400;
   letter-spacing: -0.005em;
   color: transparent;
-  -webkit-text-stroke: 1.8px #2c2c2c;
+  text-shadow: -1px 11px 10px #747171;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .talkToMe {

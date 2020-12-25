@@ -9,3 +9,7 @@ document.querySelector("#powerBtn").addEventListener("click", () => {
     ? $(".power").toggleClass("heart")
     : $(".power").toggleClass("powerChange");
 });
+
+document.querySelector(".closeWebsite").addEventListener("click", () => {
+  window.close();
+});
