@@ -3,7 +3,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  left: 2%;
+  left: 0%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +19,7 @@
 
 .header #logo {
   padding-top: calc(5%);
+  padding: calc(5%) 0 0 2vw;
   font-size: 1.8em;
   margin-bottom: auto;
 }
@@ -29,6 +30,7 @@
   width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
+  padding: 2vw 0;
   margin-right: 2rem;
   color: #2c2c2c;
   font-weight: 700;

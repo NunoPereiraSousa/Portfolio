@@ -84,11 +84,10 @@ body {
           animation: fragile 3s linear infinite;
 }
 
-.loading .introText #emoji {
-  font-size: calc(24px + 2.4vw);
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 0.35em;
+.loading .introText span.strokeWord {
+  color: transparent;
+  -webkit-text-stroke: 2.5px #2c2c2c;
+  text-shadow: 0 0 0 transparent;
 }
 
 .loading .introText h2#name,
@@ -370,7 +369,7 @@ body {
 }
 
 .whatIdo .categories h2.mainTitles {
-  margin: 20vw 0 0 16vw;
+  margin: 20vw 0 0 10vw;
   font-family: "Montserrat";
   color: #2c2c2c;
   font-size: calc(24px + 4.4vw);
@@ -387,8 +386,10 @@ body {
 }
 
 .whatIdo .categories h2.mainTitles .stroke {
+  color: transparent;
   text-shadow: -20px 20px 10px rgba(238, 164, 127, 0.6);
   text-shadow: inset 2px 16px #eea47fff;
+  -webkit-text-stroke: 2.5px #2c2c2c;
 }
 
 .whatIdo .categories h2.mainTitles #what {
@@ -407,7 +408,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(43.3vw * 14);
+  width: calc(43.3vw * 12);
 }
 
 .whatIdo .categories .slider .slide-track .slide {
@@ -443,7 +444,7 @@ body {
   text-decoration: none;
   font-size: calc(24px + 2vw);
   letter-spacing: -0.005em;
-  -webkit-text-fill-color: transparent;
+  font-weight: 400;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -524,135 +525,61 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  opacity: 0.075;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .fe_wrap {
-  background: #4a8aaf;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .be_wrap {
-  background: #808080;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux_wrap {
-  background: #b44e81;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .tt_wrap {
-  background: #beae4e;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev_wrap {
-  background: #4e9c6b;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .st_wrap {
-  background: #c54f4e;
-}
-
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .fe a {
-  -webkit-text-stroke: 1.8px #4a8aaf;
-  text-shadow: -2px 2px 0 #4a8aaf;
-}
-
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .be a {
-  -webkit-text-stroke: 1.8px #808080;
-  text-shadow: -2px 2px 0 #808080;
-}
-
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux a {
-  -webkit-text-stroke: 1.8px #b44e81;
-  text-shadow: -2px 2px 0 #b44e81;
-}
-
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .tt a {
-  -webkit-text-stroke: 1.8px #beae4e;
-  text-shadow: -2px 2px 0 #beae4e;
-}
-
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev a {
-  -webkit-text-stroke: 1.8px #4e9c6b;
-  text-shadow: -2px 2px 0 #4e9c6b;
-}
-
+.whatIdo .categories .slider .slide-track .slide .group_skills_fe .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be .fe a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_be .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_be .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_tt .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_tt .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_supp .fe a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_supp .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_supp .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_supp .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_supp .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_supp .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_supp .st a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st .fe a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st .be a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st .tt a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev a,
+.whatIdo .categories .slider .slide-track .slide .group_skills_st .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .st a {
-  -webkit-text-stroke: 1.8px #c54f4e;
-  text-shadow: -2px 2px 0 #c54f4e;
+  color: transparent;
+  text-shadow: -1px 11px 10px #747171;
 }
 
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe .fe,
@@ -704,8 +631,7 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .supp,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st .st {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #ffffff;
+  color: #2c2c2c;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -730,19 +656,6 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_supp:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe a {
-  -webkit-text-stroke: 1.8px rgba(255, 255, 255, 0.2);
-  text-shadow: 10px -6px 0 #ffffff;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
 }
 
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .be_wrap,
@@ -816,8 +729,9 @@ body {
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .supp a,
 .whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .st a {
-  -webkit-text-stroke: 1.8px rgba(255, 255, 255, 0.2);
-  text-shadow: 10px -6px 0 #fff;
+  color: transparent;
+  -webkit-text-stroke: 1.8px #b44e81;
+  text-shadow: 10px -6px 0 #2c2c2c;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
@@ -1042,12 +956,6 @@ body {
   padding: 5.6vw 0 0 10vw;
   font-family: "Montserrat";
   font-weight: 900;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: #2c2c2c;
   text-transform: uppercase;
   line-height: 1.14;
@@ -1058,26 +966,18 @@ body {
   mix-blend-mode: difference;
 }
 
-.talkToMe h2#longText #talk {
-  padding-left: 0.85vw;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-transform: rotate(90deg) translateX(50%);
-          transform: rotate(90deg) translateX(50%);
-}
-
-.talkToMe h2#longText #talk span#talkWord {
+.talkToMe h2#longText span.strokeWord {
   color: transparent;
   -webkit-text-stroke: 2.5px #2c2c2c;
 }
 
-.talkToMe h2#longText #talk_btn {
+.talkToMe h2#longText #talk #talk_btn {
   text-decoration: none;
-  color: #fcf7da;
+  color: #2c2c2c;
   position: relative;
 }
 
-.talkToMe h2#longText #talk_btn::after {
+.talkToMe h2#longText #talk #talk_btn::after {
   content: "";
   position: absolute;
   top: 90%;
@@ -1090,7 +990,7 @@ body {
   transition: all 0.6s ease-in-out 0.1s;
 }
 
-.talkToMe h2#longText #talk_btn:hover::after {
+.talkToMe h2#longText #talk #talk_btn:hover::after {
   width: 100%;
 }
 
@@ -1294,8 +1194,8 @@ footer .container .footer-copyright p span {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-43.3vw * 7));
-            transform: translateX(calc(-43.3vw * 7));
+    -webkit-transform: translateX(calc(-43.3vw * 6));
+            transform: translateX(calc(-43.3vw * 6));
   }
 }
 
@@ -1305,8 +1205,8 @@ footer .container .footer-copyright p span {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-43.3vw * 7));
-            transform: translateX(calc(-43.3vw * 7));
+    -webkit-transform: translateX(calc(-43.3vw * 6));
+            transform: translateX(calc(-43.3vw * 6));
   }
 }
 
