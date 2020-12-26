@@ -1,8 +1,5 @@
 .header {
   position: fixed;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   left: 0%;
   height: 100%;
   display: -webkit-box;
@@ -12,16 +9,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header #logo {
-  padding-top: calc(5%);
   padding: calc(5%) 0 0 2vw;
   font-size: 1.8em;
-  margin-bottom: auto;
 }
 
 .header a {
@@ -57,11 +52,10 @@
 }
 
 .header nav {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  padding-left: 3vw;
+  -webkit-transform: rotate(-90deg) translateY(50%);
+          transform: rotate(-90deg) translateY(50%);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
 .buttonHeader {

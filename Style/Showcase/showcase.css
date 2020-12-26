@@ -1,0 +1,196 @@
+.showcasePage h1,
+.showcasePage h4 {
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5.6vw 0 4.6vw 16vw;
+  letter-spacing: 0.15vw;
+  color: #2c2c2c;
+  text-shadow: -1px 11px 10px #747171;
+  font-size: calc(24px + 2.4vw);
+}
+
+.showcasePage h1:hover .stroke,
+.showcasePage h4:hover .stroke {
+  color: #2c2c2c;
+}
+
+.showcasePage .stroke {
+  color: transparent;
+  text-shadow: -1px 11px 10px #747171;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.showcasePage h4 {
+  padding: 4.6vw 0 1vw 20vw;
+  font-size: calc(24px + 1.4vw);
+}
+
+.showcasePage .secondText {
+  padding: 0 0 0 24vw;
+}
+
+.showcasePage .emoji {
+  font-size: calc(24px + 1.4vw);
+}
+
+.showcasePage #hide_arrow {
+  position: absolute;
+  right: 6.25vw;
+  bottom: 0;
+  font-size: 2vw;
+  text-shadow: -1px 3px 3px #868686;
+}
+
+.showcasePage #hide_arrow #arrowDown {
+  color: #2c2c2c;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.showcasePage .filters {
+  padding: 5.6vw 16vw 0 16vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.showcasePage .filters .filtersBtn {
+  background-color: transparent;
+  font-size: 1.45rem;
+  border: none;
+  color: #ffffff;
+  padding: 1vw 1vw;
+  border-radius: 60px;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+  opacity: 0.65;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  color: rgba(44, 44, 44, 0.5);
+  text-shadow: -1px 5px 8px #747171;
+}
+
+.showcasePage .filters .filtersBtn.filterBtnEnabled, .showcasePage .filters .filtersBtn:hover {
+  color: #2c2c2c;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.showcasePage .categories {
+  padding: 0 16vw 0 16vw;
+}
+
+.showcasePage .categories ul {
+  display: inline-block;
+  padding: 25px 0 20px 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.showcasePage .categories ul li {
+  border-bottom: 2px solid #868686;
+  padding: 1.75vw 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.showcasePage .categories ul li:not(.categoryEnabled) {
+  opacity: 0.4;
+  border-bottom: 1.5px solid #868686;
+}
+
+.showcasePage .categories ul li .categoryBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2c2c2c;
+  font-weight: 500;
+  font-family: "Montserrat";
+}
+
+.showcasePage .categories ul li .categoryBtn .number {
+  margin-right: 4vw;
+  font-size: 1.25rem;
+}
+
+.showcasePage .categories ul li .categoryBtn .project {
+  font-size: 2rem;
+}
+
+.showcasePage .categories ul li .categoryBtn .category {
+  font-size: 1rem;
+  font-style: oblique 10deg;
+}
+
+.showcasePage .categories ul li .categoryBtn .arrowIcon i {
+  font-size: 1.8rem;
+}
+
+.showcasePage .categories ul li .categoryBtn .arrowIcon i.rotateActivated {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.showcasePage .categories ul li .content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.showcasePage .categories ul li .content.opened {
+  max-height: 100%;
+}
+
+.showcasePage .categories ul li .content p.categoryDescription {
+  margin-top: 1vw;
+  width: 80%;
+  line-height: 2rem;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.showcasePage .categories ul li .content .btnGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.showcasePage .categories ul li .content button.linksBtn {
+  background-color: transparent;
+  font-size: 1.2rem;
+  border: none;
+  margin: 1vw 3vw 0 0;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+.showcasePage .categories ul li .content button.linksBtn .btnIcons i {
+  margin-right: 1vw;
+  font-size: 1.2rem;
+}
+
+.showcasePage .categories ul li .content button.linksBtn:hover {
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+/*# sourceMappingURL=showcase.css.map */

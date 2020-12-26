@@ -11,526 +11,578 @@
     />
     <link rel="stylesheet" href="/Style/Landing/index.css" />
     <link rel="stylesheet" href="/Style/Navbar/navbar.css" />
+    <link rel="stylesheet" href="/Style/Showcase/showcase.css" />
   </head>
   <body>
-    <div class="loading">
-      <div class="header">
-        <a id="logo" href="">N$</a>
-        <nav>
-          <a href="">About</a>
-          <a href="">Showcase</a>
-          <a href="" class="selected">Home</a>
-        </nav>
-      </div>
-      <div class="buttonHeader">
-        <button id="heartBtn">
-          <svg
-            version="1.1"
-            class="heart"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 512 512"
-            style="enable-background: new 0 0 512 512"
-            xml:space="preserve"
-          >
+    <!-- <div class="glass">
+      <h1>Stay Hard</h1>
+      <div class="behindBackground"></div>
+    </div> -->
+    <div class="header">
+      <a id="logo" class="selected" href="">Nuno</a>
+      <nav>
+        <a href="">About</a>
+        <a href="">Showcase</a>
+        <a href="" class="selected">Home</a>
+      </nav>
+    </div>
+    <div class="buttonHeader">
+      <!-- <button id="heartBtn">
+        <svg
+          version="1.1"
+          class="heart"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 512 512"
+          style="enable-background: new 0 0 512 512"
+          xml:space="preserve"
+        >
+          <g>
             <g>
-              <g>
-                <path
-                  d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
-                  c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
-                  c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
-                  s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
-                  C512,93.417,453.532,30,376,30z"
-                />
-              </g>
+              <path
+                d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                C512,93.417,453.532,30,376,30z"
+              />
             </g>
-          </svg>
-        </button>
-        <button id="powerBtn">
-          <svg
-            version="1.1"
-            class="power"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 512 512"
-            style="enable-background: new 0 0 512 512"
-            xml:space="preserve"
-          >
+          </g>
+        </svg>
+      </button> -->
+      <button id="powerBtn">
+        <svg
+          version="1.1"
+          class="power"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 512 512"
+          style="enable-background: new 0 0 512 512"
+          xml:space="preserve"
+        >
+          <g>
             <g>
-              <g>
-                <path
-                  d="M25.383,290.5c-7.2-77.5,25.9-147.7,80.8-192.3c21.4-17.4,53.4-2.5,53.4,25l0,0c0,10.1-4.8,19.4-12.6,25.7
-			c-38.9,31.7-62.3,81.7-56.6,136.9c7.4,71.9,65,130.1,136.8,138.1c93.7,10.5,173.3-62.9,173.3-154.5c0-48.6-22.5-92.1-57.6-120.6
-			c-7.8-6.3-12.5-15.6-12.5-25.6l0,0c0-27.2,31.5-42.6,52.7-25.6c50.2,40.5,82.4,102.4,82.4,171.8c0,126.9-107.8,229.2-236.7,219.9
-			C122.183,481.8,35.283,396.9,25.383,290.5z M244.883,0c-18,0-32.5,14.6-32.5,32.5v149.7c0,18,14.6,32.5,32.5,32.5
-			s32.5-14.6,32.5-32.5V32.5C277.383,14.6,262.883,0,244.883,0z"
-                />
-              </g>
+              <path
+                d="M25.383,290.5c-7.2-77.5,25.9-147.7,80.8-192.3c21.4-17.4,53.4-2.5,53.4,25l0,0c0,10.1-4.8,19.4-12.6,25.7
+    c-38.9,31.7-62.3,81.7-56.6,136.9c7.4,71.9,65,130.1,136.8,138.1c93.7,10.5,173.3-62.9,173.3-154.5c0-48.6-22.5-92.1-57.6-120.6
+    c-7.8-6.3-12.5-15.6-12.5-25.6l0,0c0-27.2,31.5-42.6,52.7-25.6c50.2,40.5,82.4,102.4,82.4,171.8c0,126.9-107.8,229.2-236.7,219.9
+    C122.183,481.8,35.283,396.9,25.383,290.5z M244.883,0c-18,0-32.5,14.6-32.5,32.5v149.7c0,18,14.6,32.5,32.5,32.5
+    s32.5-14.6,32.5-32.5V32.5C277.383,14.6,262.883,0,244.883,0z"
+              />
             </g>
-          </svg>
-        </button>
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div class="landingPage">
+      <div class="loading">
+        <!-- <h1 class="middleText">Click</h1> -->
+        <div class="notification"></div>
+        <div class="introText">
+          <h2 id="name" class="mainTitles">
+            <div id="text_name">Hello.</span></div>
+          </h2>
+          <h2 id="name2" class="mainTitles">
+            <div id="text_name2">
+              I
+              <div id="fall">'</div>
+              m <span class="strokeWord">Nuno</span>
+            </div>
+          </h2>
+        </div>
+        <h5 id="hide_arrow">
+          <div id="arrowDown">↓</div>
+        </h5>
+        <div class="circle_wrap">
+          <div class="circ">
+            <svg
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 473 473"
+            >
+              <path
+                class="path"
+                d="M914.5,384c0,127.85-103.65,231.5-231.5,231.5S451.5,511.85,451.5,384,555.15,152.5,683,152.5"
+                transform="translate(-446.5 -147.5)"
+              />
+            </svg>
+            <div class="center_text">
+              <h4 class="hide_categories">
+                <div class="text_category">Hustler</div>
+              </h4>
+              <h4 class="hide_categories">
+                <div class="text_category">Developer</div>
+              </h4>
+              <h4 class="hide_categories">
+                <div class="text_category">UI UX Designer</div>
+              </h4>
+            </div>
+            <div class="date">
+              <div class="day"></div>
+              <div id="info" style="padding-left: 1vw">
+                <div class="info_date" id="month"></div>
+                <div class="info_date pb-0" id="status">Available</div>
+              </div>
+            </div>
+            <!-- <div class="img_card">
+              <div class="img_container"></div>
+            </div> -->
+            <!-- <h1 id="contactMe" contenteditable data-heading="Contact">Contact</h1> -->
+          </div>
+          <div id="description">
+            <div id="contact"><a href="">Contact</a></div>
+            <h6>
+              <div>I'm a senior student from Portugal taking a</div>
+              <div>web development degree at college - esmad.</div>
+              <div>I'm currently the student with the</div>
+              <div id="go_right">highest GPA looking towards great projects</div>
+              <div>to be part of, or helping people</div>
+              <div>achieving their dreams. Stay kind.</div>
+            </h6>
+          </div>
+        </div>
       </div>
-      <!-- <h1 class="middleText">Click</h1> -->
-      <div class="notification"></div>
-      <div class="introText">
-        <h2 id="name" class="mainTitles">
-          <div id="text_name">Hello.</span></div>
-        </h2>
-        <h2 id="name2" class="mainTitles">
-          <div id="text_name2">
-            I
-            <div id="fall">'</div>
-            m <span class="strokeWord">Nuno</span>
+      <div class="whatIdo">
+        <div class="categories">
+          <h2 class="mainTitles">
+            <div id="what">A few things I do...</div>
+            <!-- <div id="what">I Do<span class="stroke">...</span></div> -->
+          </h2>
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <div class="group_skills_fe">
+                  <div class="fe_wrap"></div>
+                  <h3 class="fe"><a href="">Front-end dev</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_be">
+                  <div class="be_wrap"></div>
+                  <h3 class="be"><a href="">Back-end dev</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_uiux">
+                  <div class="uiux_wrap"></div>
+                  <h3 class="uiux"><a href="">UI & UX Design</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_tt">
+                  <div class="tt_wrap"></div>
+                  <h3 class="tt">
+                    <a href=""
+                      >Teaching
+                      &
+                      Tutoring</a
+                    >
+                  </h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_mdev">
+                  <div class="mdev_wrap"></div>
+                  <h3 class="mdev"><a href="">Mobile dev</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_st">
+                  <div class="st_wrap"></div>
+                  <h3 class="st"><a href="">Story Telling</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_fe">
+                  <div class="fe_wrap"></div>
+                  <h3 class="fe"><a href="">Front-end dev</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_be">
+                  <div class="be_wrap"></div>
+                  <h3 class="be"><a href="">Back-end dev</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_uiux">
+                  <div class="uiux_wrap"></div>
+                  <h3 class="uiux"><a href="">UI & UX Design</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_tt">
+                  <div class="tt_wrap"></div>
+                  <h3 class="tt">
+                    <a href=""
+                      >Teaching
+                      &
+                      Tutoring</a
+                    >
+                  </h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_mdev">
+                  <div class="mdev_wrap"></div>
+                  <h3 class="mdev"><a href="">Mobile dev</a></h3>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="group_skills_st">
+                  <div class="st_wrap"></div>
+                  <h3 class="st"><a href="">Story Telling</a></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="texts">
+                      <div class="skills" id="fe"><a href="">Front-end dev</a></div>
+                      <div class="skills" id="be"><a href="">Back-end dev</a></div>
+                      <div class="skills" id="uiux"><a href="">UI & UX Design</a></div>
+                      <div class="skills" id="tt"><a href="">Teaching & Tutoring</a></div>
+                      <div class="skills" id="md"><a href="">Mobile dev</a></div>
+                      <div class="skills" id="sp"><a href="">Support</a></div>
+                      <div class="skills" id="st"><a href="">Story Telling</a></div>
+                      <div class="wrapper"></div>
+                  </div> -->
+        </div>
+      </div>
+      <div class="skills">
+        <h2 class="mainTitles">Experience</h2>
+        <div class="slider2">
+          <div class="slide-track2">
+            <div class="slide2 js">
+              <h3>JavaScript</h3>
+            </div>
+            <div class="slide2 html">
+              <h3>HTML5</h3>
+            </div>
+            <div class="slide2 css">
+              <h3>CSS3</h3>
+            </div>
+            <div class="slide2 python">
+              <h3>Python</h3>
+            </div>
+            <div class="slide2 cSharp">
+              <h3>C#</h3>
+            </div>
+            <div class="slide2 java">
+              <h3>Java</h3>
+            </div>
+            <div class="slide2 adobexd">
+              <h3>Adobe XD</h3>
+            </div>
+            <div class="slide2 adobecc">
+              <h3>Adobe CC</h3>
+            </div>
+            <div class="slide2 adobeai">
+              <h3>Adobe Ai</h3>
+            </div>
+            <div class="slide2 js">
+              <h3>JavaScript</h3>
+            </div>
+            <div class="slide2 html">
+              <h3>HTML5</h3>
+            </div>
+            <div class="slide2 css">
+              <h3>CSS3</h3>
+            </div>
+            <div class="slide2 python">
+              <h3>Python</h3>
+            </div>
+            <div class="slide2 cSharp">
+              <h3>C#</h3>
+            </div>
+            <div class="slide2 java">
+              <h3>Java</h3>
+            </div>
+            <div class="slide2 adobexd">
+              <h3>Adobe XD</h3>
+            </div>
+            <div class="slide2 adobecc">
+              <h3>Adobe CC</h3>
+            </div>
+            <div class="slide2 adobeai">
+              <h3>Adobe Ai</h3>
+            </div>
+          </div>
+          <!-- <div class="slide-track2">
+                      <div class="slide2">
+                          <div>
+                              <img src="/Assets/Showcase/javascript.png" height="100" width="100" alt="" />
+                              <h3>JavaScript</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/html.svg" height="100" width="100" alt="" />
+                              <h3>HTML</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/css.svg" height="100" width="100" alt="" />
+                              <h3>CSS</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/NodeJS.png" height="100" width="100" alt="" />
+                              <h3>Node.js</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/vuejs.png" height="100" width="100" alt="" />
+                              <h3>Vue.js</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/MySQL.svg" height="100" width="100" alt="" />
+                              <h3>MySQL</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/python.png" height="100" width="100" alt="" />
+                              <h3>Python</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/adobexd.png" height="100" width="100" alt="" />
+                              <h3>Adobe XD</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/adobe-photoshop.svg" height="100" width="100" alt="" />
+                              <h3>Adobe CC</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/adobe-illustrator.svg" height="100" width="100" alt="" />
+                              <h3>Adobe Ai</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div>
+                              <img src="/Assets/Showcase/javascript.png" height="100" width="100" alt="" />
+                              <h3>JavaScript</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/html.svg" height="100" width="100" alt="" />
+                              <h3>HTML</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/css.svg" height="100" width="100" alt="" />
+                              <h3>CSS</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/NodeJS.png" height="100" width="100" alt="" />
+                              <h3>Node.js</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/vuejs.png" height="100" width="100" alt="" />
+                              <h3>Vue.js</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/MySQL.svg" height="100" width="100" alt="" />
+                              <h3>MySQL</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/python.png" height="100" width="100" alt="" />
+                              <h3>Python</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/adobexd.png" height="100" width="100" alt="" />
+                              <h3>Adobe XD</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/adobe-photoshop.svg" height="100" width="100" alt="" />
+                              <h3>Adobe CC</h3>
+                          </div>
+                      </div>
+                      <div class="slide2">
+                          <div><img src="/Assets/Showcase/adobe-illustrator.svg" height="100" width="100" alt="" />
+                              <h3>Adobe Ai</h3>
+                          </div>
+                      </div>
+                  </div> -->
+        </div>
+        <svg>
+          <line
+          id="line"
+            x1="0"
+            y1="0"
+            x2="100vw"
+            y2="0"
+          />
+        </svg>
+        <div class="slider3">
+          <div id="reverse">
+            <div class="slide3 nodejs">
+              <h3>Node.js</h3>
+            </div>
+            <div class="slide3 vuejs">
+              <h3>Vue</h3>
+            </div>
+            <div class="slide3 treejs">
+              <h3>Three.js</h3>
+            </div>
+            <div class="slide3 scss">
+              <h3>SCSS</h3>
+            </div>
+            <div class="slide3 mysql">
+              <h3>MySQL</h3>
+            </div>
+            <div class="slide3 git">
+              <h3>Git</h3>
+            </div>
+            <div class="slide3 wordpress">
+              <h3>Wordpress</h3>
+            </div>
+            <div class="slide3 mongodb">
+              <h3>MongoDB</h3>
+            </div>
+            <div class="slide3 nodejs">
+              <h3>Node.js</h3>
+            </div>
+            <div class="slide3 vuejs">
+              <h3>Vue</h3>
+            </div>
+            <div class="slide3 treejs">
+              <h3>Three.js</h3>
+            </div>
+            <div class="slide3 scss">
+              <h3>SCSS</h3>
+            </div>
+            <div class="slide3 mysql">
+              <h3>MySQL</h3>
+            </div>
+            <div class="slide3 git">
+              <h3>Git</h3>
+            </div>
+            <div class="slide3 wordpress">
+              <h3>Wordpress</h3>
+            </div>
+            <div class="slide3 mongodb">
+              <h3>MongoDB</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="talkToMe">
+        <h2 id="longText">
+          <div class="bigText">
+            <div>I'm always</div>
+            <div>interested</div>
+            <div>about <span class="strokeWord">cool</span></div>
+            <div><span class="strokeWord">stuff</span>.</div>
+            <div>Are you</div>
+            <div>down to</div>
+            <div><span class="strokeWord">impact</span> the</div>
+            <div>world? 🪐</div>
+          </div>
+          <div id="talk">
+            <a id="talk_btn" href=""
+              >Let's <span class="strokeWord">talk.</span></a
+            >
           </div>
         </h2>
+        <button class="btn btn-default" id="arrowUp">
+          ↑ Back to the top
+        </button>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="footer-copyright text-center">
+            <p class="parag">
+              Design & Developed by
+              <span class="change">&#60;/ Nuno Pereira Sousa &#62;</span>
+            </p>
+          </div>
+          <div class="socials_footer text-center">
+            <a href="">
+              <i class="fab fa-linkedin-in fa-2x"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+    </div>
+    <div class="showcasePage">
+      <h1 class="firstText">Looking for <span class="stroke">next-level</span> <br> experiences?</h1>
+      <h1 class="secondText">- - - You're talking to <br> the right person <span class="emoji">😎</span>.</h1>
+      <h4 class="thirdText">- - Check my <span class="stroke">projects</span> down below!</h4>
+      <div class="filters">
+        <button class="filtersBtn filterBtnEnabled frontEndBtn">💻 Front-End</button>
+        <button class="filtersBtn backEndBtn">🔐 Back-End</button>
+        <button class="filtersBtn uiUxBtn">🔌 UI UX Design</button>
+        <button class="filtersBtn mobileDevBtn">📱 Mobile Development</button>
+        <button class="filtersBtn gameDevBtn">🎮 Game Development</button>
       </div>
       <h5 id="hide_arrow">
         <div id="arrowDown">↓</div>
       </h5>
-      <div class="circle_wrap">
-        <div class="circ">
-          <svg
-            id="Layer_1"
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 473 473"
-          >
-            <path
-              class="path"
-              d="M914.5,384c0,127.85-103.65,231.5-231.5,231.5S451.5,511.85,451.5,384,555.15,152.5,683,152.5"
-              transform="translate(-446.5 -147.5)"
-            />
-          </svg>
-          <div class="center_text">
-            <h4 class="hide_categories">
-              <div class="text_category">Hustler</div>
-            </h4>
-            <h4 class="hide_categories">
-              <div class="text_category">Developer</div>
-            </h4>
-            <h4 class="hide_categories">
-              <div class="text_category">UI UX Designer</div>
-            </h4>
-          </div>
-          <div class="date">
-            <div class="day"></div>
-            <div id="info" style="padding-left: 1vw">
-              <div class="info_date" id="month"></div>
-              <div class="info_date pb-0" id="status">Available</div>
-            </div>
-          </div>
-          <!-- <div class="img_card">
-            <div class="img_container"></div>
-          </div> -->
-          <!-- <h1 id="contactMe" contenteditable data-heading="Contact">Contact</h1> -->
-        </div>
-        <div id="description">
-          <div id="contact"><a href="">Contact</a></div>
-          <h6>
-            <div>I'm a senior student from Portugal taking a</div>
-            <div>web development degree at college - esmad.</div>
-            <div>I'm currently the student with the</div>
-            <div id="go_right">highest GPA looking towards great projects</div>
-            <div>to be part of, or helping people</div>
-            <div>achieving their dreams. Stay kind.</div>
-          </h6>
-        </div>
-      </div>
-    </div>
-    <div class="whatIdo">
       <div class="categories">
-        <h2 class="mainTitles">
-          <div id="what">A few things I do...</div>
-          <!-- <div id="what">I Do<span class="stroke">...</span></div> -->
-        </h2>
-        <div class="slider">
-          <div class="slide-track">
-            <div class="slide">
-              <div class="group_skills_fe">
-                <div class="fe_wrap"></div>
-                <h3 class="fe"><a href="">Front-end dev</a></h3>
+        <ul>
+          <li class="categoryEnabled">
+            <div class="categoryBtn">
+              <div class="categoryType"><span class="number">💻 01</span><span class="project">GoPorto <span class="category">Front-End</span></span></div>
+              <h3 class="arrowIcon"><i class="fas fa-caret-down rotateActivated"></i></h3>
+            </div>
+            <div class="content opened">
+              <p class="categoryDescription">Bringing together design, data and technology to deliver actionable customer experience strategies that drive marketing and business outcomes. Win the present. Prepare for the future!</p>
+              <div class="btnGroup">
+                <button class="linksBtn"><span class="btnIcons"><i class="fas fa-globe"></i></span>Website</button>
+              <button class="linksBtn"><span class="btnIcons"><i class="fab fa-github"></i></span>Code</button>
               </div>
             </div>
-            <div class="slide">
-              <div class="group_skills_be">
-                <div class="be_wrap"></div>
-                <h3 class="be"><a href="">Back-end dev</a></h3>
-              </div>
+          </li>
+          <li>
+            <div class="categoryBtn">
+              <div class="categoryType"><span class="number">💻 02</span><span class="project">Control Covid <span class="category">Front-End</span></span></div>
+              <h3 class="arrowIcon"><i class="fas fa-caret-down"></i></h3>
             </div>
-            <div class="slide">
-              <div class="group_skills_uiux">
-                <div class="uiux_wrap"></div>
-                <h3 class="uiux"><a href="">UI & UX Design</a></h3>
-              </div>
+            <div class="content">
+              <p class="categoryDescription">Bringing together design, data and technology to deliver actionable customer experience strategies that drive marketing and business outcomes. Win the present. Prepare for the future!</p>
+              <button class="linksBtn"><span class="btnIcons"><i class="fas fa-globe"></i></span>Website</button>
+              <button class="linksBtn"><span class="btnIcons"><i class="fab fa-github"></i></span>Code</button>
             </div>
-            <div class="slide">
-              <div class="group_skills_tt">
-                <div class="tt_wrap"></div>
-                <h3 class="tt">
-                  <a href=""
-                    >Teaching
-                    &
-                    Tutoring</a
-                  >
-                </h3>
-              </div>
+          </li>
+          <li>
+            <div class="categoryBtn">
+              <div class="categoryType"><span class="number">💻 03</span><span class="project">Dutify <span class="category">Front-End</span></span></div>
+              <h3 class="arrowIcon"><i class="fas fa-caret-down"></i></h3>
             </div>
-            <div class="slide">
-              <div class="group_skills_mdev">
-                <div class="mdev_wrap"></div>
-                <h3 class="mdev"><a href="">Mobile dev</a></h3>
-              </div>
+            <div class="content">
+              <p class="categoryDescription">Bringing together design, data and technology to deliver actionable customer experience strategies that drive marketing and business outcomes. Win the present. Prepare for the future!</p>
+              <button class="linksBtn"><span class="btnIcons"><i class="fas fa-globe"></i></span>Website</button>
+              <button class="linksBtn"><span class="btnIcons"><i class="fab fa-github"></i></span>Code</button>
             </div>
-            <div class="slide">
-              <div class="group_skills_st">
-                <div class="st_wrap"></div>
-                <h3 class="st"><a href="">Story Telling</a></h3>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="group_skills_fe">
-                <div class="fe_wrap"></div>
-                <h3 class="fe"><a href="">Front-end dev</a></h3>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="group_skills_be">
-                <div class="be_wrap"></div>
-                <h3 class="be"><a href="">Back-end dev</a></h3>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="group_skills_uiux">
-                <div class="uiux_wrap"></div>
-                <h3 class="uiux"><a href="">UI & UX Design</a></h3>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="group_skills_tt">
-                <div class="tt_wrap"></div>
-                <h3 class="tt">
-                  <a href=""
-                    >Teaching
-                    &
-                    Tutoring</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="group_skills_mdev">
-                <div class="mdev_wrap"></div>
-                <h3 class="mdev"><a href="">Mobile dev</a></h3>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="group_skills_st">
-                <div class="st_wrap"></div>
-                <h3 class="st"><a href="">Story Telling</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="texts">
-                    <div class="skills" id="fe"><a href="">Front-end dev</a></div>
-                    <div class="skills" id="be"><a href="">Back-end dev</a></div>
-                    <div class="skills" id="uiux"><a href="">UI & UX Design</a></div>
-                    <div class="skills" id="tt"><a href="">Teaching & Tutoring</a></div>
-                    <div class="skills" id="md"><a href="">Mobile dev</a></div>
-                    <div class="skills" id="sp"><a href="">Support</a></div>
-                    <div class="skills" id="st"><a href="">Story Telling</a></div>
-                    <div class="wrapper"></div>
-                </div> -->
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="skills">
-      <h2 class="mainTitles">Experience</h2>
-      <div class="slider2">
-        <div class="slide-track2">
-          <div class="slide2 js">
-            <h3>JavaScript</h3>
-          </div>
-          <div class="slide2 html">
-            <h3>HTML5</h3>
-          </div>
-          <div class="slide2 css">
-            <h3>CSS3</h3>
-          </div>
-          <div class="slide2 python">
-            <h3>Python</h3>
-          </div>
-          <div class="slide2 cSharp">
-            <h3>C#</h3>
-          </div>
-          <div class="slide2 java">
-            <h3>Java</h3>
-          </div>
-          <div class="slide2 adobexd">
-            <h3>Adobe XD</h3>
-          </div>
-          <div class="slide2 adobecc">
-            <h3>Adobe CC</h3>
-          </div>
-          <div class="slide2 adobeai">
-            <h3>Adobe Ai</h3>
-          </div>
-          <div class="slide2 js">
-            <h3>JavaScript</h3>
-          </div>
-          <div class="slide2 html">
-            <h3>HTML5</h3>
-          </div>
-          <div class="slide2 css">
-            <h3>CSS3</h3>
-          </div>
-          <div class="slide2 python">
-            <h3>Python</h3>
-          </div>
-          <div class="slide2 cSharp">
-            <h3>C#</h3>
-          </div>
-          <div class="slide2 java">
-            <h3>Java</h3>
-          </div>
-          <div class="slide2 adobexd">
-            <h3>Adobe XD</h3>
-          </div>
-          <div class="slide2 adobecc">
-            <h3>Adobe CC</h3>
-          </div>
-          <div class="slide2 adobeai">
-            <h3>Adobe Ai</h3>
-          </div>
-        </div>
-        <!-- <div class="slide-track2">
-                    <div class="slide2">
-                        <div>
-                            <img src="/Assets/Showcase/javascript.png" height="100" width="100" alt="" />
-                            <h3>JavaScript</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/html.svg" height="100" width="100" alt="" />
-                            <h3>HTML</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/css.svg" height="100" width="100" alt="" />
-                            <h3>CSS</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/NodeJS.png" height="100" width="100" alt="" />
-                            <h3>Node.js</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/vuejs.png" height="100" width="100" alt="" />
-                            <h3>Vue.js</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/MySQL.svg" height="100" width="100" alt="" />
-                            <h3>MySQL</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/python.png" height="100" width="100" alt="" />
-                            <h3>Python</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/adobexd.png" height="100" width="100" alt="" />
-                            <h3>Adobe XD</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/adobe-photoshop.svg" height="100" width="100" alt="" />
-                            <h3>Adobe CC</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/adobe-illustrator.svg" height="100" width="100" alt="" />
-                            <h3>Adobe Ai</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div>
-                            <img src="/Assets/Showcase/javascript.png" height="100" width="100" alt="" />
-                            <h3>JavaScript</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/html.svg" height="100" width="100" alt="" />
-                            <h3>HTML</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/css.svg" height="100" width="100" alt="" />
-                            <h3>CSS</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/NodeJS.png" height="100" width="100" alt="" />
-                            <h3>Node.js</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/vuejs.png" height="100" width="100" alt="" />
-                            <h3>Vue.js</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/MySQL.svg" height="100" width="100" alt="" />
-                            <h3>MySQL</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/python.png" height="100" width="100" alt="" />
-                            <h3>Python</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/adobexd.png" height="100" width="100" alt="" />
-                            <h3>Adobe XD</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/adobe-photoshop.svg" height="100" width="100" alt="" />
-                            <h3>Adobe CC</h3>
-                        </div>
-                    </div>
-                    <div class="slide2">
-                        <div><img src="/Assets/Showcase/adobe-illustrator.svg" height="100" width="100" alt="" />
-                            <h3>Adobe Ai</h3>
-                        </div>
-                    </div>
-                </div> -->
-      </div>
-      <svg>
-        <line
-        id="line"
-          x1="0"
-          y1="0"
-          x2="100vw"
-          y2="0"
-        />
-      </svg>
-      <div class="slider3">
-        <div id="reverse">
-          <div class="slide3 nodejs">
-            <h3>Node.js</h3>
-          </div>
-          <div class="slide3 vuejs">
-            <h3>Vue</h3>
-          </div>
-          <div class="slide3 treejs">
-            <h3>Three.js</h3>
-          </div>
-          <div class="slide3 scss">
-            <h3>SCSS</h3>
-          </div>
-          <div class="slide3 mysql">
-            <h3>MySQL</h3>
-          </div>
-          <div class="slide3 git">
-            <h3>Git</h3>
-          </div>
-          <div class="slide3 wordpress">
-            <h3>Wordpress</h3>
-          </div>
-          <div class="slide3 mongodb">
-            <h3>MongoDB</h3>
-          </div>
-          <div class="slide3 nodejs">
-            <h3>Node.js</h3>
-          </div>
-          <div class="slide3 vuejs">
-            <h3>Vue</h3>
-          </div>
-          <div class="slide3 treejs">
-            <h3>Three.js</h3>
-          </div>
-          <div class="slide3 scss">
-            <h3>SCSS</h3>
-          </div>
-          <div class="slide3 mysql">
-            <h3>MySQL</h3>
-          </div>
-          <div class="slide3 git">
-            <h3>Git</h3>
-          </div>
-          <div class="slide3 wordpress">
-            <h3>Wordpress</h3>
-          </div>
-          <div class="slide3 mongodb">
-            <h3>MongoDB</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="talkToMe">
-      <h2 id="longText">
-        <div class="bigText">
-          <div>I'm always</div>
-          <div>interested</div>
-          <div>about <span class="strokeWord">cool</span></div>
-          <div><span class="strokeWord">stuff</span>.</div>
-          <div>Are you</div>
-          <div>down to</div>
-          <div><span class="strokeWord">impact</span> the</div>
-          <div>world? 🪐</div>
-        </div>
-        <div id="talk">
-          <a id="talk_btn" href=""
-            >Let's <span class="strokeWord">talk.</span></a
-          >
-        </div>
-      </h2>
-      <button class="btn btn-default" id="arrowUp">
-        ↑ Back to the top
-      </button>
-    </div>
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-copyright text-center">
-          <p class="parag">
-            Design & Developed by
-            <span class="change">&#60;/ Nuno Pereira Sousa &#62;</span>
-          </p>
-        </div>
-        <div class="socials_footer text-center">
-          <a href="">
-            <i class="fab fa-linkedin-in fa-2x"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-instagram fa-2x"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-facebook fa-2x"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer -->
-    <div class="off">
-      <h1 class="closeWebsite">Enjoy your day 🤟</h1>
-    </div>
-
-    <!-- <div id="dark"></div> -->
-    <!-- <div class="firstPage">
-      <div class="titleWrapper">
-        <h1>Nuno</h1>
-      </div>
-    </div> -->
+    <div class="off"></div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"

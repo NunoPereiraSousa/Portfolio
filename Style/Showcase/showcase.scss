@@ -1,0 +1,204 @@
+@mixin textShadow($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textShadowCategories($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textStrokeCategories($stroke, $color) {
+  -webkit-text-stroke: $stroke $color;
+}
+
+@mixin boxShadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+$textColor1: #ffffff;
+$textColor2: #2c2c2c;
+$textShadowColor: #747171;
+$textShadowColorSoft: #868686;
+$fontTitle: "Montserrat";
+$fontText: "Raleway";
+$feColor: #4a8aaf;
+$beColor: #808080;
+$uiUxColor: #b44e81;
+$teachingColor: #beae4e;
+$mobileDevColor: #4e9c6b;
+$storyColor: #c54f4e;
+
+.showcasePage {
+  h1,
+  h4 {
+    margin: 0;
+    width: fit-content;
+    padding: 5.6vw 0 4.6vw 16vw;
+    letter-spacing: 0.15vw;
+    color: $textColor2;
+    @include textShadow(-1px, 11px, 10px, $textShadowColor);
+    font-size: calc(24px + 2.4vw);
+
+    &:hover .stroke {
+      color: $textColor2;
+    }
+  }
+
+  .stroke {
+    color: transparent;
+    @include textShadow(-1px, 11px, 10px, $textShadowColor);
+    transition: all 0.1s ease;
+  }
+
+  h4 {
+    padding: 4.6vw 0 1vw 20vw;
+    font-size: calc(24px + 1.4vw);
+  }
+
+  .secondText {
+    padding: 0 0 0 24vw;
+  }
+
+  .emoji {
+    font-size: calc(24px + 1.4vw);
+  }
+
+  #hide_arrow {
+    // overflow: hidden;
+    // background: transparent;
+    position: absolute;
+    right: 6.25vw;
+    bottom: 0;
+    font-size: 2vw;
+    @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+
+    #arrowDown {
+      color: $textColor2;
+      transform: translateY(-100%);
+    }
+  }
+
+  .filters {
+    padding: 5.6vw 16vw 0 16vw;
+    display: flex;
+    justify-content: space-between;
+
+    .filtersBtn {
+      background-color: transparent;
+      font-size: 1.45rem;
+      border: none;
+      color: $textColor1;
+      padding: 1vw 1vw;
+      border-radius: 60px;
+      transition: all 0.35s ease-in-out;
+      cursor: pointer;
+      opacity: 0.65;
+      transform: scale(0.85);
+      color: rgba(44, 44, 44, 0.5);
+      @include textShadow(-1px, 5px, 8px, $textShadowColor);
+
+      &.filterBtnEnabled,
+      &:hover {
+        color: $textColor2;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .categories {
+    padding: 0 16vw 0 16vw;
+
+    ul {
+      display: inline-block;
+      padding: 25px 0 20px 0;
+      list-style-type: none;
+      width: 100%;
+
+      li {
+        border-bottom: 2px solid $textShadowColorSoft;
+        padding: 1.75vw 0;
+        transition: all 0.5s ease-in-out;
+
+        &:not(.categoryEnabled) {
+          opacity: 0.4;
+          border-bottom: 1.5px solid $textShadowColorSoft;
+        }
+        .categoryBtn {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: $textColor2;
+          font-weight: 500;
+          font-family: $fontTitle;
+
+          .number {
+            margin-right: 4vw;
+            font-size: 1.25rem;
+          }
+
+          .project {
+            font-size: 2rem;
+          }
+
+          .category {
+            font-size: 1rem;
+            font-style: oblique 10deg;
+          }
+
+          .arrowIcon {
+            i {
+              font-size: 1.8rem;
+
+              &.rotateActivated {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+
+        .content {
+          max-height: 0;
+          overflow: hidden;
+
+          &.opened {
+            max-height: 100%;
+          }
+
+          p.categoryDescription {
+            margin-top: 1vw;
+            width: 80%;
+            line-height: 2rem;
+            font-family: $fontText;
+            font-weight: 400;
+            font-size: 1.1rem;
+          }
+
+          .btnGroup {
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          button.linksBtn {
+            background-color: transparent;
+            font-size: 1.2rem;
+            border: none;
+            margin: 1vw 3vw 0 0;
+            transition: all 0.35s ease-in-out;
+            cursor: pointer;
+
+            .btnIcons i {
+              margin-right: 1vw;
+              font-size: 1.2rem;
+            }
+
+            &:hover {
+              transform: translateX(10%);
+              font-weight: 500;
+              letter-spacing: 0.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
