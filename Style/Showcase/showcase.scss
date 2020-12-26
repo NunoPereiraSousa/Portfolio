@@ -28,52 +28,85 @@ $mobileDevColor: #4e9c6b;
 $storyColor: #c54f4e;
 
 .showcasePage {
-  h1,
-  h4 {
-    margin: 0;
-    width: fit-content;
-    padding: 5.6vw 0 4.6vw 16vw;
-    letter-spacing: 0.15vw;
-    color: $textColor2;
-    @include textShadow(-1px, 11px, 10px, $textShadowColor);
-    font-size: calc(24px + 2.4vw);
+  .introPage {
+    height: 100vh;
+    position: relative;
 
-    &:hover .stroke {
+    h1,
+    h4 {
+      margin: 0;
+      width: fit-content;
+      padding: 8.6vw 0 4.6vw 16vw;
+      letter-spacing: 0.15vw;
       color: $textColor2;
+      @include textShadow(-1px, 11px, 10px, $textShadowColor);
+      font-size: calc(24px + 2.4vw);
+
+      &:hover .stroke {
+        color: $textColor2;
+      }
+    }
+
+    .stroke {
+      color: transparent;
+      @include textShadow(-1px, 11px, 10px, $textShadowColor);
+      transition: all 0.1s ease;
+    }
+
+    h4 {
+      padding: 4.6vw 0 1vw 20vw;
+      font-size: calc(24px + 1.4vw);
+    }
+
+    .secondText {
+      padding: 0 0 0 24vw;
+    }
+
+    .emoji {
+      font-size: calc(24px + 1.4vw);
+    }
+
+    #hide_arrow {
+      // overflow: hidden;
+      // background: transparent;
+      position: absolute;
+      right: 6.25vw;
+      bottom: 0;
+      font-size: 2vw;
+      @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+
+      #arrowDown {
+        color: $textColor2;
+        transform: translateY(-100%);
+      }
     }
   }
 
-  .stroke {
-    color: transparent;
-    @include textShadow(-1px, 11px, 10px, $textShadowColor);
-    transition: all 0.1s ease;
-  }
-
-  h4 {
-    padding: 4.6vw 0 1vw 20vw;
-    font-size: calc(24px + 1.4vw);
-  }
-
-  .secondText {
-    padding: 0 0 0 24vw;
-  }
-
-  .emoji {
-    font-size: calc(24px + 1.4vw);
-  }
-
-  #hide_arrow {
-    // overflow: hidden;
-    // background: transparent;
-    position: absolute;
-    right: 6.25vw;
-    bottom: 0;
-    font-size: 2vw;
-    @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
-
-    #arrowDown {
+  .secondPage {
+    h1.title {
+      margin: 0 0 0 16vw;
+      font-family: $fontTitle;
       color: $textColor2;
-      transform: translateY(-100%);
+      font-size: calc(24px + 2.4vw);
+      width: fit-content;
+      transition: all 1s ease-in-out;
+      height: fit-content;
+      text-transform: uppercase;
+      font-weight: 300;
+      @include textShadow(-1px, 11px, 10px, $textShadowColor);
+      mix-blend-mode: difference;
+      position: relative;
+      width: fit-content;
+
+      &::after {
+        content: "";
+        border-bottom: 2px solid #000;
+        position: absolute;
+        left: 0;
+        bottom: -5%;
+        width: 10%;
+        @include boxShadow(-1px, 11px, 8px, $textShadowColor);
+      }
     }
   }
 
@@ -106,21 +139,25 @@ $storyColor: #c54f4e;
   }
 
   .categories {
-    padding: 0 16vw 0 16vw;
+    padding: 2.5vw 16vw 0 16vw;
 
     ul {
       display: inline-block;
       padding: 25px 0 20px 0;
       list-style-type: none;
-      width: 100%;
+      width: 75%;
 
       li {
         border-bottom: 2px solid $textShadowColorSoft;
-        padding: 1.75vw 0;
+        padding: 1.25vw 0;
         transition: all 0.5s ease-in-out;
 
+        &:first-child {
+          padding-top: 0;
+        }
+
         &:not(.categoryEnabled) {
-          opacity: 0.4;
+          opacity: 0.6;
           border-bottom: 1.5px solid $textShadowColorSoft;
         }
         .categoryBtn {

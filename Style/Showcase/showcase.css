@@ -1,42 +1,47 @@
-.showcasePage h1,
-.showcasePage h4 {
+.showcasePage .introPage {
+  height: 100vh;
+  position: relative;
+}
+
+.showcasePage .introPage h1,
+.showcasePage .introPage h4 {
   margin: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 5.6vw 0 4.6vw 16vw;
+  padding: 8.6vw 0 4.6vw 16vw;
   letter-spacing: 0.15vw;
   color: #2c2c2c;
   text-shadow: -1px 11px 10px #747171;
   font-size: calc(24px + 2.4vw);
 }
 
-.showcasePage h1:hover .stroke,
-.showcasePage h4:hover .stroke {
+.showcasePage .introPage h1:hover .stroke,
+.showcasePage .introPage h4:hover .stroke {
   color: #2c2c2c;
 }
 
-.showcasePage .stroke {
+.showcasePage .introPage .stroke {
   color: transparent;
   text-shadow: -1px 11px 10px #747171;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 
-.showcasePage h4 {
+.showcasePage .introPage h4 {
   padding: 4.6vw 0 1vw 20vw;
   font-size: calc(24px + 1.4vw);
 }
 
-.showcasePage .secondText {
+.showcasePage .introPage .secondText {
   padding: 0 0 0 24vw;
 }
 
-.showcasePage .emoji {
+.showcasePage .introPage .emoji {
   font-size: calc(24px + 1.4vw);
 }
 
-.showcasePage #hide_arrow {
+.showcasePage .introPage #hide_arrow {
   position: absolute;
   right: 6.25vw;
   bottom: 0;
@@ -44,10 +49,42 @@
   text-shadow: -1px 3px 3px #868686;
 }
 
-.showcasePage #hide_arrow #arrowDown {
+.showcasePage .introPage #hide_arrow #arrowDown {
   color: #2c2c2c;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+.showcasePage .secondPage h1.title {
+  margin: 0 0 0 16vw;
+  font-family: "Montserrat";
+  color: #2c2c2c;
+  font-size: calc(24px + 2.4vw);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-shadow: -1px 11px 10px #747171;
+  mix-blend-mode: difference;
+  position: relative;
+  width: fit-content;
+}
+
+.showcasePage .secondPage h1.title::after {
+  content: "";
+  border-bottom: 2px solid #000;
+  position: absolute;
+  left: 0;
+  bottom: -5%;
+  width: 10%;
+  -webkit-box-shadow: -1px 11px 8px #747171;
+          box-shadow: -1px 11px 8px #747171;
 }
 
 .showcasePage .filters {
@@ -85,25 +122,29 @@
 }
 
 .showcasePage .categories {
-  padding: 0 16vw 0 16vw;
+  padding: 2.5vw 16vw 0 16vw;
 }
 
 .showcasePage .categories ul {
   display: inline-block;
   padding: 25px 0 20px 0;
   list-style-type: none;
-  width: 100%;
+  width: 75%;
 }
 
 .showcasePage .categories ul li {
   border-bottom: 2px solid #868686;
-  padding: 1.75vw 0;
+  padding: 1.25vw 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
+.showcasePage .categories ul li:first-child {
+  padding-top: 0;
+}
+
 .showcasePage .categories ul li:not(.categoryEnabled) {
-  opacity: 0.4;
+  opacity: 0.6;
   border-bottom: 1.5px solid #868686;
 }
 
