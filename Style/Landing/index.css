@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat";
@@ -8,6 +13,8 @@ body {
           user-select: none;
   background-color: #d6d6d6;
   overflow-x: hidden;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
 }
 
 .showcasePage {
@@ -89,6 +96,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+.dark.hideDark {
+  display: none;
 }
 
 .dark h1 {
@@ -472,7 +483,7 @@ body {
 }
 
 .whatIdo .categories .slider {
-  margin: 6vw 0 14vw 0;
+  padding: 10vw 0 0 0;
 }
 
 .whatIdo .categories .slider .slide-track {
@@ -494,7 +505,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 40vh;
   width: 43.3vw;
   padding: 0;
   position: relative;
@@ -520,6 +530,21 @@ body {
   font-weight: 400;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+  color: transparent;
+  text-shadow: -1px 11px 10px #747171;
+}
+
+.whatIdo .categories .slider .slide-track .slide:hover .fe a,
+.whatIdo .categories .slider .slide-track .slide:hover .be a,
+.whatIdo .categories .slider .slide-track .slide:hover .uiux a,
+.whatIdo .categories .slider .slide-track .slide:hover .tt a,
+.whatIdo .categories .slider .slide-track .slide:hover .mdev a,
+.whatIdo .categories .slider .slide-track .slide:hover .st a {
+  color: #2c2c2c;
+  text-shadow: 10px -6px 6px #868686;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  font-weight: 400;
 }
 
 .whatIdo .categories .slider .slide-track .slide .group_skills_fe,
@@ -542,296 +567,12 @@ body {
   margin: 0;
 }
 
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .st_wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .st a {
-  color: transparent;
-  text-shadow: -1px 11px 10px #747171;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st .st {
-  color: #2c2c2c;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .fe_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe_wrap {
-  opacity: 0.3;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .fe,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .be_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .be_wrap {
-  opacity: 0.3;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .be,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .be {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .st a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .fe a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .be a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .uiux a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .tt a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev a,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .st a {
-  color: #2c2c2c;
-  text-shadow: 10px -6px 6px #868686;
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
-  font-weight: 400;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .uiux_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .uiux_wrap {
-  opacity: 0.3;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .uiux,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .uiux {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .tt_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .tt_wrap {
-  opacity: 0.3;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .tt,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .tt {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .mdev_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev_wrap {
-  opacity: 0.3;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .mdev,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .mdev {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .st_wrap,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .st_wrap {
-  opacity: 0.3;
-}
-
-.whatIdo .categories .slider .slide-track .slide .group_skills_fe:hover .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_be:hover .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_uiux:hover .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_tt:hover .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_mdev:hover .st,
-.whatIdo .categories .slider .slide-track .slide .group_skills_st:hover .st {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-}
-
 .skills {
   height: auto;
 }
 
 .skills h2.mainTitles {
-  margin: 10vw 0 2vw 10vw;
+  margin: 18vw 0 0 14vw;
   font-family: "Montserrat";
   color: #2c2c2c;
   font-weight: 300;
@@ -846,19 +587,17 @@ body {
   mix-blend-mode: difference;
 }
 
-.skills svg {
-  position: absolute;
-  left: 0;
-  width: 100vw;
-  height: 2px;
+.skills .carouselLine {
+  border: 0.75px solid #2c2c2c;
 }
 
 .skills hr {
+  margin: 2vw 0;
   background-color: #2c2c2c;
 }
 
 .skills .slider2 {
-  padding: 6vw 0 3vw 0;
+  padding: 10vw 0 3vw 0;
 }
 
 .skills .slider2 .slide-track2 {
@@ -889,8 +628,10 @@ body {
 }
 
 .skills .slider2 .slide-track2 .slide2 h3 {
+  margin: 0;
+  width: 100%;
+  height: 100%;
   font-family: "Raleway";
-  padding: 2vw 0;
   display: block;
   color: transparent;
   text-shadow: -1px 11px 10px #747171;
@@ -939,8 +680,10 @@ body {
 }
 
 .skills .slider3 #reverse .slide3 h3 {
+  margin: 0;
+  width: 100%;
+  height: 100%;
   font-family: "Raleway";
-  padding: 2vw 0;
   display: block;
   font-size: calc(20px + 3vw);
   text-align: center;
@@ -954,7 +697,8 @@ body {
 
 .talkToMe {
   position: relative;
-  margin-bottom: 12vw;
+  height: auto;
+  padding-bottom: 10vw;
 }
 
 .talkToMe h2#longText {
@@ -985,26 +729,26 @@ body {
 .talkToMe h2#longText #talk #talk_btn::after {
   content: "";
   position: absolute;
-  top: 90%;
-  right: 0;
-  background: #fcf7da;
+  bottom: -6%;
+  left: 50%;
+  background: #2c2c2c;
   width: 0%;
-  height: 16px;
+  height: 10px;
   border-radius: 1px;
   -webkit-transition: all 0.6s ease-in-out 0.1s;
   transition: all 0.6s ease-in-out 0.1s;
 }
 
 .talkToMe h2#longText #talk #talk_btn:hover::after {
-  width: 100%;
+  width: 50%;
 }
 
-.talkToMe button#arrowUp {
+.talkToMe #arrowUp {
+  width: 200px;
   color: #2c2c2c;
   position: absolute;
   right: 6.25vw;
-  bottom: -20%;
-  font-size: 1.2vw;
+  bottom: 10%;
   font-weight: 600;
   margin: 0;
   padding: 0;
@@ -1012,27 +756,12 @@ body {
   border: none;
   font-family: "Raleway";
   mix-blend-mode: difference;
-}
-
-.talkToMe button#arrowUp::before {
-  content: "";
-  position: absolute;
-  bottom: -15%;
-  left: 0%;
-  background: #2c2c2c;
-  width: 100%;
-  height: 2px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: 20%;
-          transform-origin: 20%;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.talkToMe button#arrowUp:hover::before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  cursor: pointer;
+  fill: #2c2c2c;
+  -webkit-animation: spin 8s linear infinite;
+          animation: spin 8s linear infinite;
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 footer {
@@ -1087,6 +816,54 @@ footer .container .footer-copyright p {
 
 footer .container .footer-copyright p span {
   color: #2c2c2c;
+}
+
+@-webkit-keyframes roundandround {
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes roundandround {
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin2 {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 
 @-webkit-keyframes blinking {

@@ -1,8 +1,5 @@
-document.querySelector("#powerBtn").addEventListener("click", () => {
-  $(".off").toggleClass("dark");
-  $(".off").append(
-    $("<h1 class='closeWebsite'></h1>").text("Enjoy your day 🤟")
-  );
+$("#powerBtn").click(() => {
+  $(".dark").toggleClass("hideDark");
 
   $(".heart").hasClass(".heartChange")
     ? $(".heart").toggleClass("heart")

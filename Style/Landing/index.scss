@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @mixin textShadow($x, $y, $blur, $color) {
   text-shadow: $x $y $blur $color;
 }
@@ -40,6 +44,7 @@ body {
   // background-image: linear-gradient(260deg, #cdd2e4, #cdd2e4, #ffe9b1);
   // animation: gradient 60s ease infinite;
   overflow-x: hidden;
+  touch-action: pan-y;
 }
 
 .showcasePage {
@@ -109,6 +114,10 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  &.hideDark {
+    display: none;
+  }
 
   h1 {
     margin: 0;
@@ -494,7 +503,7 @@ body {
     }
 
     .slider {
-      margin: 6vw 0 14vw 0;
+      padding: 10vw 0 0 0;
 
       .slide-track {
         animation: categoriesCarousel 14s linear infinite;
@@ -505,7 +514,6 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 40vh;
           width: 43.3vw;
           padding: 0;
           position: relative;
@@ -524,7 +532,26 @@ body {
               letter-spacing: -0.005em;
               font-weight: 400;
               transition: all 0.5s ease-out;
+              color: transparent;
+              @include textShadow(-1px, 11px, 10px, $textShadowColor);
             }
+          }
+
+          &:hover .fe a,
+          &:hover .be a,
+          &:hover .uiux a,
+          &:hover .tt a,
+          &:hover .mdev a,
+          &:hover .st a {
+            color: $textColor2;
+            @include textShadowCategories(
+              10px,
+              -6px,
+              6px,
+              $textShadowColorSoft
+            );
+            transform: scale(1.005);
+            font-weight: 400;
           }
 
           .group_skills_fe,
@@ -539,112 +566,6 @@ body {
             height: 100%;
             width: 100%;
             margin: 0;
-
-            .fe_wrap,
-            .be_wrap,
-            .uiux_wrap,
-            .tt_wrap,
-            .mdev_wrap,
-            .st_wrap {
-              position: absolute;
-              top: 0;
-              left: 0;
-              height: 100%;
-              width: 100%;
-              margin: 0;
-              transition: all 0.4s ease-in-out;
-            }
-
-            .fe a,
-            .be a,
-            .uiux a,
-            .tt a,
-            .mdev a,
-            .st a {
-              color: transparent;
-              @include textShadow(-1px, 11px, 10px, $textShadowColor);
-            }
-
-            .fe,
-            .be,
-            .uiux,
-            .tt,
-            .mdev,
-            .st {
-              color: $textColor2;
-              transition: all 0.5s ease-out;
-            }
-
-            &:hover .fe_wrap {
-              opacity: 0.3;
-              // background: $feColor;
-            }
-
-            &:hover .fe {
-              transform: scale(1.07);
-            }
-
-            &:hover .be_wrap {
-              opacity: 0.3;
-              // background: $beColor;
-            }
-
-            &:hover .be {
-              transform: scale(1.07);
-            }
-
-            &:hover .fe a,
-            &:hover .be a,
-            &:hover .uiux a,
-            &:hover .tt a,
-            &:hover .mdev a,
-            &:hover .st a {
-              color: $textColor2;
-              @include textShadowCategories(
-                10px,
-                -6px,
-                6px,
-                $textShadowColorSoft
-              );
-              transform: scale(1.005);
-              font-weight: 400;
-            }
-
-            &:hover .uiux_wrap {
-              opacity: 0.3;
-              // background: $uiUxColor;
-            }
-
-            &:hover .uiux {
-              transform: scale(1.07);
-            }
-
-            &:hover .tt_wrap {
-              opacity: 0.3;
-              // background: $teachingColor;
-            }
-
-            &:hover .tt {
-              transform: scale(1.07);
-            }
-
-            &:hover .mdev_wrap {
-              opacity: 0.3;
-              // background: $mobileDevColor;
-            }
-
-            &:hover .mdev {
-              transform: scale(1.07);
-            }
-
-            &:hover .st_wrap {
-              opacity: 0.3;
-              // background: $storyColor;
-            }
-
-            &:hover .st {
-              transform: scale(1.07);
-            }
           }
         }
       }
@@ -658,7 +579,7 @@ body {
   height: auto;
 
   h2.mainTitles {
-    margin: 10vw 0 2vw 10vw;
+    margin: 18vw 0 0 14vw;
     font-family: $fontTitle;
     color: $textColor2;
     font-weight: 300;
@@ -670,25 +591,17 @@ body {
     mix-blend-mode: difference;
   }
 
-  svg {
-    position: absolute;
-    left: 0;
-    width: 100vw;
-    height: 2px;
-
-    // line {
-    //   // stroke-dasharray: 50;
-    //   // stroke-dashoffset: 50;
-    //   // animation: dash 10s linear infinite;
-    // }
+  .carouselLine {
+    border: 0.75px solid $textColor2;
   }
 
   hr {
+    margin: 2vw 0;
     background-color: $textColor2;
   }
 
   .slider2 {
-    padding: 6vw 0 3vw 0;
+    padding: 10vw 0 3vw 0;
 
     .slide-track2 {
       animation: carrousel 20s linear infinite;
@@ -729,8 +642,10 @@ body {
         }
 
         h3 {
+          margin: 0;
+          width: 100%;
+          height: 100%;
           font-family: $fontText;
-          padding: 2vw 0;
           display: block;
           color: transparent;
           @include textShadow(-1px, 11px, 10px, $textShadowColor);
@@ -769,8 +684,10 @@ body {
         }
 
         h3 {
+          margin: 0;
+          width: 100%;
+          height: 100%;
           font-family: $fontText;
-          padding: 2vw 0;
           display: block;
           font-size: calc(20px + 3vw);
           text-align: center;
@@ -787,7 +704,9 @@ body {
 
 .talkToMe {
   position: relative;
-  margin-bottom: 12vw;
+  height: auto;
+  padding-bottom: 10vw;
+
   h2#longText {
     padding: 8.6vw 0 0 14vw;
     font-family: $fontTitle;
@@ -814,28 +733,29 @@ body {
         &::after {
           content: "";
           position: absolute;
-          top: 90%;
-          right: 0;
-          background: #fcf7da;
+          bottom: -6%;
+          left: 50%;
+          background: $textColor2;
           width: 0%;
-          height: 16px;
+          height: 10px;
           border-radius: 1px;
           transition: all 0.6s ease-in-out 0.1s;
         }
 
         &:hover::after {
-          width: 100%;
+          width: 50%;
         }
       }
     }
   }
 
-  button#arrowUp {
+  #arrowUp {
+    width: 200px;
     color: $textColor2;
     position: absolute;
     right: 6.25vw;
-    bottom: -20%;
-    font-size: 1.2vw;
+    bottom: 10%;
+    // font-size: 1.2vw;
     font-weight: 600;
     margin: 0;
     padding: 0;
@@ -843,23 +763,10 @@ body {
     border: none;
     font-family: $fontText;
     mix-blend-mode: difference;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -15%;
-      left: 0%;
-      background: $textColor2;
-      width: 100%;
-      height: 2px;
-      transform: scaleX(0);
-      transform-origin: 20%;
-      transition: all 0.5s ease-in-out;
-    }
-
-    &:hover::before {
-      transform: scaleX(1);
-    }
+    cursor: pointer;
+    fill: $textColor2;
+    animation: spin 8s linear infinite;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 
@@ -925,6 +832,27 @@ footer {
         }
       }
     }
+  }
+}
+
+@keyframes roundandround {
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin2 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
   }
 }
 
