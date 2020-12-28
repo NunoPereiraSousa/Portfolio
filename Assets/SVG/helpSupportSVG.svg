@@ -1,0 +1,47 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.5 138.26">
+    <defs>
+        <style>
+            .cls-1,
+            .cls-2 {
+                font-size: 16px;
+            }
+
+            .cls-1 {
+                font-family: Montserrat-Bold, Montserrat;
+                font-weight: 700;
+            }
+
+            .cls-2 {
+                font-family: Montserrat-Medium, Montserrat;
+                font-weight: 500;
+            }
+        </style>
+    </defs><text class="cls-1" transform="translate(12.01 41.72) rotate(-54.41)">H</text><text class="cls-1"
+        transform="matrix(0.73, -0.69, 0.69, 0.73, 18.97, 32.06)">e</text><text class="cls-1"
+        transform="translate(25.88 25.67) rotate(-36.45)">l</text><text class="cls-1"
+        transform="matrix(0.88, -0.48, 0.48, 0.88, 29.03, 23.04)">p</text><text class="cls-1"
+        transform="translate(38.14 18.19) rotate(-21.47)"> </text><text class="cls-1"
+        transform="matrix(0.97, -0.24, 0.24, 0.97, 41.57, 16.53)">&amp;</text><text class="cls-1"
+        transform="matrix(0.99, -0.1, 0.1, 0.99, 52.19, 14.13)"> </text><text class="cls-1"
+        transform="matrix(1, 0.02, -0.02, 1, 56.03, 13.51)">S</text><text class="cls-1"
+        transform="translate(65.29 13.54) rotate(10.94)">u</text><text class="cls-1"
+        transform="translate(75.11 15.34) rotate(21.47)">p</text><text class="cls-1"
+        transform="matrix(0.85, 0.53, -0.53, 0.85, 84.5, 18.93)">p</text><text class="cls-1"
+        transform="translate(93.08 24.23) rotate(42.22)">o</text><text class="cls-1"
+        transform="translate(100.2 30.79) rotate(50.43)">r</text><text class="cls-1"
+        transform="matrix(0.54, 0.84, -0.84, 0.54, 104.34, 35.75)">t</text><text class="cls-2"
+        transform="matrix(0.61, 0.8, -0.8, 0.61, 3.91, 102.94)">H</text><text class="cls-2"
+        transform="translate(12.62 113.97) rotate(41.93)">e</text><text class="cls-2"
+        transform="translate(20.52 120.8) rotate(35.18)">l</text><text class="cls-2"
+        transform="translate(24.69 123.94) rotate(27.86)">p</text><text class="cls-2"
+        transform="translate(35.07 129.14) rotate(20.6)"> </text><text class="cls-2"
+        transform="translate(39.74 131.07) rotate(13.27)">&amp;</text><text class="cls-2"
+        transform="translate(51.18 133.5) rotate(5.98)"> </text><text class="cls-2"
+        transform="matrix(1, -0.02, 0.02, 1, 56.13, 134.16)">S</text><text class="cls-2"
+        transform="translate(67.03 133.96) rotate(-10.53)">u</text><text class="cls-2"
+        transform="translate(78.69 131.7) rotate(-20.95)">p</text><text class="cls-2"
+        transform="translate(89.8 127.35) rotate(-31.35)">p</text><text class="cls-2"
+        transform="translate(99.9 121.05) rotate(-41.33)">o</text><text class="cls-2"
+        transform="translate(108 113.7) rotate(-49.23)">r</text><text class="cls-2"
+        transform="matrix(0.56, -0.83, 0.83, 0.56, 112.82, 108.04)">t</text>
+</svg>

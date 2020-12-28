@@ -1,0 +1,43 @@
+<svg id="backEndSVG" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.25 140.41">
+    <defs>
+        <style>
+            .cls-1,
+            .cls-2 {
+                font-size: 16px;
+            }
+
+            .cls-1 {
+                font-family: Montserrat-Bold, Montserrat;
+                font-weight: 700;
+            }
+
+            .cls-2 {
+                font-family: Montserrat-SemiBold, Montserrat;
+                font-weight: 600;
+            }
+        </style>
+    </defs><text class="cls-1" transform="translate(47.68 25.38) rotate(-32.45)">B</text><text class="cls-1"
+        transform="translate(57.15 19.37) rotate(-21.92)">a</text><text class="cls-1"
+        transform="translate(65.57 15.93) rotate(-12.55)">c</text><text class="cls-1"
+        transform="translate(73.83 13.97) rotate(-3.11)">k</text><text class="cls-1"
+        transform="matrix(1, 0.08, -0.08, 1, 83.25, 13.52)">-</text><text class="cls-1"
+        transform="matrix(0.98, 0.21, -0.21, 0.98, 88.83, 13.77)">e</text><text class="cls-1"
+        transform="translate(97.78 15.58) rotate(22.35)">n</text><text class="cls-1"
+        transform="matrix(0.84, 0.54, -0.54, 0.84, 107.21, 19.37)">d</text><text class="cls-2"
+        transform="translate(16.5 60) rotate(91.93)">B</text><text class="cls-2"
+        transform="translate(16.26 73.2) rotate(81.5)">a</text><text class="cls-2"
+        transform="translate(17.94 83.76) rotate(72.33)">c</text><text class="cls-2"
+        transform="matrix(0.45, 0.89, -0.89, 0.45, 21.05, 93.43)">k</text><text class="cls-2"
+        transform="matrix(0.56, 0.83, -0.83, 0.56, 25.91, 102.7)">-</text><text class="cls-2"
+        transform="matrix(0.67, 0.74, -0.74, 0.67, 29.85, 108.62)">e</text><text class="cls-2"
+        transform="translate(37.2 116.74) rotate(38.04)">n</text><text class="cls-2"
+        transform="translate(46.8 124.11) rotate(27.49)">d</text><text class="cls-2"
+        transform="matrix(0.88, -0.47, 0.47, 0.88, 107.79, 129.2)">B</text><text class="cls-2"
+        transform="translate(119.34 122.81) rotate(-38.5)">a</text><text class="cls-2"
+        transform="matrix(0.67, -0.74, 0.74, 0.67, 127.64, 116.08)">c</text><text class="cls-2"
+        transform="translate(134.46 108.54) rotate(-56.87)">k</text><text class="cls-2"
+        transform="translate(140.05 99.7) rotate(-64.12)">-</text><text class="cls-2"
+        transform="translate(143.22 93.33) rotate(-71.95)">e</text><text class="cls-2"
+        transform="translate(146.57 82.91) rotate(-81.96)">n</text><text class="cls-2"
+        transform="translate(148.16 70.91) rotate(-92.51)">d</text>
+</svg>

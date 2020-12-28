@@ -14,6 +14,10 @@
   box-shadow: $x $y $blur $color;
 }
 
+@mixin stopAnimation() {
+  animation: none;
+}
+
 $textColor1: #ffffff;
 $textColor2: #2c2c2c;
 $textShadowColor: #747171;
@@ -21,9 +25,9 @@ $textShadowColorSoft: #868686;
 $fontTitle: "Montserrat";
 $fontText: "Raleway";
 $feColor: #4a8aaf;
-$beColor: #808080;
+$beColor: #2c5530;
 $uiUxColor: #b44e81;
-$teachingColor: #beae4e;
+$teachingColor: #7363c2;
 $mobileDevColor: #4e9c6b;
 $storyColor: #c54f4e;
 
@@ -38,7 +42,15 @@ body {
   overflow-x: hidden;
 }
 
-.landingPage {
+.showcasePage {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
   display: none;
 }
 
@@ -100,13 +112,29 @@ body {
 
   h1 {
     margin: 0;
-    font-size: 6vw;
+    font-size: 4.6vw;
     font-weight: 600;
     letter-spacing: 10px;
     color: #fff;
     white-space: nowrap;
     width: fit-content;
     cursor: pointer;
+  }
+
+  svg#contactMeSvg {
+    position: absolute;
+    z-index: 999;
+    right: 10%;
+    bottom: 10%;
+    width: 180px;
+    cursor: pointer;
+    fill: #b2a3fc;
+    animation: spin 8s linear infinite;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      fill: #7363c2;
+    }
   }
 }
 
@@ -444,7 +472,7 @@ body {
     position: relative;
 
     h2.mainTitles {
-      margin: 20vw 0 0 10vw;
+      margin: 20vw 0 0 14vw;
       font-family: $fontTitle;
       color: $textColor2;
       font-size: calc(24px + 4.4vw);
@@ -548,8 +576,8 @@ body {
             }
 
             &:hover .fe_wrap {
-              opacity: 0.8;
-              background: $feColor;
+              opacity: 0.3;
+              // background: $feColor;
             }
 
             &:hover .fe {
@@ -557,52 +585,34 @@ body {
             }
 
             &:hover .be_wrap {
-              opacity: 0.8;
-              background: $beColor;
+              opacity: 0.3;
+              // background: $beColor;
             }
 
             &:hover .be {
               transform: scale(1.07);
             }
 
-            &:hover .fe a {
-              color: $feColor;
-              @include textShadowCategories(10px, -6px, 0, $textColor2);
-              transform: scale(1.02);
-            }
-
-            &:hover .be a {
-              color: $beColor;
-              @include textShadowCategories(10px, -6px, 0, $textColor2);
-              transform: scale(1.02);
-            }
-
-            &:hover .uiux a {
-              color: $uiUxColor;
-              @include textShadowCategories(10px, -6px, 0, $textColor2);
-              transform: scale(1.02);
-            }
-
-            &:hover .tt a {
-              color: $teachingColor;
-              @include textShadowCategories(10px, -6px, 0, $textColor2);
-              transform: scale(1.02);
-            }
-            &:hover .mdev a {
-              color: $mobileDevColor;
-              @include textShadowCategories(10px, -6px, 0, $textColor2);
-              transform: scale(1.02);
-            }
-
+            &:hover .fe a,
+            &:hover .be a,
+            &:hover .uiux a,
+            &:hover .tt a,
+            &:hover .mdev a,
             &:hover .st a {
-              color: $storyColor;
-              @include textShadowCategories(10px, -6px, 0, $textColor2);
-              transform: scale(1.02);
+              color: $textColor2;
+              @include textShadowCategories(
+                10px,
+                -6px,
+                6px,
+                $textShadowColorSoft
+              );
+              transform: scale(1.005);
+              font-weight: 400;
             }
 
             &:hover .uiux_wrap {
-              opacity: 0.8;
-              background: $uiUxColor;
+              opacity: 0.3;
+              // background: $uiUxColor;
             }
 
             &:hover .uiux {
@@ -610,8 +620,8 @@ body {
             }
 
             &:hover .tt_wrap {
-              opacity: 0.8;
-              background: $teachingColor;
+              opacity: 0.3;
+              // background: $teachingColor;
             }
 
             &:hover .tt {
@@ -619,8 +629,8 @@ body {
             }
 
             &:hover .mdev_wrap {
-              opacity: 0.8;
-              background: $mobileDevColor;
+              opacity: 0.3;
+              // background: $mobileDevColor;
             }
 
             &:hover .mdev {
@@ -628,9 +638,8 @@ body {
             }
 
             &:hover .st_wrap {
-              opacity: 0.8;
-
-              background: $storyColor;
+              opacity: 0.3;
+              // background: $storyColor;
             }
 
             &:hover .st {
@@ -780,9 +789,9 @@ body {
   position: relative;
   margin-bottom: 12vw;
   h2#longText {
-    padding: 5.6vw 0 0 10vw;
+    padding: 8.6vw 0 0 14vw;
     font-family: $fontTitle;
-    font-weight: 900;
+    font-weight: 700;
     color: $textColor2;
     text-transform: uppercase;
     line-height: 1.14;
@@ -954,6 +963,12 @@ footer {
   50%,
   100% {
     transform: translateX(25%) rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 
