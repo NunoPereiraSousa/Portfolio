@@ -17,10 +17,6 @@ body {
       touch-action: pan-y;
 }
 
-.showcasePage {
-  display: none;
-}
-
 .show {
   display: block;
 }
