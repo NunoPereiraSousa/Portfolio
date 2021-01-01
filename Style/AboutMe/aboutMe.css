@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  color: #ffffff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #121212;
+  overflow-x: hidden;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+.aboutMePage {
+  height: 100vh;
+}
+
+.aboutMePage .aboutMeFlexbox {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutMePage .aboutMeFlexbox .mainInfo h1 {
+  margin-bottom: 2vw;
+  font-size: calc(24px + 10vw);
+  color: #ffffff;
+  line-height: 150px;
+  position: relative;
+  text-shadow: -1px 16px 16px #4d4d4d;
+}
+
+.aboutMePage .aboutMeFlexbox .mainInfo p {
+  margin: 0;
+  color: #ffffff;
+  line-height: 2.5vw;
+  letter-spacing: -0.005em;
+  width: 28.5vw;
+  font-size: 1.375vw;
+}
+
+.aboutMePage .aboutMeFlexbox .socialsInfo a {
+  text-decoration: none;
+}
+
+.aboutMePage .aboutMeFlexbox .socialsInfo h2 {
+  font-family: "Univia Pro";
+  font-size: calc(24px + 6vw);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.aboutMePage .aboutMeFlexbox .socialsInfo h2#instagram:hover {
+  -webkit-text-stroke: 2px #e1306c;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  text-shadow: 3px -3px 2px #e1306c;
+}
+
+.aboutMePage .aboutMeFlexbox .socialsInfo h2#github:hover {
+  -webkit-text-stroke: 2px #e3e3e3;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  text-shadow: 3px -3px 2px #e3e3e3;
+}
+
+.aboutMePage .aboutMeFlexbox .socialsInfo h2#linkedin:hover {
+  -webkit-text-stroke: 2px #2867b2;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  text-shadow: 3px -3px 2px #2867b2;
+}
+/*# sourceMappingURL=aboutMe.css.map */

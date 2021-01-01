@@ -1,0 +1,122 @@
+@mixin textShadow($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textShadowCategories($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textStrokeCategories($stroke, $color) {
+  -webkit-text-stroke: $stroke $color;
+}
+
+@mixin boxShadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+$textColor1: #ffffff;
+$textColor2: rgba(255, 255, 255, 0.5);
+$purpleText: #b2a3fc;
+$textShadowColor: #3d3d3d;
+$textShadowColorSoft: #868686;
+$fontTitle: "Montserrat";
+$fontText: "Raleway";
+$feColor: #4a8aaf;
+$beColor: #808080;
+$uiUxColor: #b44e81;
+$teachingColor: #beae4e;
+$mobileDevColor: #4e9c6b;
+$storyColor: #c54f4e;
+
+body {
+  margin: 0;
+  font-family: $fontTitle;
+  color: $textColor1;
+  user-select: none;
+  background-color: #121212;
+  // background-image: linear-gradient(260deg, #cdd2e4, #cdd2e4, #ffe9b1);
+  // animation: gradient 60s ease infinite;
+  overflow-x: hidden;
+  touch-action: pan-y;
+}
+
+.aboutMePage {
+  height: 100vh;
+
+  .aboutMeFlexbox {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .mainInfo {
+      h1 {
+        margin-bottom: 2vw;
+        font-size: calc(24px + 10vw);
+        color: $textColor1;
+        line-height: 150px;
+        position: relative;
+        text-shadow: -1px 16px 16px #4d4d4d;
+      }
+
+      p {
+        margin: 0;
+        color: $textColor1;
+        line-height: 2.5vw;
+        letter-spacing: -0.005em;
+        width: 28.5vw;
+        font-size: 1.375vw;
+
+        span {
+        }
+      }
+    }
+
+    .socialsInfo {
+      a {
+        text-decoration: none;
+      }
+
+      h2 {
+        font-family: "Univia Pro";
+        font-size: calc(24px + 6vw);
+        // color: #fff;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px #fff;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -ms-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        // text-shadow: -1px 11px 10px #4d4d4d;
+      }
+
+      h2#instagram:hover {
+        -webkit-text-stroke: 2px #e1306c;
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        text-shadow: 3px -3px 2px #e1306c;
+        // text-shadow: 1px -1px 2px #bc1888, 2px -2px 2px #cc2366, 3px -3px 2px #dc2743, 4px -4px 2px #e6683c, 5px -5px 2px #f09433;
+      }
+
+      h2#github:hover {
+        -webkit-text-stroke: 2px #e3e3e3;
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        text-shadow: 3px -3px 2px #e3e3e3;
+      }
+
+      h2#linkedin:hover {
+        -webkit-text-stroke: 2px #2867b2;
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        text-shadow: 3px -3px 2px #2867b2;
+      }
+    }
+  }
+}

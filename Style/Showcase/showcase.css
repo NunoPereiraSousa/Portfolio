@@ -35,9 +35,9 @@ body {
   height: 100%;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 20vw;
-          column-gap: 20vw;
-  row-gap: 0;
+  -webkit-column-gap: 16vw;
+          column-gap: 16vw;
+  row-gap: 8em;
 }
 
 .showcasePage .grid .gridCell {
@@ -45,7 +45,7 @@ body {
 }
 
 .showcasePage .grid .gridCell:nth-child(odd) {
-  margin: 8vw 0 16vw 0;
+  margin: 10em 0 16em 0;
 }
 
 .showcasePage .grid .gridCell .imageContainer {
@@ -73,12 +73,9 @@ body {
   font-weight: 400;
 }
 
-.showcasePage .grid img {
-  width: 50%;
-}
-
 .showcasePage .contactSection {
   background-color: #1b1b1b;
+  margin-top: 8vw;
   padding: 8vw 0 4vw 16vw;
 }
 
@@ -99,7 +96,7 @@ body {
 }
 
 .showcasePage .contactSection .contactInfo {
-  margin-top: 8vw;
+  margin-top: 6vw;
 }
 
 .showcasePage .contactSection .contactInfo .contactGrid {
@@ -134,7 +131,7 @@ body {
 .showcasePage .contactSection .contactInfo .contactGrid .socials .socialsFlexbox a {
   text-decoration: none;
   margin: 0 2vw 0 0;
-  font-weight: 500;
+  font-weight: 400;
   color: #868686;
 }
 /*# sourceMappingURL=showcase.css.map */
