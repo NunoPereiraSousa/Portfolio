@@ -42,81 +42,126 @@ body {
 
 .aboutMePage {
   height: 100vh;
+  position: relative;
 
-  .aboutMeFlexbox {
+  .intro {
     height: 100%;
+    position: relative;
+  }
+
+  .quote {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-family: $fontText;
+      font-size: 3.9vw;
+      margin: 0;
+      color: $textColor1;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+
+      div {
+        text-align: left;
+      }
+    }
+  }
+
+  #hide_arrow {
+    // overflow: hidden;
+    // background: transparent;
+    position: absolute;
+    right: 6.25vw;
+    bottom: 3%;
+    font-size: 2vw;
+    margin: 0;
+
+    #arrowDown {
+      color: $textColor1;
+      transform: translateY(-100%);
+    }
+  }
+
+  .socialsInfo {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    .mainInfo {
-      h1 {
-        margin-bottom: 2vw;
-        font-size: calc(24px + 10vw);
-        color: $textColor1;
-        line-height: 150px;
-        position: relative;
-        text-shadow: -1px 16px 16px #4d4d4d;
-      }
+    padding: 4vw;
 
-      p {
-        margin: 0;
-        color: $textColor1;
-        line-height: 2.5vw;
-        letter-spacing: -0.005em;
-        width: 28.5vw;
-        font-size: 1.375vw;
+    a {
+      text-decoration: none;
 
-        span {
+      h2 {
+        font-size: calc(24px + 3vw);
+        margin: 1vw 0;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px $textColor1;
+        transition: all 0.5s ease-out;
+
+        &#instagram:hover {
+          -webkit-text-stroke: 2px #e1306c;
+          transform: scale(1.02);
+          text-shadow: 3px -3px 2px #e1306c;
+          // text-shadow: 1px -1px 2px #bc1888, 2px -2px 2px #cc2366, 3px -3px 2px #dc2743, 4px -4px 2px #e6683c, 5px -5px 2px #f09433;
+        }
+
+        &#github:hover {
+          -webkit-text-stroke: 2px #e3e3e3;
+          transform: scale(1.02);
+          text-shadow: 3px -3px 2px #e3e3e3;
+        }
+
+        &#linkedin:hover {
+          -webkit-text-stroke: 2px #2867b2;
+          transform: scale(1.02);
+          text-shadow: 3px -3px 2px #2867b2;
         }
       }
     }
+  }
 
-    .socialsInfo {
-      a {
-        text-decoration: none;
-      }
+  .accomplishmentsGrid {
+    padding: 10vw 4vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
 
-      h2 {
-        font-family: "Univia Pro";
-        font-size: calc(24px + 6vw);
-        // color: #fff;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 2px #fff;
-        -webkit-transition: all 0.5s ease-out;
-        -moz-transition: all 0.5s ease-out;
-        -ms-transition: all 0.5s ease-out;
-        -o-transition: all 0.5s ease-out;
-        transition: all 0.5s ease-out;
-        // text-shadow: -1px 11px 10px #4d4d4d;
-      }
+    .awards:nth-child(odd) {
+      margin: 8em 0 2em 0;
+    }
 
-      h2#instagram:hover {
-        -webkit-text-stroke: 2px #e1306c;
-        -webkit-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -o-transform: scale(1.02);
-        text-shadow: 3px -3px 2px #e1306c;
-        // text-shadow: 1px -1px 2px #bc1888, 2px -2px 2px #cc2366, 3px -3px 2px #dc2743, 4px -4px 2px #e6683c, 5px -5px 2px #f09433;
-      }
+    .desc {
+      font-family: $fontTitle;
+      margin: 2vw 0 1.5vw 0;
+      font-size: 0.8em;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
 
-      h2#github:hover {
-        -webkit-text-stroke: 2px #e3e3e3;
-        -webkit-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -o-transform: scale(1.02);
-        text-shadow: 3px -3px 2px #e3e3e3;
-      }
+    .title_achievement {
+      margin: 0;
+      font-size: calc(16px + 0.35vw);
+      line-height: 1.7em;
+      font-family: $fontText;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
 
-      h2#linkedin:hover {
-        -webkit-text-stroke: 2px #2867b2;
-        -webkit-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -o-transform: scale(1.02);
-        text-shadow: 3px -3px 2px #2867b2;
-      }
+    h3 {
+      font-family: $fontTitle;
+      font-weight: 500;
+      font-size: calc(16px + 0.25vw);
+    }
+
+    .image1 {
+      background-image: url("/Assets/Images/swimming.jpg");
+      background-size: cover;
+      background-position: 40% 100%;
+      height: 75vh;
+      width: 28vw;
     }
   }
 }

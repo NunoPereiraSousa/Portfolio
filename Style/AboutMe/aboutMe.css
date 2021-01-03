@@ -14,75 +14,140 @@ body {
 
 .aboutMePage {
   height: 100vh;
+  position: relative;
 }
 
-.aboutMePage .aboutMeFlexbox {
+.aboutMePage .intro {
   height: 100%;
+  position: relative;
+}
+
+.aboutMePage .quote {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.aboutMePage .aboutMeFlexbox .mainInfo h1 {
-  margin-bottom: 2vw;
-  font-size: calc(24px + 10vw);
-  color: #ffffff;
-  line-height: 150px;
-  position: relative;
-  text-shadow: -1px 16px 16px #4d4d4d;
-}
-
-.aboutMePage .aboutMeFlexbox .mainInfo p {
+.aboutMePage .quote h1 {
+  font-family: "Raleway";
+  font-size: 3.9vw;
   margin: 0;
   color: #ffffff;
-  line-height: 2.5vw;
-  letter-spacing: -0.005em;
-  width: 28.5vw;
-  font-size: 1.375vw;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 
-.aboutMePage .aboutMeFlexbox .socialsInfo a {
+.aboutMePage .quote h1 div {
+  text-align: left;
+}
+
+.aboutMePage #hide_arrow {
+  position: absolute;
+  right: 6.25vw;
+  bottom: 3%;
+  font-size: 2vw;
+  margin: 0;
+}
+
+.aboutMePage #hide_arrow #arrowDown {
+  color: #ffffff;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.aboutMePage .socialsInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 4vw;
+}
+
+.aboutMePage .socialsInfo a {
   text-decoration: none;
 }
 
-.aboutMePage .aboutMeFlexbox .socialsInfo h2 {
-  font-family: "Univia Pro";
-  font-size: calc(24px + 6vw);
+.aboutMePage .socialsInfo a h2 {
+  font-size: calc(24px + 3vw);
+  margin: 1vw 0;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 2px #ffffff;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
-.aboutMePage .aboutMeFlexbox .socialsInfo h2#instagram:hover {
+.aboutMePage .socialsInfo a h2#instagram:hover {
   -webkit-text-stroke: 2px #e1306c;
   -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
+          transform: scale(1.02);
   text-shadow: 3px -3px 2px #e1306c;
 }
 
-.aboutMePage .aboutMeFlexbox .socialsInfo h2#github:hover {
+.aboutMePage .socialsInfo a h2#github:hover {
   -webkit-text-stroke: 2px #e3e3e3;
   -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
+          transform: scale(1.02);
   text-shadow: 3px -3px 2px #e3e3e3;
 }
 
-.aboutMePage .aboutMeFlexbox .socialsInfo h2#linkedin:hover {
+.aboutMePage .socialsInfo a h2#linkedin:hover {
   -webkit-text-stroke: 2px #2867b2;
   -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
+          transform: scale(1.02);
   text-shadow: 3px -3px 2px #2867b2;
+}
+
+.aboutMePage .accomplishmentsGrid {
+  padding: 10vw 4vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.aboutMePage .accomplishmentsGrid .awards:nth-child(odd) {
+  margin: 8em 0 2em 0;
+}
+
+.aboutMePage .accomplishmentsGrid .desc {
+  font-family: "Montserrat";
+  margin: 2vw 0 1.5vw 0;
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.aboutMePage .accomplishmentsGrid .title_achievement {
+  margin: 0;
+  font-size: calc(16px + 0.35vw);
+  line-height: 1.7em;
+  font-family: "Raleway";
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.aboutMePage .accomplishmentsGrid h3 {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: calc(16px + 0.25vw);
+}
+
+.aboutMePage .accomplishmentsGrid .image1 {
+  background-image: url("/Assets/Images/swimming.jpg");
+  background-size: cover;
+  background-position: 40% 100%;
+  height: 75vh;
+  width: 28vw;
 }
 /*# sourceMappingURL=aboutMe.css.map */

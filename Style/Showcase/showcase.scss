@@ -65,7 +65,7 @@ body {
     row-gap: 8em;
 
     .gridCell {
-      height: 50vh;
+      height: 60vh;
 
       &:nth-child(odd) {
         margin: 10em 0 16em 0;
@@ -107,8 +107,8 @@ body {
       margin: 0;
       font-family: $fontTitle;
       color: $textColor1;
-      font-weight: 600;
-      letter-spacing: 2px;
+      font-weight: 500;
+      letter-spacing: 1px;
       // @include textShadow(-1px, 11px, 10px, $textShadowColorSoft);
       // text-transform: uppercase;
       line-height: 1.4em;
@@ -127,7 +127,7 @@ body {
 
         h3 {
           font-weight: 500;
-          font-size: 1.35em;
+          font-size: calc(16 + 1vw);
         }
 
         p {
@@ -153,208 +153,4 @@ body {
       }
     }
   }
-
-  // .introPage {
-  //   height: 100vh;
-  //   position: relative;
-
-  //   h1,
-  //   h4 {
-  //     margin: 0;
-  //     width: fit-content;
-  //     padding: 8.6vw 0 4.6vw 16vw;
-  //     letter-spacing: 0.15vw;
-  //     color: $textColor2;
-  //     @include textShadow(-1px, 11px, 10px, $textShadowColor);
-  //     font-size: calc(24px + 2.4vw);
-
-  //     &:hover .stroke {
-  //       color: $purpleText;
-  //     }
-  //   }
-
-  //   .stroke {
-  //     color: transparent;
-  //     @include textShadow(-1px, 11px, 10px, $textShadowColor);
-  //     transition: all 0.1s ease;
-  //   }
-
-  //   h4 {
-  //     padding: 4.6vw 0 1vw 20vw;
-  //     font-size: calc(24px + 1.4vw);
-  //   }
-
-  //   .secondText {
-  //     padding: 0 0 0 24vw;
-  //   }
-
-  //   .emoji {
-  //     font-size: calc(24px + 1.4vw);
-  //   }
-
-  //   #hide_arrow {
-  //     // overflow: hidden;
-  //     // background: transparent;
-  //     position: absolute;
-  //     right: 6.25vw;
-  //     bottom: 0;
-  //     font-size: 2vw;
-  //     @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
-
-  //     #arrowDown {
-  //       color: $textColor2;
-  //       transform: translateY(-100%);
-  //     }
-  //   }
-  // }
-
-  // .secondPage {
-  //   h1.title {
-  //     margin: 0 0 0 16vw;
-  //     font-family: $fontTitle;
-  //     color: $textColor1;
-  //     font-weight: 300;
-  //     @include textShadow(-1px, 11px, 10px, $textShadowColor);
-  //     text-transform: uppercase;
-  //     font-size: calc(24px + 4.4vw);
-  //     width: fit-content;
-  //     transition: all 1s ease-in-out;
-  //     mix-blend-mode: difference;
-  //   }
-  // }
-
-  // .filters {
-  //   padding: 5.6vw 16vw 0 16vw;
-  //   display: flex;
-  //   justify-content: space-between;
-
-  //   .filtersBtn {
-  //     background-color: transparent;
-  //     font-size: 1.25rem;
-  //     border: none;
-  //     color: $textColor1;
-  //     padding: 1vw 1vw;
-  //     border-radius: 60px;
-  //     transition: all 0.35s ease-in-out;
-  //     cursor: pointer;
-  //     opacity: 0.65;
-  //     transform: scale(0.95);
-  //     @include textShadow(-1px, 5px, 8px, $textShadowColor);
-
-  //     &.filterBtnEnabled,
-  //     &:hover {
-  //       color: $textColor1;
-  //       opacity: 1;
-  //       transform: scale(1);
-  //     }
-  //   }
-  // }
-
-  // .categories {
-  //   padding: 2.5vw 16vw 0 16vw;
-
-  //   ul {
-  //     display: inline-block;
-  //     padding: 25px 0 20px 0;
-  //     list-style-type: none;
-  //     width: 75%;
-
-  //     li {
-  //       border-bottom: 2px solid $textShadowColorSoft;
-  //       padding: 1.25vw 0;
-  //       transition: all 0.5s ease-in-out;
-
-  //       &:first-child {
-  //         padding-top: 0;
-  //       }
-
-  //       &:not(.categoryEnabled) {
-  //         opacity: 0.6;
-  //         border-bottom: 1.5px solid $textShadowColorSoft;
-  //       }
-  //       .categoryBtn {
-  //         display: flex;
-  //         justify-content: space-between;
-  //         align-items: center;
-  //         color: $textColor2;
-  //         font-weight: 500;
-  //         font-family: $fontTitle;
-  //         color: $textColor1;
-
-  //         .number {
-  //           margin-right: 4vw;
-  //           font-size: 1.25rem;
-  //         }
-
-  //         .project {
-  //           font-size: 1.6rem;
-  //         }
-
-  //         .category {
-  //           font-size: 1rem;
-  //           font-style: oblique 10deg;
-  //         }
-
-  //         .arrowIcon {
-  //           i {
-  //             font-size: 1.15rem;
-
-  //             &.rotateActivated {
-  //               transform: rotate(180deg);
-  //             }
-  //           }
-  //         }
-  //       }
-
-  //       .content {
-  //         max-height: 0;
-  //         overflow: hidden;
-
-  //         &.opened {
-  //           max-height: 100%;
-  //         }
-
-  //         p.categoryDescription {
-  //           margin-top: 1vw;
-  //           width: 80%;
-  //           line-height: 2rem;
-  //           font-family: $fontText;
-  //           font-weight: 400;
-  //           font-size: 1.1rem;
-  //         }
-
-  //         .btnGroup {
-  //           display: flex;
-  //           justify-content: space-between;
-  //           width: 100%;
-  //           margin-bottom: 1vw;
-  //         }
-
-  //         button.linksBtn {
-  //           background-color: transparent;
-  //           font-size: 1.2rem;
-  //           border: none;
-  //           transition: all 0.35s ease-in-out;
-  //           color: $textColor1;
-  //           letter-spacing: 0.1rem;
-  //           cursor: pointer;
-
-  //           &:first-of-type {
-  //             margin: 1vw 3vw 0 0;
-  //           }
-
-  //           .btnIcons i {
-  //             margin-right: 1vw;
-  //             font-size: 1.2rem;
-  //             color: $textColor1;
-  //           }
-
-  //           &:hover {
-  //             letter-spacing: 0.15rem;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }

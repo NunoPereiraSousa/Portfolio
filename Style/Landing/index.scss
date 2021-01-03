@@ -23,9 +23,10 @@
 }
 
 $textColor1: #ffffff;
-$textColor2: #2c2c2c;
+// $textColor1: #2c2c2c;
+$secondaryColor: #b2a3fc;
 $textShadowColor: #747171;
-$textShadowColorSoft: #868686;
+$textShadowColorSoft: #444;
 $fontTitle: "Montserrat";
 $fontText: "Raleway";
 $feColor: #4a8aaf;
@@ -40,7 +41,7 @@ body {
   font-family: $fontTitle;
   color: #121212;
   user-select: none;
-  background-color: #d6d6d6;
+  background-color: #121212;
   // background-image: linear-gradient(260deg, #cdd2e4, #cdd2e4, #ffe9b1);
   // animation: gradient 60s ease infinite;
   overflow-x: hidden;
@@ -98,7 +99,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
   right: 0;
@@ -133,7 +134,7 @@ body {
     bottom: 10%;
     width: 180px;
     cursor: pointer;
-    fill: #b2a3fc;
+    fill: $secondaryColor;
     animation: spin 8s linear infinite;
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -206,10 +207,10 @@ body {
   }
 
   .introText {
-    padding: 5.6vw 0 0 16vw;
+    padding: 7.4vw 0 0 16vw;
     letter-spacing: 0.15vw;
-    color: $textColor2;
-    @include textShadow(-1px, 11px, 10px, $textShadowColor);
+    color: $textColor1;
+    // @include textShadow(-6px, 11px, 10px, #555);
 
     #fall {
       display: inline-block;
@@ -219,7 +220,7 @@ body {
 
     span.strokeWord {
       color: transparent;
-      @include textStrokeCategories(2.5px, $textColor2);
+      @include textStrokeCategories(2.5px, $textColor1);
       @include textShadow(0, 0, 0, transparent);
     }
 
@@ -238,7 +239,7 @@ body {
       width: fit-content;
       // padding: 0 0 6vw 0;
       // text-transform: uppercase;
-      font-weight: 800;
+      font-weight: 600;
       margin: 0;
 
       // #text_name,
@@ -259,7 +260,7 @@ body {
     @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
 
     #arrowDown {
-      color: $textColor2;
+      color: $textColor1;
       transform: translateY(-100%);
     }
   }
@@ -281,8 +282,8 @@ body {
       }
 
       .path {
-        stroke-width: 3px;
-        stroke: rgba(0, 0, 0, 0.5);
+        stroke-width: 2.35px;
+        stroke: rgba(255, 255, 255, 0.5);
         stroke-dasharray: 1060;
         // stroke-dashoffset: 1030;
         stroke-dashoffset: 0;
@@ -293,6 +294,7 @@ body {
       &:hover .path {
         stroke-dashoffset: 0;
         opacity: 1;
+        stroke: rgba(255, 255, 255, 1);
       }
 
       &:hover .center_text {
@@ -314,8 +316,9 @@ body {
         transform: translate(-50%, -50%);
         left: 50%;
         top: 50%;
-        color: $textColor2;
+        color: $textColor1;
         opacity: 0.3;
+        font-family: $fontText;
         font-size: 1.25vw;
         line-height: 1.5vw;
         letter-spacing: 0.25vw;
@@ -325,7 +328,7 @@ body {
         transition: all 0.4s ease-in-out;
 
         &:hover {
-          @include textShadow(-1px, 4px, 4px, $textShadowColor);
+          @include textShadow(-1px, 4px, 4px, $textShadowColorSoft);
         }
 
         .hide_categories {
@@ -351,7 +354,7 @@ body {
 
         .day {
           -webkit-text-fill-color: transparent;
-          -webkit-text-stroke: 2px #000;
+          -webkit-text-stroke: 2px $textColor1;
           font-weight: 800;
           // text-shadow: -1px 5px 5px #525252;
           background-size: 0 100%;
@@ -388,7 +391,7 @@ body {
           // line-height: 1.8vw;
           // opacity: 0;
           letter-spacing: 0.25vw;
-          color: $textColor2;
+          color: $textColor1;
         }
       }
 
@@ -424,9 +427,9 @@ body {
       margin-left: 10vw;
       text-align: left;
       position: relative;
-      opacity: 0.5;
+      opacity: 1;
       transform: translateY(30%);
-      color: $textColor2;
+      color: $textColor1;
       transition: all 1s ease-in-out;
 
       h6 {
@@ -438,7 +441,7 @@ body {
         top: 50%;
         left: -4vw;
         font-size: 1.4vw;
-        color: $textColor2;
+        color: $textColor1;
         text-decoration: none;
         font-weight: 800;
         text-transform: uppercase;
@@ -449,8 +452,8 @@ body {
           // -webkit-text-stroke: 1px #eea47fff;
           // -moz-background-clip: text;
           // -moz-text-fill-color: transparent;
-          @include textShadow(-2px, 3px, 3px, $textShadowColor);
-          color: #e89931;
+          @include textShadow(-2px, 3px, 3px, $textShadowColorSoft);
+          color: $secondaryColor;
         }
       }
 
@@ -479,14 +482,14 @@ body {
     h2.mainTitles {
       margin: 20vw 0 0 14vw;
       font-family: $fontTitle;
-      color: $textColor2;
-      font-size: calc(24px + 4.4vw);
+      color: $textColor1;
+      font-size: calc(16px + 4.4vw);
       width: fit-content;
       transition: all 1s ease-in-out;
       height: fit-content;
       text-transform: uppercase;
       font-weight: 300;
-      @include textShadow(-1px, 11px, 10px, $textShadowColor);
+      // @include textShadow(-1px, 11px, 10px, $textShadowColor);
       mix-blend-mode: difference;
       // text-shadow: -1px 10px 16px #4d4d4d;
 
@@ -494,7 +497,7 @@ body {
         color: transparent;
         @include textShadow(-20px, 20px, 10px, rgba(238, 164, 127, 0.6));
         text-shadow: inset 2px 16px #eea47fff;
-        @include textStrokeCategories(2.5px, $textColor2);
+        @include textStrokeCategories(2.5px, $textColor1);
       }
     }
 
@@ -504,13 +507,13 @@ body {
       .slide-track {
         animation: categoriesCarousel 14s linear infinite;
         display: flex;
-        width: calc(43.3vw * 12);
+        width: calc(36.3vw * 12);
 
         .slide {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 43.3vw;
+          width: 36.3vw;
           padding: 0;
           position: relative;
 
@@ -539,7 +542,7 @@ body {
           &:hover .tt a,
           &:hover .mdev a,
           &:hover .st a {
-            color: $textColor2;
+            color: $textColor1;
             @include textShadowCategories(
               10px,
               -6px,
@@ -577,27 +580,27 @@ body {
   h2.mainTitles {
     margin: 18vw 0 0 14vw;
     font-family: $fontTitle;
-    color: $textColor2;
+    color: $textColor1;
     font-weight: 300;
-    @include textShadow(-1px, 11px, 10px, $textShadowColor);
+    // @include textShadow(-1px, 11px, 10px, $textShadowColor);
     text-transform: uppercase;
-    font-size: calc(24px + 4.4vw);
+    font-size: calc(16px + 4.4vw);
     width: fit-content;
     transition: all 1s ease-in-out;
     mix-blend-mode: difference;
   }
 
   .carouselLine {
-    border: 0.75px solid $textColor2;
+    border: 0.75px solid $textColor1;
   }
 
   hr {
     margin: 2vw 0;
-    background-color: $textColor2;
+    background-color: $textColor1;
   }
 
   .slider2 {
-    padding: 10vw 0 3vw 0;
+    padding: 10vw 0 1.5vw 0;
 
     .slide-track2 {
       animation: carrousel 20s linear infinite;
@@ -634,7 +637,7 @@ body {
         // }
 
         &:hover h3 {
-          color: $textColor2;
+          color: $textColor1;
         }
 
         h3 {
@@ -645,7 +648,7 @@ body {
           display: block;
           color: transparent;
           @include textShadow(-1px, 11px, 10px, $textShadowColor);
-          font-size: calc(20px + 3vw);
+          font-size: calc(20px + 2vw);
           text-align: center;
           font-weight: 400;
           transition: all 0.3s ease-in-out;
@@ -655,12 +658,13 @@ body {
   }
 
   #line {
-    stroke: $textColor2;
-    stroke-width: 4px;
+    margin: 0;
+    stroke: $textColor1;
+    stroke-width: 2px;
   }
 
   .slider3 {
-    padding: 3vw 0 4vw 0;
+    padding: 1.5vw 0 4vw 0;
 
     #reverse {
       animation: carrouselReverse 20s linear infinite;
@@ -676,7 +680,7 @@ body {
         width: 30vw;
 
         &:hover h3 {
-          color: $textColor2;
+          color: $textColor1;
         }
 
         h3 {
@@ -685,7 +689,7 @@ body {
           height: 100%;
           font-family: $fontText;
           display: block;
-          font-size: calc(20px + 3vw);
+          font-size: calc(20px + 2vw);
           text-align: center;
           font-weight: 400;
           letter-spacing: -0.005em;
@@ -707,7 +711,7 @@ body {
     padding: 8.6vw 0 0 14vw;
     font-family: $fontTitle;
     font-weight: 700;
-    color: $textColor2;
+    color: $textColor1;
     text-transform: uppercase;
     line-height: 1.14;
     font-size: 4.5vw;
@@ -717,13 +721,13 @@ body {
 
     span.strokeWord {
       color: transparent;
-      @include textStrokeCategories(2.5px, $textColor2);
+      @include textStrokeCategories(2.5px, $textColor1);
     }
 
     #talk {
       #talk_btn {
         text-decoration: none;
-        color: $textColor2;
+        color: $textColor1;
         position: relative;
 
         &::after {
@@ -731,7 +735,7 @@ body {
           position: absolute;
           bottom: -6%;
           left: 50%;
-          background: $textColor2;
+          background: $textColor1;
           width: 0%;
           height: 10px;
           border-radius: 1px;
@@ -747,7 +751,7 @@ body {
 
   #arrowUp {
     width: 200px;
-    color: $textColor2;
+    color: $textColor1;
     position: absolute;
     right: 6.25vw;
     bottom: 10%;
@@ -760,7 +764,7 @@ body {
     font-family: $fontText;
     mix-blend-mode: difference;
     cursor: pointer;
-    fill: $textColor2;
+    fill: $textColor1;
     animation: spin 8s linear infinite;
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -771,7 +775,7 @@ footer {
   width: 100vw;
   height: 100%;
   margin: 0;
-  box-shadow: 0 1px 6px $textColor2;
+  box-shadow: 0 1px 6px $textColor1;
   font-family: $fontText;
 
   .container {
@@ -783,7 +787,7 @@ footer {
       text-decoration: none;
 
       i {
-        color: $textColor2;
+        color: $textColor1;
         padding: 0 2vw 0 2vw;
         font-size: 1.5vw;
         transition: all 0.2s ease-in-out;
@@ -818,13 +822,13 @@ footer {
 
       p {
         font-size: 18px;
-        color: $textColor2;
+        color: $textColor1;
         letter-spacing: 1px;
         font-weight: 600;
         mix-blend-mode: difference;
 
         span {
-          color: $textColor2;
+          color: $textColor1;
         }
       }
     }
@@ -914,7 +918,7 @@ footer {
   }
 
   100% {
-    transform: translateX(calc(-43.3vw * 6));
+    transform: translateX(calc(-36.3vw * 6));
   }
 }
 

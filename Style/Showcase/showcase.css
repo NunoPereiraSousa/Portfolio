@@ -41,7 +41,7 @@ body {
 }
 
 .showcasePage .grid .gridCell {
-  height: 50vh;
+  height: 60vh;
 }
 
 .showcasePage .grid .gridCell:nth-child(odd) {
@@ -83,8 +83,8 @@ body {
   margin: 0;
   font-family: "Montserrat";
   color: #ffffff;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 500;
+  letter-spacing: 1px;
   line-height: 1.4em;
   font-size: 2em;
   width: -webkit-fit-content;
@@ -109,7 +109,7 @@ body {
 
 .showcasePage .contactSection .contactInfo .contactGrid h3 {
   font-weight: 500;
-  font-size: 1.35em;
+  font-size: calc(16 + 1vw);
 }
 
 .showcasePage .contactSection .contactInfo .contactGrid p {

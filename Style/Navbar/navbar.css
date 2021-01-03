@@ -1,7 +1,11 @@
 .header {
   position: fixed;
   left: 0%;
+  z-index: 9;
   height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,8 +19,9 @@
 }
 
 .header #logo {
-  padding: calc(5%) 0 0 2vw;
+  padding: 2vw 0 0 2.2vw;
   font-size: 1.8em;
+  font-weight: 200;
 }
 
 .header a {
@@ -27,11 +32,11 @@
   display: inline-block;
   padding: 2vw 0;
   margin-right: 2rem;
-  color: #2c2c2c;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
-  text-shadow: -1px 3px 3px #868686;
+  text-shadow: -1px 3px 3px #444;
   -webkit-transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
   transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
 }
@@ -42,16 +47,19 @@
 }
 
 .header a:not(.selected) {
-  text-shadow: -1px 1px 1px #868686;
+  text-shadow: -1px 1px 1px #444;
   opacity: 0.2;
+  color: #ffffff;
 }
 
 .header a:not(.selected):hover {
   opacity: 1;
-  text-shadow: -1px 3px 3px #868686;
+  text-shadow: -1px 3px 3px #444;
 }
 
 .header nav {
+  width: 2vw;
+  white-space: nowrap;
   -webkit-transform: rotate(-90deg) translateY(50%);
           transform: rotate(-90deg) translateY(50%);
   -webkit-transform-origin: left center;
@@ -60,8 +68,9 @@
 
 .buttonHeader {
   position: absolute;
-  top: 3%;
+  top: 5%;
   right: 2%;
+  z-index: 11;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +100,7 @@
 .buttonHeader button#heartBtn .power,
 .buttonHeader button#powerBtn .heart,
 .buttonHeader button#powerBtn .power {
-  fill: #2c2c2c;
+  fill: #ffffff;
   -webkit-transform: scale(2);
           transform: scale(2);
   -webkit-transform-origin: left;

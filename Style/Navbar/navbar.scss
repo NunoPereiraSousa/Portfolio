@@ -1,7 +1,5 @@
 $textColor1: #ffffff;
-$textColor2: #2c2c2c;
-$textShadowColor: #747171;
-$textShadowColorSoft: #868686;
+$textShadowColorSoftSoft: #444;
 
 @mixin textShadow($x, $y, $blue, $color) {
   text-shadow: $x $y $blue $color;
@@ -10,14 +8,17 @@ $textShadowColorSoft: #868686;
 .header {
   position: fixed;
   left: 0%;
+  z-index: 9;
   height: 100%;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   #logo {
-    padding: calc(5%) 0 0 2vw;
+    padding: 2vw 0 0 2.2vw;
     font-size: 1.8em;
+    font-weight: 200;
     // margin-bottom: auto;
   }
 
@@ -27,11 +28,11 @@ $textShadowColorSoft: #868686;
     display: inline-block;
     padding: 2vw 0;
     margin-right: 2rem;
-    color: $textColor2;
-    font-weight: 700;
+    color: $textColor1;
+    font-weight: 500;
     text-align: center;
     text-decoration: none;
-    @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+    @include textShadow(-1px, 3px, 3px, $textShadowColorSoftSoft);
     transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
 
     &:hover {
@@ -39,17 +40,20 @@ $textShadowColorSoft: #868686;
     }
 
     &:not(.selected) {
-      @include textShadow(-1px, 1px, 1px, $textShadowColorSoft);
+      @include textShadow(-1px, 1px, 1px, $textShadowColorSoftSoft);
       opacity: 0.2;
+      color: $textColor1;
 
       &:hover {
         opacity: 1;
-        @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+        @include textShadow(-1px, 3px, 3px, $textShadowColorSoftSoft);
       }
     }
   }
 
   nav {
+    width: 2vw;
+    white-space: nowrap;
     transform: rotate(-90deg) translateY(50%);
     transform-origin: left center;
   }
@@ -57,8 +61,9 @@ $textShadowColorSoft: #868686;
 
 .buttonHeader {
   position: absolute;
-  top: 3%;
+  top: 5%;
   right: 2%;
+  z-index: 11;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -79,7 +84,7 @@ $textShadowColorSoft: #868686;
 
     .heart,
     .power {
-      fill: $textColor2;
+      fill: $textColor1;
       transform: scale(2);
       transform-origin: left;
     }
