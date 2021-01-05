@@ -1,0 +1,37 @@
+.cursor {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transition-property: background, width, height;
+  transition-property: background, width, height;
+}
+
+.logo {
+  height: 3em;
+  width: 3em;
+  background: #b2a3fc;
+}
+
+.introTextCursor,
+.bigTextCursor {
+  height: 7em;
+  width: 7em;
+  background: #ffffff;
+}
+
+.powerBtnCursor {
+  height: 3em;
+  width: 3em;
+  background: #ffffff;
+}
+
+.contactBtnCursor {
+  height: 6em;
+  width: 6em;
+  background: #ffffff;
+}
+/*# sourceMappingURL=mousecursor.css.map */

@@ -9,13 +9,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="/Style/Landing/index.css" />
-    <link rel="stylesheet" href="/Style/Navbar/navbar.css" />
-    <link rel="stylesheet" href="/Style/Showcase/showcase.css" />
-    <link rel="stylesheet" href="/Style/AboutMe/aboutMe.css" />
+    <link rel="stylesheet" href="/css/aboutMe.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/showcase.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/mousecursor.css">
   </head>
 
   <body>
+    <dic class="cursor"></dic>
     <!-- <div class="glass">
       <h1>Stay Hard</h1>
       <div class="behindBackground"></div>
@@ -80,7 +82,7 @@
         </svg>
       </button>
     </div>
-    <div class="landingPage hide">
+    <div class="landingPage">
       <div class="loading">
         <!-- <h1 class="middleText">Click</h1> -->
         <div class="notification"></div>
@@ -418,12 +420,10 @@
             <div>down to</div>
             <div><span class="strokeWord">impact</span> the</div>
             <div>world? 🪐</div>
-          </div>
-          <div id="talk">
-            <a id="talk_btn" href="">Let's <span class="strokeWord">talk.</span></a>
+            <div><a id="talk_btn" class="bigText">Let's <span class="strokeWord">talk.</span></a></div>
           </div>
         </h2>
-        <svg id="arrowUp" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.64 146.8">
+        <svg id="rotatingContact" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.64 146.8">
           <defs>
             <style>
               .cls-1 {
@@ -648,7 +648,7 @@
         </ul>
       </div> -->
     </div>
-    <div class="aboutMePage">
+    <div class="aboutMePage hide">
       <div class="intro">
         <div class="quote">
           <h1>
@@ -865,6 +865,7 @@
     <script src="/JS/words.js"></script>
     <script src="/JS/onOff.js"></script>
     <script src="/JS/currentDate.js"></script>
+    <script src="/JS/mousecursor.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </body>
 </html>

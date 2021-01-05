@@ -57,6 +57,7 @@ body {
 
 .showcasePage .grid .gridCell .projectName {
   font-family: "Montserrat";
+  color: #ffffff;
   margin: 2vw 0 1.5vw 0;
   font-size: 0.8em;
   font-weight: 400;
@@ -67,6 +68,7 @@ body {
 .showcasePage .grid .gridCell .projectDesc {
   margin: 0;
   font-size: calc(16px + 0.35vw);
+  color: #ffffff;
   line-height: 1.7em;
   font-family: "Raleway";
   letter-spacing: 1px;
@@ -110,13 +112,14 @@ body {
 .showcasePage .contactSection .contactInfo .contactGrid h3 {
   font-weight: 500;
   font-size: calc(16 + 1vw);
+  color: #ffffff;
 }
 
 .showcasePage .contactSection .contactInfo .contactGrid p {
   font-weight: 400;
   font-family: "Montserrat";
   letter-spacing: 1.5px;
-  color: #868686;
+  color: #444;
 }
 
 .showcasePage .contactSection .contactInfo .contactGrid .socials .socialsFlexbox {
@@ -132,6 +135,6 @@ body {
   text-decoration: none;
   margin: 0 2vw 0 0;
   font-weight: 400;
-  color: #868686;
+  color: #444;
 }
 /*# sourceMappingURL=showcase.css.map */

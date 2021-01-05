@@ -10,9 +10,9 @@ $("#powerBtn").click(() => {
     : $(".power").toggleClass("powerChange");
 });
 
-// document.querySelector(".closeWebsite").addEventListener("click", () => {
-//   window.close();
-// });
+document.querySelector(".closeWebsite").addEventListener("click", () => {
+  window.close();
+});
 
 // document.querySelector("#hide_arrow").addEventListener("click", () => {
 //   $(".landingPage").toggleClass("hide");

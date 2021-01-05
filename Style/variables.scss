@@ -1,0 +1,33 @@
+@mixin textShadow($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textShadowCategories($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin textStrokeCategories($stroke, $color) {
+  -webkit-text-stroke: $stroke $color;
+}
+
+@mixin boxShadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin stopAnimation() {
+  animation: none;
+}
+
+$textColor1: #ffffff;
+$secondaryColor: #b2a3fc;
+$textShadowColor: #747171;
+$textShadowColorSoft: #444;
+$darkColor: #121212;
+$fontTitle: "Montserrat";
+$fontText: "Raleway";
+$feColor: #4a8aaf;
+$beColor: #2c5530;
+$uiUxColor: #b44e81;
+$teachingColor: #7363c2;
+$mobileDevColor: #4e9c6b;
+$storyColor: #c54f4e;

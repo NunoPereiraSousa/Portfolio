@@ -1,40 +1,8 @@
+@import "variables.scss";
+
 * {
   box-sizing: border-box;
 }
-
-@mixin textShadow($x, $y, $blur, $color) {
-  text-shadow: $x $y $blur $color;
-}
-
-@mixin textShadowCategories($x, $y, $blur, $color) {
-  text-shadow: $x $y $blur $color;
-}
-
-@mixin textStrokeCategories($stroke, $color) {
-  -webkit-text-stroke: $stroke $color;
-}
-
-@mixin boxShadow($x, $y, $blur, $color) {
-  box-shadow: $x $y $blur $color;
-}
-
-@mixin stopAnimation() {
-  animation: none;
-}
-
-$textColor1: #ffffff;
-// $textColor1: #2c2c2c;
-$secondaryColor: #b2a3fc;
-$textShadowColor: #747171;
-$textShadowColorSoft: #444;
-$fontTitle: "Montserrat";
-$fontText: "Raleway";
-$feColor: #4a8aaf;
-$beColor: #2c5530;
-$uiUxColor: #b44e81;
-$teachingColor: #7363c2;
-$mobileDevColor: #4e9c6b;
-$storyColor: #c54f4e;
 
 body {
   margin: 0;
@@ -210,7 +178,9 @@ body {
     padding: 7.4vw 0 0 16vw;
     letter-spacing: 0.15vw;
     color: $textColor1;
-    // @include textShadow(-6px, 11px, 10px, #555);
+    mix-blend-mode: difference;
+    width: fit-content;
+    cursor: none;
 
     #fall {
       display: inline-block;
@@ -708,6 +678,7 @@ body {
   padding-bottom: 10vw;
 
   h2#longText {
+    width: fit-content;
     padding: 8.6vw 0 0 14vw;
     font-family: $fontTitle;
     font-weight: 700;
@@ -718,38 +689,40 @@ body {
     letter-spacing: 0.2vw;
     transition: all 1s ease-in-out;
     mix-blend-mode: difference;
+    cursor: none;
 
     span.strokeWord {
       color: transparent;
       @include textStrokeCategories(2.5px, $textColor1);
     }
 
-    #talk {
-      #talk_btn {
-        text-decoration: none;
-        color: $textColor1;
-        position: relative;
+    #talk_btn {
+      width: fit-content;
+      text-decoration: none;
+      color: $textColor1;
+      position: relative;
+      mix-blend-mode: difference;
+      cursor: none;
 
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -6%;
-          left: 50%;
-          background: $textColor1;
-          width: 0%;
-          height: 10px;
-          border-radius: 1px;
-          transition: all 0.6s ease-in-out 0.1s;
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -6%;
+        left: 50%;
+        background: $textColor1;
+        width: 0%;
+        height: 10px;
+        border-radius: 1px;
+        transition: all 0.6s ease-in-out 0.1s;
+      }
 
-        &:hover::after {
-          width: 50%;
-        }
+      &:hover::after {
+        width: 50%;
       }
     }
   }
 
-  #arrowUp {
+  #rotatingContact {
     width: 200px;
     color: $textColor1;
     position: absolute;
@@ -765,7 +738,7 @@ body {
     mix-blend-mode: difference;
     cursor: pointer;
     fill: $textColor1;
-    animation: spin 8s linear infinite;
+    animation: spin 16s linear infinite;
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }

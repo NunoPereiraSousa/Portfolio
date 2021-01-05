@@ -1,32 +1,4 @@
-@mixin textShadow($x, $y, $blur, $color) {
-  text-shadow: $x $y $blur $color;
-}
-
-@mixin textShadowCategories($x, $y, $blur, $color) {
-  text-shadow: $x $y $blur $color;
-}
-
-@mixin textStrokeCategories($stroke, $color) {
-  -webkit-text-stroke: $stroke $color;
-}
-
-@mixin boxShadow($x, $y, $blur, $color) {
-  box-shadow: $x $y $blur $color;
-}
-
-$textColor1: #ffffff;
-$textColor2: rgba(255, 255, 255, 0.5);
-$purpleText: #b2a3fc;
-$textShadowColor: #3d3d3d;
-$textShadowColorSoft: #868686;
-$fontTitle: "Montserrat";
-$fontText: "Raleway";
-$feColor: #4a8aaf;
-$beColor: #808080;
-$uiUxColor: #b44e81;
-$teachingColor: #beae4e;
-$mobileDevColor: #4e9c6b;
-$storyColor: #c54f4e;
+@import "variables.scss";
 
 body {
   margin: 0;
@@ -80,6 +52,7 @@ body {
 
       .projectName {
         font-family: $fontTitle;
+        color: $textColor1;
         margin: 2vw 0 1.5vw 0;
         font-size: 0.8em;
         font-weight: 400;
@@ -90,6 +63,7 @@ body {
       .projectDesc {
         margin: 0;
         font-size: calc(16px + 0.35vw);
+        color: $textColor1;
         line-height: 1.7em;
         font-family: $fontText;
         letter-spacing: 1px;
@@ -120,6 +94,7 @@ body {
 
     .contactInfo {
       margin-top: 6vw;
+
       .contactGrid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -128,6 +103,7 @@ body {
         h3 {
           font-weight: 500;
           font-size: calc(16 + 1vw);
+          color: $textColor1;
         }
 
         p {

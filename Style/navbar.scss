@@ -1,14 +1,9 @@
-$textColor1: #ffffff;
-$textShadowColorSoftSoft: #444;
-
-@mixin textShadow($x, $y, $blue, $color) {
-  text-shadow: $x $y $blue $color;
-}
+@import "variables.scss";
 
 .header {
   position: fixed;
   left: 0%;
-  z-index: 9;
+  z-index: 4;
   height: 100%;
   width: fit-content;
   display: flex;
@@ -32,7 +27,7 @@ $textShadowColorSoftSoft: #444;
     font-weight: 500;
     text-align: center;
     text-decoration: none;
-    @include textShadow(-1px, 3px, 3px, $textShadowColorSoftSoft);
+    @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
     transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
 
     &:hover {
@@ -40,13 +35,13 @@ $textShadowColorSoftSoft: #444;
     }
 
     &:not(.selected) {
-      @include textShadow(-1px, 1px, 1px, $textShadowColorSoftSoft);
+      @include textShadow(-1px, 1px, 1px, $textShadowColorSoft);
       opacity: 0.2;
       color: $textColor1;
 
       &:hover {
         opacity: 1;
-        @include textShadow(-1px, 3px, 3px, $textShadowColorSoftSoft);
+        @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
       }
     }
   }
@@ -67,6 +62,7 @@ $textShadowColorSoftSoft: #444;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  mix-blend-mode: difference;
 
   button#heartBtn,
   button#powerBtn {

@@ -1,32 +1,4 @@
-@mixin textShadow($x, $y, $blur, $color) {
-  text-shadow: $x $y $blur $color;
-}
-
-@mixin textShadowCategories($x, $y, $blur, $color) {
-  text-shadow: $x $y $blur $color;
-}
-
-@mixin textStrokeCategories($stroke, $color) {
-  -webkit-text-stroke: $stroke $color;
-}
-
-@mixin boxShadow($x, $y, $blur, $color) {
-  box-shadow: $x $y $blur $color;
-}
-
-$textColor1: #ffffff;
-$textColor2: rgba(255, 255, 255, 0.5);
-$purpleText: #b2a3fc;
-$textShadowColor: #3d3d3d;
-$textShadowColorSoft: #868686;
-$fontTitle: "Montserrat";
-$fontText: "Raleway";
-$feColor: #4a8aaf;
-$beColor: #808080;
-$uiUxColor: #b44e81;
-$teachingColor: #beae4e;
-$mobileDevColor: #4e9c6b;
-$storyColor: #c54f4e;
+@import "variables.scss";
 
 body {
   margin: 0;
@@ -139,6 +111,7 @@ body {
       font-weight: 400;
       letter-spacing: 4px;
       text-transform: uppercase;
+      color: $textColor1;
     }
 
     .title_achievement {
@@ -148,6 +121,7 @@ body {
       font-family: $fontText;
       letter-spacing: 1px;
       font-weight: 400;
+      color: $textColor1;
     }
 
     h3 {

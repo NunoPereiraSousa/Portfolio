@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.cursor {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  background: $textColor1;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  transition-property: background, width, height;
+}
+
+.logo {
+  height: 3em;
+  width: 3em;
+  background: $secondaryColor;
+}
+
+.introTextCursor,
+.bigTextCursor {
+  height: 7em;
+  width: 7em;
+  background: $textColor1;
+}
+
+.powerBtnCursor {
+  height: 3em;
+  width: 3em;
+  background: $textColor1;
+}
+
+.contactBtnCursor {
+  height: 6em;
+  width: 6em;
+  background: $textColor1;
+
+  //   &::after {
+  //     content: "Contact Me!";
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //     color: $darkColor;
+  //   }
+}

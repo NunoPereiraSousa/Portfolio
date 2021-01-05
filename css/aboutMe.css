@@ -126,6 +126,7 @@ body {
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 .aboutMePage .accomplishmentsGrid .title_achievement {
@@ -135,6 +136,7 @@ body {
   font-family: "Raleway";
   letter-spacing: 1px;
   font-weight: 400;
+  color: #ffffff;
 }
 
 .aboutMePage .accomplishmentsGrid h3 {
