@@ -6,8 +6,10 @@
   border-radius: 50%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-transition-property: background, width, height;
-  transition-property: background, width, height;
+  -webkit-transition-property: background, width, height, -webkit-transition;
+  transition-property: background, width, height, -webkit-transition;
+  transition-property: background, width, height, transition;
+  transition-property: background, width, height, transition, -webkit-transition;
 }
 
 .logo {

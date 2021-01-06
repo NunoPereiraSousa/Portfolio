@@ -7,7 +7,7 @@
   background: $textColor1;
   border-radius: 50%;
   transition: all 0.5s ease;
-  transition-property: background, width, height;
+  transition-property: background, width, height, transition;
 }
 
 .logo {
@@ -33,13 +33,4 @@
   height: 6em;
   width: 6em;
   background: $textColor1;
-
-  //   &::after {
-  //     content: "Contact Me!";
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //     color: $darkColor;
-  //   }
 }

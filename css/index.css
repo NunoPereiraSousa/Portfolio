@@ -98,7 +98,7 @@ body {
   display: none;
 }
 
-.dark h1 {
+.dark .closeWebsite {
   margin: 0;
   font-size: 4.6vw;
   font-weight: 600;
@@ -126,7 +126,8 @@ body {
 }
 
 .dark svg#contactMeSvg:hover {
-  fill: #7363c2;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .loading {
@@ -186,8 +187,11 @@ body {
   cursor: pointer;
 }
 
-.loading .introText {
-  padding: 7.4vw 0 0 16vw;
+.loading .outsideSpaceTxt {
+  padding: 8.4vw 0 0 16vw;
+}
+
+.loading .outsideSpaceTxt .introText {
   letter-spacing: 0.15vw;
   color: #ffffff;
   mix-blend-mode: difference;
@@ -197,28 +201,39 @@ body {
   cursor: none;
 }
 
-.loading .introText #fall {
+.loading .outsideSpaceTxt .introText #fall {
   display: inline-block;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-animation: fragile 3s linear infinite;
-          animation: fragile 3s linear infinite;
 }
 
-.loading .introText span.strokeWord {
+.loading .outsideSpaceTxt .introText span.strokeWord {
   color: transparent;
   -webkit-text-stroke: 2.5px #ffffff;
   text-shadow: 0 0 0 transparent;
 }
 
-.loading .introText h2#name,
-.loading .introText h2#name2 {
+.loading .outsideSpaceTxt .introText h2#name,
+.loading .outsideSpaceTxt .introText h2#name2 {
   font-size: calc(24px + 4.4vw);
+  overflow: hidden;
+  background: transparent;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 600;
   margin: 0;
+}
+
+.loading .outsideSpaceTxt .introText h2#name #text_name,
+.loading .outsideSpaceTxt .introText h2#name #text_name2,
+.loading .outsideSpaceTxt .introText h2#name2 #text_name,
+.loading .outsideSpaceTxt .introText h2#name2 #text_name2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .loading #hide_arrow {
@@ -257,23 +272,13 @@ body {
 }
 
 .loading .circle_wrap .circ .path {
-  stroke-width: 2.35px;
-  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 2px;
+  stroke: white;
   stroke-dasharray: 1060;
-  stroke-dashoffset: 0;
+  stroke-dashoffset: 1028;
   opacity: 1;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-}
-
-.loading .circle_wrap .circ:hover .path {
-  stroke-dashoffset: 0;
-  opacity: 1;
-  stroke: white;
-}
-
-.loading .circle_wrap .circ:hover .center_text {
-  opacity: 1;
 }
 
 .loading .circle_wrap .circ:hover #description {
@@ -294,8 +299,6 @@ body {
           transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  color: #ffffff;
-  opacity: 0.3;
   font-family: "Raleway";
   font-size: 1.25vw;
   line-height: 1.5vw;
@@ -312,7 +315,15 @@ body {
 }
 
 .loading .circle_wrap .circ .center_text .hide_categories {
+  overflow: hidden;
+  background: transparent;
   font-weight: 600;
+}
+
+.loading .circle_wrap .circ .center_text .hide_categories .text_category {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  color: #ffffff;
 }
 
 .loading .circle_wrap .circ .date {
@@ -334,7 +345,12 @@ body {
           align-items: center;
 }
 
-.loading .circle_wrap .circ .date .day {
+.loading .circle_wrap .circ .date .dayWrapper {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.loading .circle_wrap .circ .date .dayWrapper .day {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px #ffffff;
   font-weight: 800;
@@ -347,28 +363,44 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
-.loading .circle_wrap .circ .date #month {
-  font-weight: 800;
-  font-size: 1.2vw;
-  text-shadow: -1px 4px 4px #444;
+.loading .circle_wrap .circ .date #info {
+  padding-left: 1vw;
 }
 
-.loading .circle_wrap .circ .date #status {
-  font-family: "Raleway";
-  font-weight: 500;
-  font-size: 1.2vw;
-  padding: 0.35vw 0 0 0;
-  text-shadow: -1px 4px 4px #444;
+.loading .circle_wrap .circ .date #info #info_date_wrapper1,
+.loading .circle_wrap .circ .date #info #info_date_wrapper2 {
+  overflow: hidden;
+  background-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.loading .circle_wrap .circ .date .info_date {
+.loading .circle_wrap .circ .date #info #info_date_wrapper1 .info_date,
+.loading .circle_wrap .circ .date #info #info_date_wrapper2 .info_date {
   text-align: left;
   letter-spacing: 0.25vw;
   color: #ffffff;
+  font-size: 1.2vw;
+  text-shadow: -1px 4px 4px #444;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.loading .circle_wrap .circ .date #info #info_date_wrapper1 .info_date#month,
+.loading .circle_wrap .circ .date #info #info_date_wrapper2 .info_date#month {
+  font-weight: 800;
+}
+
+.loading .circle_wrap .circ .date #info #info_date_wrapper1 .info_date#status,
+.loading .circle_wrap .circ .date #info #info_date_wrapper2 .info_date#status {
+  font-family: "Raleway";
+  font-weight: 500;
+  padding: 0.35vw 0 0 0;
 }
 
 .loading .circle_wrap .circ .img_card {
@@ -601,8 +633,8 @@ body {
 }
 
 .skills .slider2 .slide-track2 {
-  -webkit-animation: carrousel 20s linear infinite;
-          animation: carrousel 20s linear infinite;
+  -webkit-animation: carrousel 30s linear infinite;
+          animation: carrousel 30s linear infinite;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,8 +685,8 @@ body {
 }
 
 .skills .slider3 #reverse {
-  -webkit-animation: carrouselReverse 20s linear infinite;
-          animation: carrouselReverse 20s linear infinite;
+  -webkit-animation: carrouselReverse 30s linear infinite;
+          animation: carrouselReverse 30s linear infinite;
   animation-direction: reverse;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -774,6 +806,11 @@ body {
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.talkToMe #rotatingContact:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 footer {
   background: transparent;
   width: 100vw;
@@ -782,6 +819,7 @@ footer {
   -webkit-box-shadow: 0 1px 6px #ffffff;
           box-shadow: 0 1px 6px #ffffff;
   font-family: "Raleway";
+  position: relative;
 }
 
 footer .container {
@@ -797,6 +835,7 @@ footer .container {
 
 footer .container a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 footer .container a i {

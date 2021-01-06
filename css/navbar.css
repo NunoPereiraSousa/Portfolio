@@ -79,10 +79,32 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   mix-blend-mode: difference;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.buttonHeader button#heartBtn,
-.buttonHeader button#powerBtn {
+.buttonHeader .soundInfo {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.025);
+  color: #ffffff;
+  margin: 0 2em;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.buttonHeader .soundInfo p.soundStatus {
+  margin: 10px 20px;
+  font-size: calc(10px + 0.1vw);
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+
+.buttonHeader button.svgsBtns {
   cursor: pointer;
   margin: 0 2em;
   width: 1.2em;
@@ -92,37 +114,182 @@
   z-index: 5;
 }
 
-.buttonHeader button#heartBtn:focus,
-.buttonHeader button#powerBtn:focus {
+.buttonHeader button.svgsBtns:focus {
   outline: none;
 }
 
-.buttonHeader button#heartBtn .heart,
-.buttonHeader button#heartBtn .power,
-.buttonHeader button#powerBtn .heart,
-.buttonHeader button#powerBtn .power {
+.buttonHeader button.svgsBtns .power,
+.buttonHeader button.svgsBtns .sound {
   fill: #ffffff;
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  fill: #ffffff;
+}
+
+.buttonHeader button.svgsBtns .sound {
+  -webkit-transform: scale(2.15);
+          transform: scale(2.15);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(1) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 200ms ease infinite;
+          animation: pulse-n-glow 2000ms 200ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(2) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 400ms ease infinite;
+          animation: pulse-n-glow 2000ms 400ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(3) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 600ms ease infinite;
+          animation: pulse-n-glow 2000ms 600ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(4) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 800ms ease infinite;
+          animation: pulse-n-glow 2000ms 800ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(5) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 1000ms ease infinite;
+          animation: pulse-n-glow 2000ms 1000ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(6) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 1200ms ease infinite;
+          animation: pulse-n-glow 2000ms 1200ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(7) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 1400ms ease infinite;
+          animation: pulse-n-glow 2000ms 1400ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(8) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 1600ms ease infinite;
+          animation: pulse-n-glow 2000ms 1600ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(9) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 1800ms ease infinite;
+          animation: pulse-n-glow 2000ms 1800ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .sound path:nth-child(10) {
+  opacity: 1;
+  -webkit-animation: pulse-n-glow 2000ms 2000ms ease infinite;
+          animation: pulse-n-glow 2000ms 2000ms ease infinite;
+}
+
+.buttonHeader button.svgsBtns .powerChange {
+  fill: #b2a3fc;
   -webkit-transform-origin: left;
           transform-origin: left;
 }
 
-.buttonHeader button#heartBtn .heartChange,
-.buttonHeader button#powerBtn .heartChange {
-  fill: #fdd6f5;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+@-webkit-keyframes glow {
+  50% {
+    opacity: 0.75;
+  }
 }
 
-.buttonHeader button#heartBtn .powerChange,
-.buttonHeader button#powerBtn .powerChange {
-  fill: #ffe9b1;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+@keyframes glow {
+  50% {
+    opacity: 0.75;
+  }
+}
+
+@-webkit-keyframes pulse-n-glow {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    background: #03a9f4;
+  }
+  16.67% {
+    -webkit-transform: scale(1.04);
+    background: #ff5722;
+  }
+  33.33% {
+    -webkit-transform: scale(1);
+    background: #ff5252;
+  }
+  50% {
+    -webkit-transform: scale(1.04);
+    background: #e91e63;
+  }
+  66.67% {
+    -webkit-transform: scale(1);
+    background: #9c27b0;
+  }
+  83.34% {
+    -webkit-transform: scale(1.04);
+    background: #673ab7;
+  }
+}
+
+@keyframes pulse-n-glow {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    background: #03a9f4;
+  }
+  16.67% {
+    -webkit-transform: scale(1.04);
+    background: #ff5722;
+  }
+  33.33% {
+    -webkit-transform: scale(1);
+    background: #ff5252;
+  }
+  50% {
+    -webkit-transform: scale(1.04);
+    background: #e91e63;
+  }
+  66.67% {
+    -webkit-transform: scale(1);
+    background: #9c27b0;
+  }
+  83.34% {
+    -webkit-transform: scale(1.04);
+    background: #673ab7;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
 }
 /*# sourceMappingURL=navbar.css.map */

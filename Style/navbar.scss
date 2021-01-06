@@ -54,6 +54,11 @@
   }
 }
 
+$duration: 2000; // how much each animation will take
+$animation-playing: "pulse-n-glow"; // pulse | glow | pulse-n-glow
+$growth-size: 1.05; // how big they'll grow each time if animation playing is pulse.
+$glow-strength: 0.75; // how much they'll increase their brightness if animation playing is glow
+
 .buttonHeader {
   position: absolute;
   top: 5%;
@@ -63,9 +68,27 @@
   display: flex;
   justify-content: flex-end;
   mix-blend-mode: difference;
+  width: fit-content;
+  height: fit-content;
 
-  button#heartBtn,
-  button#powerBtn {
+  .soundInfo {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.025);
+    color: $textColor1;
+    margin: 0 2em;
+    transform: translateY(50%);
+    opacity: 0;
+    // transition: all 0.5s ease;
+
+    p.soundStatus {
+      margin: 10px 20px;
+      font-size: calc(10px + 0.1vw);
+      letter-spacing: 1.5px;
+      font-weight: 300;
+    }
+  }
+
+  button.svgsBtns {
     cursor: pointer;
     margin: 0 2em;
     width: 1.2em;
@@ -78,23 +101,79 @@
       outline: none;
     }
 
-    .heart,
-    .power {
+    .power,
+    .sound {
       fill: $textColor1;
-      transform: scale(2);
+      transform: scale(1.75);
       transform-origin: left;
+      fill: $textColor1;
     }
 
-    .heartChange {
-      fill: #fdd6f5;
-      transform: scale(2);
-      transform-origin: left;
+    .sound {
+      transform: scale(2.15);
+      transform-origin: center;
+
+      @for $i from 1 through 10 {
+        path:nth-child(#{$i}) {
+          opacity: 1;
+          animation: #{$animation-playing}
+            #{$duration}ms
+            #{($duration / 10) *
+            $i}ms
+            ease
+            infinite;
+        }
+      }
     }
 
     .powerChange {
-      fill: #ffe9b1;
-      transform: scale(2);
+      fill: $secondaryColor;
       transform-origin: left;
     }
+  }
+}
+
+@keyframes glow {
+  50% {
+    opacity: $glow-strength;
+  }
+}
+
+@keyframes pulse-n-glow {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    background: #03a9f4;
+  }
+  16.67% {
+    -webkit-transform: scale(1.04);
+    background: #ff5722;
+  }
+  33.33% {
+    -webkit-transform: scale(1);
+    background: #ff5252;
+  }
+  50% {
+    -webkit-transform: scale(1.04);
+    background: #e91e63;
+  }
+  66.67% {
+    -webkit-transform: scale(1);
+    background: #9c27b0;
+  }
+  83.34% {
+    -webkit-transform: scale(1.04);
+    background: #673ab7;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale($growth-size);
   }
 }
