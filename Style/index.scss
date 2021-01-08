@@ -441,7 +441,7 @@ body {
     position: relative;
 
     h2.mainTitles {
-      margin: 25vw 0 0 14vw;
+      margin: 20vw 0 0 14vw;
       font-family: $fontTitle;
       color: $textColor1;
       font-size: calc(16px + 4.4vw);
@@ -467,7 +467,7 @@ body {
     }
 
     .slider {
-      margin: 10vw 0 0 0;
+      margin: 8vw 0 0 0;
 
       .slide-track {
         animation: categoriesCarousel 14s linear infinite;
@@ -569,7 +569,9 @@ body {
   }
 
   .carouselLine {
-    border: 0.75px solid $textColor1;
+    width: 0%;
+    border: 0.35px solid $textColor1;
+    opacity: 0.75;
   }
 
   hr {
@@ -707,11 +709,11 @@ body {
 .talkToMe {
   position: relative;
   height: auto;
-  padding-bottom: 10vw;
+  padding: 8.6vw 0 10vw 14vw;
 
-  h2#longText {
+  h2.longText {
     width: fit-content;
-    padding: 8.6vw 0 0 14vw;
+    margin: 0;
     font-family: $fontTitle;
     font-weight: 700;
     color: $textColor1;
@@ -722,10 +724,16 @@ body {
     transition: all 1s ease-in-out;
     mix-blend-mode: difference;
     cursor: none;
+    background-color: transparent;
+    overflow: hidden;
 
     span.strokeWord {
       color: transparent;
       @include textStrokeCategories(2.5px, $textColor1);
+    }
+
+    .longTextDiv {
+      transform: translateY(100%);
     }
 
     #talk_btn {
@@ -755,12 +763,11 @@ body {
   }
 
   #rotatingContact {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
     width: 200px;
     color: $textColor1;
-    position: absolute;
-    right: 6.25vw;
-    bottom: 10%;
-    // font-size: 1.2vw;
     font-weight: 600;
     margin: 0;
     padding: 0;

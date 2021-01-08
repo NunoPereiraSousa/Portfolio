@@ -7,7 +7,7 @@ let tl = gsap.timeline({
 });
 
 ScrollTrigger.defaults({
-  toggleActions: "restart pause resume reset"
+  toggleActions: "resume pause resume none"
 
   // markers: true
 });
@@ -16,11 +16,12 @@ gsap.to(".what", {
   scrollTrigger: {
     trigger: ".what",
     // toggleActions: "resume pause resume resume",
-    start: "-150% 80%"
+    start: "-200% 80%",
     // end: "center center",
-    // markers: true
+    markers: true
     // scrub: true
   },
+  delay: 0.5,
   y: "10%",
   duration: 1
 });
@@ -28,6 +29,7 @@ gsap.to(".what", {
 gsap.to(".paused1", {
   scrollTrigger: {
     trigger: ".paused1",
+    start: "-50% 80%",
     onEnter: () => {
       setTimeout(() => {
         document.querySelector(".paused1").style.animationPlayState = "running";
@@ -40,7 +42,7 @@ gsap.to(".paused1", {
 gsap.to(".slide h3", {
   scrollTrigger: {
     trigger: ".slide h3",
-    start: "-150% 80%"
+    start: "-175% 80%"
   },
   y: "10%",
   duration: 1
@@ -49,10 +51,21 @@ gsap.to(".slide h3", {
 gsap.to(".exp", {
   scrollTrigger: {
     trigger: ".exp",
-    start: "-150% 80%"
+    start: "-100% 80%",
+    markers: true
   },
   y: "10%",
   duration: 1
+});
+
+gsap.to(".carouselLine", {
+  scrollTrigger: {
+    trigger: ".exp",
+    start: "-0% 80%",
+    markers: true
+  },
+  width: "100%",
+  duration: 1.6
 });
 
 gsap.to([".up", ".up2"], {
@@ -75,6 +88,18 @@ gsap.to(".paused2", {
     }
   },
   duration: 1
+});
+
+document.querySelectorAll(".longTextDiv").forEach((element, i) => {
+  i++;
+  gsap.to(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "-125% 80%"
+    },
+    y: "0%",
+    duration: 1
+  });
 });
 
 window.addEventListener("load", () => {
@@ -203,3 +228,27 @@ window.addEventListener("load", () => {
 //     },
 //     "-=0.5"
 //   );
+
+// let emoji = $(".emoji");
+// let emojiBox = [
+//   emoji.offset().left + emoji.width() / 2,
+//   emoji.offset().top + emoji.height() / 2
+// ];
+
+// $(document).mousemove(function (e) {
+//   let angle =
+//     Math.atan2(e.pageX - emojiBox[0], -(e.pageY - emojiBox[1])) *
+//     (180 / Math.PI);
+
+//   emoji.css({ "-webkit-transform": "rotate(" + angle + "deg)" });
+//   emoji.css({ "-moz-transform": "rotate(" + angle + "deg)" });
+//   emoji.css({ transform: "rotate(" + angle + "deg)" });
+// });
+
+document.querySelector(".outside").addEventListener("mouseenter", e => {
+  document.querySelector(".emoji").innerHTML = "📤";
+});
+
+document.querySelector(".outside").addEventListener("mouseleave", e => {
+  document.querySelector(".emoji").innerHTML = "📥";
+});

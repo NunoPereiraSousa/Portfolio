@@ -485,7 +485,7 @@ body {
 }
 
 .whatIdo .categories h2.mainTitles {
-  margin: 25vw 0 0 14vw;
+  margin: 20vw 0 0 14vw;
   font-family: "Montserrat";
   color: #ffffff;
   font-size: calc(16px + 4.4vw);
@@ -517,7 +517,7 @@ body {
 }
 
 .whatIdo .categories .slider {
-  margin: 10vw 0 0 0;
+  margin: 8vw 0 0 0;
 }
 
 .whatIdo .categories .slider .slide-track {
@@ -638,7 +638,9 @@ body {
 }
 
 .skills .carouselLine {
-  border: 0.75px solid #ffffff;
+  width: 0%;
+  border: 0.35px solid #ffffff;
+  opacity: 0.75;
 }
 
 .skills hr {
@@ -791,14 +793,14 @@ body {
 .talkToMe {
   position: relative;
   height: auto;
-  padding-bottom: 10vw;
+  padding: 8.6vw 0 10vw 14vw;
 }
 
-.talkToMe h2#longText {
+.talkToMe h2.longText {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 8.6vw 0 0 14vw;
+  margin: 0;
   font-family: "Montserrat";
   font-weight: 700;
   color: #ffffff;
@@ -810,14 +812,21 @@ body {
   transition: all 1s ease-in-out;
   mix-blend-mode: difference;
   cursor: none;
+  background-color: transparent;
+  overflow: hidden;
 }
 
-.talkToMe h2#longText span.strokeWord {
+.talkToMe h2.longText span.strokeWord {
   color: transparent;
   -webkit-text-stroke: 2.5px #ffffff;
 }
 
-.talkToMe h2#longText #talk_btn {
+.talkToMe h2.longText .longTextDiv {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.talkToMe h2.longText #talk_btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -828,7 +837,7 @@ body {
   cursor: none;
 }
 
-.talkToMe h2#longText #talk_btn::after {
+.talkToMe h2.longText #talk_btn::after {
   content: "";
   position: absolute;
   bottom: -6%;
@@ -841,16 +850,16 @@ body {
   transition: all 0.6s ease-in-out 0.1s;
 }
 
-.talkToMe h2#longText #talk_btn:hover::after {
+.talkToMe h2.longText #talk_btn:hover::after {
   width: 50%;
 }
 
 .talkToMe #rotatingContact {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
   width: 200px;
   color: #ffffff;
-  position: absolute;
-  right: 6.25vw;
-  bottom: 10%;
   font-weight: 600;
   margin: 0;
   padding: 0;

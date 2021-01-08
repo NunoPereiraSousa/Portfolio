@@ -70,7 +70,7 @@
 
       </button>
     </div>
-    <div class="landingPage">
+    <div class="landingPage hide">
       <div class="loading">
         <!-- <h1 class="middleText">Click</h1> -->
         <div class="notification"></div>
@@ -493,16 +493,32 @@
         </div>
       </div>
       <div class="talkToMe">
-        <h2 id="longText">
-          <div>I'm always</div>
-            <div>interested</div>
-            <div>about <span class="strokeWord">cool</span></div>
-            <div><span class="strokeWord">stuff</span>.</div>
-            <div>Are you</div>
-            <div>down to</div>
-            <div><span class="strokeWord">impact</span> the</div>
-            <div>world? 🪐</div>
-            <div><a id="talk_btn" class="bigText">Let's <span class="strokeWord">talk.</span></a></div>
+        <h2 class="longText">
+          <div class="longTextDiv">I'm always</div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv">interested</div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv">about <span class="strokeWord">cool</span></div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv"><span class="strokeWord">stuff</span>.</div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv">Are you</div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv">down to</div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv"><span class="strokeWord">impact</span> the</div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv">world? 🪐</div>
+        </h2>
+        <h2 class="longText">
+          <div class="longTextDiv"><a id="talk_btn" class="bigText">Let's <span class="strokeWord">talk.</span></a></div>
         </h2>
         <svg id="rotatingContact" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.64 146.8">
           <defs>
@@ -729,7 +745,7 @@
         </ul>
       </div> -->
     </div>
-    <div class="aboutMePage hide">
+    <div class="aboutMePage">
       <div class="intro">
         <div class="quote">
           <h1>
@@ -945,15 +961,22 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+    <script src="/JS/hover-effect.js"></script>
     <script>
-//       gsap.to(".what", {
-//   scrollTrigger: ".what",
-//   y: "0%",
-//   duration: 2
-// });
-
-    </script>
+      var myAnimation = new hoverEffect({
+          parent: document.querySelector('.image1'),
+          intensity: 0.5,
+          angle: Math.PI / 8,
+          angle1: Math.PI / 4,
+          angle2: Math.PI / 4,
+          speedIn: 1.5,
+          speedOut: 2,
+          image1: '/Assets/Images/swimming.jpg',
+          image2: '/Assets/Images/MeSunGlasses.jpeg',
+          displacementImage: '/Assets/Images/Displacements/6.jpg'
+      });
+  </script>
     
     <script src="/JS/words.js"></script>
     <script src="/JS/landingAnimations.js"></script>

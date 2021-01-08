@@ -74,7 +74,7 @@ function soundControl() {
     }, 250);
   } else {
     setTimeout(() => {
-      audio.volume = 0.2;
+      audio.volume = 0.05;
     }, 250);
   }
 }

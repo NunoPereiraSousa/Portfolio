@@ -2,9 +2,9 @@ let cursor = document.querySelector(".cursor");
 let logo = document.getElementById("logo");
 let introText = document.querySelector(".introText");
 let powerBtn = document.getElementById("powerBtn");
-let contactBtn = document.getElementById("contact");
-let bigText = document.querySelector(".bigText");
-let rotatingContact = document.getElementById("rotatingContact");
+let contactBtn = document.querySelector(".contact");
+let bigText = document.querySelectorAll(".longText");
+let rotatingContact = document.querySelector(".svgEmoji");
 
 window.addEventListener("mousemove", mouseCursor);
 cursor.style.opacity = 0;
@@ -44,13 +44,15 @@ contactBtn.addEventListener("mouseover", () => {
   cursor.classList.add("contactBtnCursor");
 });
 
-bigText.addEventListener("mouseleave", () => {
-  cursor.classList.remove("bigTextCursor");
-  cursor.style.opacity = 0;
-});
-bigText.addEventListener("mouseover", () => {
-  cursor.classList.add("bigTextCursor");
-  cursor.style.opacity = 1;
+bigText.forEach(element => {
+  element.addEventListener("mouseleave", () => {
+    cursor.classList.remove("bigTextCursor");
+    cursor.style.opacity = 0;
+  });
+  element.addEventListener("mouseover", () => {
+    cursor.classList.add("bigTextCursor");
+    cursor.style.opacity = 1;
+  });
 });
 
 rotatingContact.addEventListener("mouseleave", () => {
