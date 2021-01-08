@@ -175,7 +175,7 @@ body {
   }
 
   .outsideSpaceTxt {
-    padding: 8.4vw 0 0 16vw;
+    padding: 7.4vw 0 0 16vw;
 
     .introText {
       letter-spacing: 0.15vw;
@@ -245,7 +245,7 @@ body {
   }
 
   .circle_wrap {
-    padding: 12.6vw 0 0 16vw;
+    padding: 10.6vw 0 0 16vw;
     width: 100%;
     height: auto;
     display: flex;
@@ -354,7 +354,7 @@ body {
               color: $textColor1;
               font-size: 1.2vw;
               @include textShadow(-1px, 4px, 4px, $textShadowColorSoft);
-              transform: translateX(100%);
+              transform: translateX(110%);
 
               &#month {
                 font-weight: 800;
@@ -382,6 +382,31 @@ body {
       color: $textColor1;
       transition: all 1s ease-in-out;
 
+      .contact {
+        overflow: hidden;
+        background-color: transparent;
+        width: fit-content;
+        position: absolute;
+        z-index: 99;
+        top: 43%;
+        left: -4vw;
+        cursor: pointer;
+
+        .contactText {
+          font-size: 1.4vw;
+          color: $textColor1;
+          text-decoration: none;
+          font-weight: 800;
+          text-transform: uppercase;
+          transform: translateY(100%);
+
+          &:hover {
+            @include textShadow(-2px, 3px, 3px, $textShadowColorSoft);
+            color: $secondaryColor;
+          }
+        }
+      }
+
       h6.descHeader {
         margin: 0;
         overflow: hidden;
@@ -390,28 +415,6 @@ body {
 
         .descLine {
           transform: translateY(100%);
-        }
-      }
-
-      a {
-        position: absolute;
-        z-index: 10;
-        top: 50%;
-        left: -4vw;
-        font-size: 1.4vw;
-        color: $textColor1;
-        text-decoration: none;
-        font-weight: 800;
-        text-transform: uppercase;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-          // -webkit-text-fill-color: transparent;
-          // -webkit-text-stroke: 1px #eea47fff;
-          // -moz-background-clip: text;
-          // -moz-text-fill-color: transparent;
-          @include textShadow(-2px, 3px, 3px, $textShadowColorSoft);
-          color: $secondaryColor;
         }
       }
 
@@ -438,7 +441,7 @@ body {
     position: relative;
 
     h2.mainTitles {
-      margin: 30vw 0 0 14vw;
+      margin: 25vw 0 0 14vw;
       font-family: $fontTitle;
       color: $textColor1;
       font-size: calc(16px + 4.4vw);
@@ -464,26 +467,34 @@ body {
     }
 
     .slider {
-      padding: 10vw 0 0 0;
+      margin: 10vw 0 0 0;
 
       .slide-track {
         animation: categoriesCarousel 14s linear infinite;
         display: flex;
         width: calc(36.3vw * 12);
 
+        &.paused1 {
+          animation-play-state: paused;
+        }
+
         .slide {
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
           width: 36.3vw;
           padding: 0;
           position: relative;
+          overflow: hidden;
+          background-color: transparent;
 
           h3 {
+            padding: 1.25vw 0;
             font-family: $fontText;
             display: block;
             font-size: calc(20px + 0.01vw);
             text-align: center;
+            transform: translateY(100%);
 
             a {
               height: fit-content;
@@ -551,6 +562,10 @@ body {
     mix-blend-mode: difference;
     overflow: hidden;
     background-color: transparent;
+
+    .exp {
+      transform: translateY(100%);
+    }
   }
 
   .carouselLine {
@@ -570,40 +585,22 @@ body {
       display: flex;
       width: calc(30vw * 18);
 
+      &.paused2 {
+        animation-play-state: paused;
+      }
+
       .slide2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
+        height: 85px;
         width: 30vw;
-
-        // div {
-        //     transition: all 0.5s ease;
-
-        //     &:hover {
-        //         transform: scale(1.1);
-        //     }
-
-        //     img {
-        //         filter: grayscale(0.5);
-        //         filter: opacity(0.5);
-        //     }
-
-        //     h3 {
-        //         font-family: "Univia Pro";
-        //         padding-top: 2vw;
-        //         display: block;
-        //         color: #fcf6f4;
-        //         font-size: calc(20px + 0.01vw);
-        //         text-align: center;
-        //     }
-        // }
 
         &:hover h3 {
           color: $textColor1;
         }
 
-        h3 {
+        h3.slideTitle {
           margin: 0;
           width: 100%;
           height: 100%;
@@ -615,6 +612,25 @@ body {
           text-align: center;
           font-weight: 400;
           transition: all 0.3s ease-in-out;
+          overflow: hidden;
+          background-color: transparent;
+          cursor: pointer;
+
+          .up {
+            transform: translateY(100%);
+          }
+
+          &:hover {
+            color: $textColor1;
+            @include textShadowCategories(
+              10px,
+              -6px,
+              6px,
+              $textShadowColorSoft
+            );
+            transform: scale(1.005);
+            font-weight: 400;
+          }
         }
       }
     }
@@ -629,24 +645,28 @@ body {
   .slider3 {
     padding: 1.5vw 0 4vw 0;
 
-    #reverse {
+    .reverse {
       animation: carrouselReverse 30s linear infinite;
       animation-direction: reverse;
       display: flex;
       width: calc(30vw * 16);
 
+      &.paused3 {
+        animation-play-state: paused;
+      }
+
       .slide3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
+        height: 85px;
         width: 30vw;
 
         &:hover h3 {
           color: $textColor1;
         }
 
-        h3 {
+        h3.slideTitle2 {
           margin: 0;
           width: 100%;
           height: 100%;
@@ -659,6 +679,25 @@ body {
           color: transparent;
           @include textShadow(-1px, 11px, 10px, $textShadowColor);
           transition: all 0.3s ease-in-out;
+          overflow: hidden;
+          background-color: transparent;
+          cursor: pointer;
+
+          .up2 {
+            transform: translateY(100%);
+          }
+
+          &:hover {
+            color: $textColor1;
+            @include textShadowCategories(
+              10px,
+              -6px,
+              6px,
+              $textShadowColorSoft
+            );
+            transform: scale(1.005);
+            font-weight: 400;
+          }
         }
       }
     }

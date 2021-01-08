@@ -188,7 +188,7 @@ body {
 }
 
 .loading .outsideSpaceTxt {
-  padding: 8.4vw 0 0 16vw;
+  padding: 7.4vw 0 0 16vw;
 }
 
 .loading .outsideSpaceTxt .introText {
@@ -251,7 +251,7 @@ body {
 }
 
 .loading .circle_wrap {
-  padding: 12.6vw 0 0 16vw;
+  padding: 10.6vw 0 0 16vw;
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -389,8 +389,8 @@ body {
   color: #ffffff;
   font-size: 1.2vw;
   text-shadow: -1px 4px 4px #444;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
 }
 
 .loading .circle_wrap .circ .date #info #info_date_wrapper1 .info_date#month,
@@ -421,6 +421,34 @@ body {
   transition: all 1s ease-in-out;
 }
 
+.loading .circle_wrap #description .contact {
+  overflow: hidden;
+  background-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  z-index: 99;
+  top: 43%;
+  left: -4vw;
+  cursor: pointer;
+}
+
+.loading .circle_wrap #description .contact .contactText {
+  font-size: 1.4vw;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.loading .circle_wrap #description .contact .contactText:hover {
+  text-shadow: -2px 3px 3px #444;
+  color: #b2a3fc;
+}
+
 .loading .circle_wrap #description h6.descHeader {
   margin: 0;
   overflow: hidden;
@@ -433,25 +461,6 @@ body {
 .loading .circle_wrap #description h6.descHeader .descLine {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-}
-
-.loading .circle_wrap #description a {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: -4vw;
-  font-size: 1.4vw;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 800;
-  text-transform: uppercase;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.loading .circle_wrap #description a:hover {
-  text-shadow: -2px 3px 3px #444;
-  color: #b2a3fc;
 }
 
 .loading .circle_wrap #description div {
@@ -476,7 +485,7 @@ body {
 }
 
 .whatIdo .categories h2.mainTitles {
-  margin: 30vw 0 0 14vw;
+  margin: 25vw 0 0 14vw;
   font-family: "Montserrat";
   color: #ffffff;
   font-size: calc(16px + 4.4vw);
@@ -508,7 +517,7 @@ body {
 }
 
 .whatIdo .categories .slider {
-  padding: 10vw 0 0 0;
+  margin: 10vw 0 0 0;
 }
 
 .whatIdo .categories .slider .slide-track {
@@ -520,6 +529,11 @@ body {
   width: calc(36.3vw * 12);
 }
 
+.whatIdo .categories .slider .slide-track.paused1 {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .whatIdo .categories .slider .slide-track .slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -527,19 +541,24 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 36.3vw;
   padding: 0;
   position: relative;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 .whatIdo .categories .slider .slide-track .slide h3 {
+  padding: 1.25vw 0;
   font-family: "Raleway";
   display: block;
   font-size: calc(20px + 0.01vw);
   text-align: center;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .whatIdo .categories .slider .slide-track .slide h3 a {
@@ -613,6 +632,11 @@ body {
   background-color: transparent;
 }
 
+.skills h2.mainTitles .exp {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
 .skills .carouselLine {
   border: 0.75px solid #ffffff;
 }
@@ -635,6 +659,11 @@ body {
   width: calc(30vw * 18);
 }
 
+.skills .slider2 .slide-track2.paused2 {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .skills .slider2 .slide-track2 .slide2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -645,7 +674,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
+  height: 85px;
   width: 30vw;
 }
 
@@ -653,7 +682,7 @@ body {
   color: #ffffff;
 }
 
-.skills .slider2 .slide-track2 .slide2 h3 {
+.skills .slider2 .slide-track2 .slide2 h3.slideTitle {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -666,6 +695,22 @@ body {
   font-weight: 400;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.skills .slider2 .slide-track2 .slide2 h3.slideTitle .up {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.skills .slider2 .slide-track2 .slide2 h3.slideTitle:hover {
+  color: #ffffff;
+  text-shadow: 10px -6px 6px #444;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  font-weight: 400;
 }
 
 .skills #line {
@@ -678,7 +723,7 @@ body {
   padding: 1.5vw 0 4vw 0;
 }
 
-.skills .slider3 #reverse {
+.skills .slider3 .reverse {
   -webkit-animation: carrouselReverse 30s linear infinite;
           animation: carrouselReverse 30s linear infinite;
   animation-direction: reverse;
@@ -688,7 +733,12 @@ body {
   width: calc(30vw * 16);
 }
 
-.skills .slider3 #reverse .slide3 {
+.skills .slider3 .reverse.paused3 {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.skills .slider3 .reverse .slide3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,15 +748,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
+  height: 85px;
   width: 30vw;
 }
 
-.skills .slider3 #reverse .slide3:hover h3 {
+.skills .slider3 .reverse .slide3:hover h3 {
   color: #ffffff;
 }
 
-.skills .slider3 #reverse .slide3 h3 {
+.skills .slider3 .reverse .slide3 h3.slideTitle2 {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -720,6 +770,22 @@ body {
   text-shadow: -1px 11px 10px #747171;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.skills .slider3 .reverse .slide3 h3.slideTitle2 .up2 {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.skills .slider3 .reverse .slide3 h3.slideTitle2:hover {
+  color: #ffffff;
+  text-shadow: 10px -6px 6px #444;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  font-weight: 400;
 }
 
 .talkToMe {
