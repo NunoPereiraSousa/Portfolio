@@ -12,25 +12,28 @@
 
   #logo {
     padding: 2vw 0 0 2.2vw;
-    font-size: 1.8em;
+    font-size: 1em;
     font-weight: 200;
     // margin-bottom: auto;
+
+    &:hover {
+    }
   }
 
   a {
-    font-size: 1.275em;
+    font-size: 1.075em;
     width: fit-content;
     display: inline-block;
     padding: 2vw 0;
     margin-right: 2rem;
+    letter-spacing: 0.5px;
     color: $textColor1;
-    font-weight: 500;
     text-align: center;
     text-decoration: none;
     @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
     transition: 0.8s cubic-bezier(0.07, 0.95, 0, 1);
 
-    &:hover {
+    &.link:hover {
       transform: translateY(10px);
     }
 

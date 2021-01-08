@@ -26,11 +26,11 @@
       <div class="behindBackground"></div>
     </div> -->
     <div class="header">
-      <a id="logo" class="selected" href="">Nuno</a>
+      <a id="logo" class="selected" href="">Leave a Legacy</a>
       <nav>
-        <a href="">About</a>
-        <a href="">Showcase</a>
-        <a href="" class="selected">Home</a>
+        <a class="link" href="">About</a>
+        <a class="link" href="">Showcase</a>
+        <a class="link selected" href="">Home</a>
       </nav>
     </div>
     <div class="buttonHeader">
@@ -106,6 +106,9 @@
                 <div class="text_category">Developer</div>
               </h4>
               <h4 class="hide_categories">
+                <div class="text_category">Teacher & Tutor</div>
+              </h4>
+              <h4 class="hide_categories">
                 <div class="text_category">UI UX Designer</div>
               </h4>
             </div>
@@ -129,13 +132,23 @@
           </div>
           <div id="description">
             <div id="contact"><a href="">Contact</a></div>
-            <h6>
-              <div>I'm a senior student from Portugal taking a</div>
-              <div>web development degree at college - esmad.</div>
-              <div>I'm currently the student with the</div>
-              <div id="go_right">highest GPA looking towards great projects</div>
-              <div>to be part of, or helping people</div>
-              <div>achieving their dreams. Stay kind.</div>
+            <h6 class="descHeader">
+              <div class="descLine">I'm a senior student from Portugal taking a</div>
+            </h6>
+            <h6 class="descHeader">
+              <div class="descLine">web development degree at college - esmad.</div>
+            </h6>
+            <h6 class="descHeader">
+              <div class="descLine">I'm currently the student with the</div>
+            </h6>
+            <h6 class="descHeader">
+              <div class="descLine" id="go_right">highest GPA looking towards great projects</div>
+            </h6>
+            <h6 class="descHeader">
+              <div class="descLine">to be part of, or helping people</div>
+            </h6>
+            <h6 class="descHeader">
+              <div class="descLine">achieving their dreams. Stay kind.</div>              
             </h6>
           </div>
         </div>
@@ -143,7 +156,7 @@
       <div class="whatIdo">
         <div class="categories">
           <h2 class="mainTitles">
-            <div id="what">A few things I do...</div>
+            <div class="what">A few things I do...</div>
           </h2>
           <div class="slider">
             <div class="slide-track">
@@ -859,6 +872,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    
+    <script>
+//       gsap.to(".what", {
+//   scrollTrigger: ".what",
+//   y: "0%",
+//   duration: 2
+// });
+
+    </script>
+    
     <script src="/JS/words.js"></script>
     <script src="/JS/landingAnimations.js"></script>
     <script type="module" src="/JS/onOff.js"></script>

@@ -276,7 +276,7 @@ body {
   stroke: white;
   stroke-dasharray: 1060;
   stroke-dashoffset: 1028;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -300,7 +300,7 @@ body {
   left: 50%;
   top: 50%;
   font-family: "Raleway";
-  font-size: 1.25vw;
+  font-size: 1vw;
   line-height: 1.5vw;
   letter-spacing: 0.25vw;
   text-transform: uppercase;
@@ -329,7 +329,7 @@ body {
 .loading .circle_wrap .circ .date {
   position: absolute;
   left: 75%;
-  top: 5%;
+  top: 0%;
   white-space: nowrap;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -340,12 +340,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .loading .circle_wrap .circ .date .dayWrapper {
+  margin: 0;
   overflow: hidden;
   background-color: transparent;
 }
@@ -373,6 +374,7 @@ body {
 
 .loading .circle_wrap .circ .date #info #info_date_wrapper1,
 .loading .circle_wrap .circ .date #info #info_date_wrapper2 {
+  margin: 0;
   overflow: hidden;
   background-color: transparent;
   width: -webkit-fit-content;
@@ -403,34 +405,6 @@ body {
   padding: 0.35vw 0 0 0;
 }
 
-.loading .circle_wrap .circ .img_card {
-  opacity: 0;
-  position: absolute;
-  right: -34vw;
-  bottom: -25vw;
-  height: 30vw;
-  width: 20vw;
-  -webkit-transform: translateY(70%);
-          transform: translateY(70%);
-  border-radius: 4px;
-  background-image: url("/Assets/Images/MeSunGlasses.jpeg");
-  background-size: cover;
-  background-position: 40% 100%;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-box-shadow: -8px 8px 14px #999;
-          box-shadow: -8px 8px 14px #999;
-}
-
-.loading .circle_wrap .circ .img_card .img_container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-radius: 4px;
-}
-
 .loading .circle_wrap #description {
   font-family: "Raleway";
   -ms-flex-item-align: center;
@@ -447,12 +421,23 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.loading .circle_wrap #description h6 {
+.loading .circle_wrap #description h6.descHeader {
   margin: 0;
+  overflow: hidden;
+  background-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.loading .circle_wrap #description h6.descHeader .descLine {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .loading .circle_wrap #description a {
   position: absolute;
+  z-index: 10;
   top: 50%;
   left: -4vw;
   font-size: 1.4vw;
@@ -491,7 +476,7 @@ body {
 }
 
 .whatIdo .categories h2.mainTitles {
-  margin: 20vw 0 0 14vw;
+  margin: 30vw 0 0 14vw;
   font-family: "Montserrat";
   color: #ffffff;
   font-size: calc(16px + 4.4vw);
@@ -506,6 +491,13 @@ body {
   text-transform: uppercase;
   font-weight: 300;
   mix-blend-mode: difference;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.whatIdo .categories h2.mainTitles div.what {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .whatIdo .categories h2.mainTitles .stroke {
@@ -617,6 +609,8 @@ body {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   mix-blend-mode: difference;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 .skills .carouselLine {

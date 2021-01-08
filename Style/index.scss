@@ -266,7 +266,7 @@ body {
         stroke-dasharray: 1060;
         stroke-dashoffset: 1028;
         // stroke-dashoffset: 0;
-        opacity: 1;
+        opacity: 0;
         transition: all 1s ease-in-out;
       }
 
@@ -286,7 +286,7 @@ body {
         left: 50%;
         top: 50%;
         font-family: $fontText;
-        font-size: 1.25vw;
+        font-size: 1vw;
         line-height: 1.5vw;
         letter-spacing: 0.25vw;
         text-transform: uppercase;
@@ -313,14 +313,15 @@ body {
       .date {
         position: absolute;
         left: 75%;
-        top: 5%;
+        top: 0%;
         white-space: nowrap;
         height: fit-content;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
 
         .dayWrapper {
+          margin: 0;
           overflow: hidden;
           background-color: transparent;
 
@@ -342,6 +343,7 @@ body {
 
           #info_date_wrapper1,
           #info_date_wrapper2 {
+            margin: 0;
             overflow: hidden;
             background-color: transparent;
             width: fit-content;
@@ -367,31 +369,6 @@ body {
           }
         }
       }
-
-      .img_card {
-        opacity: 0;
-        position: absolute;
-        right: -34vw;
-        bottom: -25vw;
-        height: 30vw;
-        width: 20vw;
-        transform: translateY(70%);
-        border-radius: 4px;
-        background-image: url("/Assets/Images/MeSunGlasses.jpeg");
-        background-size: cover;
-        background-position: 40% 100%;
-        transition: all 1s ease-in-out;
-        @include boxShadow(-8px, 8px, 14px, #999);
-
-        .img_container {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          border-radius: 4px;
-        }
-      }
     }
 
     #description {
@@ -405,12 +382,20 @@ body {
       color: $textColor1;
       transition: all 1s ease-in-out;
 
-      h6 {
+      h6.descHeader {
         margin: 0;
+        overflow: hidden;
+        background-color: transparent;
+        width: fit-content;
+
+        .descLine {
+          transform: translateY(100%);
+        }
       }
 
       a {
         position: absolute;
+        z-index: 10;
         top: 50%;
         left: -4vw;
         font-size: 1.4vw;
@@ -453,7 +438,7 @@ body {
     position: relative;
 
     h2.mainTitles {
-      margin: 20vw 0 0 14vw;
+      margin: 30vw 0 0 14vw;
       font-family: $fontTitle;
       color: $textColor1;
       font-size: calc(16px + 4.4vw);
@@ -463,6 +448,12 @@ body {
       text-transform: uppercase;
       font-weight: 300;
       mix-blend-mode: difference;
+      overflow: hidden;
+      background-color: transparent;
+
+      div.what {
+        transform: translateY(100%);
+      }
 
       .stroke {
         color: transparent;
@@ -545,7 +536,6 @@ body {
 
 .skills {
   // margin: 14vw 0 14vw 0;
-  // overflow: hidden;
   height: auto;
 
   h2.mainTitles {
@@ -559,6 +549,8 @@ body {
     width: fit-content;
     transition: all 1s ease-in-out;
     mix-blend-mode: difference;
+    overflow: hidden;
+    background-color: transparent;
   }
 
   .carouselLine {
