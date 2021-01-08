@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: $fontTitle;
@@ -439,30 +443,31 @@ body {
 
   .categories {
     position: relative;
+    margin: 20vw 0 0 14vw;
 
     h2.mainTitles {
-      margin: 20vw 0 0 14vw;
+      margin: 0;
       font-family: $fontTitle;
       color: $textColor1;
-      font-size: calc(16px + 4.4vw);
+      font-size: calc(16px + 5vw);
       width: fit-content;
       transition: all 1s ease-in-out;
       height: fit-content;
       text-transform: uppercase;
-      font-weight: 300;
+      font-weight: 700;
       mix-blend-mode: difference;
       overflow: hidden;
       background-color: transparent;
 
-      div.what {
-        transform: translateY(100%);
+      #rotate {
+        color: transparent;
+        // transform: rotate(180deg);
+        @include textStrokeCategories(0.5px, $textColor1);
+        @include textShadow(0, 0, 0, transparent);
       }
 
-      .stroke {
-        color: transparent;
-        @include textShadow(-20px, 20px, 10px, rgba(238, 164, 127, 0.6));
-        text-shadow: inset 2px 16px #eea47fff;
-        @include textStrokeCategories(2.5px, $textColor1);
+      div.what {
+        transform: translateY(100%);
       }
     }
 
@@ -538,6 +543,7 @@ body {
             height: 100%;
             width: 100%;
             margin: 0;
+            transition: all 0.6s ease;
           }
         }
       }
@@ -548,20 +554,30 @@ body {
 .skills {
   // margin: 14vw 0 14vw 0;
   height: auto;
+  margin: 18vw 0 0 0;
 
   h2.mainTitles {
-    margin: 18vw 0 0 14vw;
+    margin: 0 0 0 14vw;
     font-family: $fontTitle;
     color: $textColor1;
-    font-weight: 300;
-    // @include textShadow(-1px, 11px, 10px, $textShadowColor);
+    font-size: calc(16px + 5vw);
     text-transform: uppercase;
-    font-size: calc(16px + 4.4vw);
+    font-weight: 700;
     width: fit-content;
-    transition: all 1s ease-in-out;
     mix-blend-mode: difference;
     overflow: hidden;
     background-color: transparent;
+    transition: all 0.6s ease-in-out;
+
+    #smallT {
+      font-size: calc(16px + 0.5vw);
+    }
+
+    .stroke {
+      color: transparent;
+      @include textStrokeCategories(0.5px, $textColor1);
+      @include textShadow(0, 0, 0, transparent);
+    }
 
     .exp {
       transform: translateY(100%);
@@ -571,7 +587,7 @@ body {
   .carouselLine {
     width: 0%;
     border: 0.35px solid $textColor1;
-    opacity: 0.75;
+    opacity: 0.4;
   }
 
   hr {
@@ -641,7 +657,7 @@ body {
   #line {
     margin: 0;
     stroke: $textColor1;
-    stroke-width: 2px;
+    stroke-width: 1px;
   }
 
   .slider3 {
@@ -710,6 +726,7 @@ body {
   position: relative;
   height: auto;
   padding: 8.6vw 0 10vw 14vw;
+  mix-blend-mode: difference;
 
   h2.longText {
     width: fit-content;
@@ -787,9 +804,9 @@ body {
 }
 
 footer {
-  background: transparent;
+  background: red;
   width: 100vw;
-  height: 100%;
+  height: 50vh;
   margin: 0;
   box-shadow: 0 1px 6px $textColor1;
   font-family: $fontText;
@@ -847,6 +864,66 @@ footer {
 
         span {
           color: $textColor1;
+        }
+      }
+    }
+  }
+}
+
+.contactSection {
+  background-color: #1b1b1b;
+  margin-top: 8vw;
+  padding: 8vw 0 4vw 16vw;
+
+  h3.subtitles {
+    margin: 0;
+    font-family: $fontTitle;
+    color: $textColor1;
+    font-weight: 500;
+    letter-spacing: 1px;
+    // @include textShadow(-1px, 11px, 10px, $textShadowColorSoft);
+    // text-transform: uppercase;
+    line-height: 1.4em;
+    font-size: 2em;
+    width: fit-content;
+    transition: all 1s ease-in-out;
+    mix-blend-mode: difference;
+  }
+
+  .contactInfo {
+    margin-top: 6vw;
+
+    .contactGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2vw;
+
+      h3 {
+        font-weight: 500;
+        font-size: calc(16 + 1vw);
+        color: $textColor1;
+      }
+
+      p {
+        font-weight: 400;
+        font-family: $fontTitle;
+        letter-spacing: 1.5px;
+        color: $textColor1;
+        opacity: 0.5;
+      }
+
+      .socials {
+        .socialsFlexbox {
+          display: flex;
+          align-items: flex-start;
+
+          a {
+            text-decoration: none;
+            margin: 0 2vw 0 0;
+            font-weight: 400;
+            color: $textColor1;
+            opacity: 0.5;
+          }
         }
       }
     }
