@@ -139,3 +139,52 @@ body {
     }
   }
 }
+
+.dark {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: none;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &.hideDark {
+    display: none;
+  }
+
+  .closeWebsite {
+    margin: 0;
+    font-size: 4.6vw;
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: #fff;
+    white-space: nowrap;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  svg#contactMeSvg {
+    position: absolute;
+    z-index: 999;
+    right: 10%;
+    bottom: 10%;
+    width: 180px;
+    cursor: pointer;
+    fill: $secondaryColor;
+    animation: spin 8s linear infinite;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}

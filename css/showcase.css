@@ -12,20 +12,37 @@ body {
       touch-action: pan-y;
 }
 
-.showcasePage h1.title {
-  margin: 0;
+.showcasePage .titleWrapper {
   padding: 10vw 0 4vw 16vw;
+}
+
+.showcasePage .titleWrapper h1.title {
+  margin: 0;
   font-family: "Montserrat";
   color: #ffffff;
   font-weight: 600;
   letter-spacing: 2px;
-  font-size: calc(24px + 8.4vw);
+  font-size: calc(24px + 5vw);
+  text-transform: uppercase;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   mix-blend-mode: difference;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.showcasePage .titleWrapper h1.title .stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+  text-shadow: 0 0 0 transparent;
+}
+
+.showcasePage .titleWrapper h1.title div {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .showcasePage .grid {
@@ -48,7 +65,12 @@ body {
   margin: 10em 0 16em 0;
 }
 
-.showcasePage .grid .gridCell .imageContainer {
+.showcasePage .grid .gridCell .imageContainer1,
+.showcasePage .grid .gridCell .imageContainer2,
+.showcasePage .grid .gridCell .imageContainer3,
+.showcasePage .grid .gridCell .imageContainer4,
+.showcasePage .grid .gridCell .imageContainer5,
+.showcasePage .grid .gridCell .imageContainer6 {
   width: 100%;
   height: 100%;
   background-image: url("/Assets/Images/MeSunGlasses.jpeg");
@@ -67,18 +89,37 @@ body {
 
 .showcasePage .grid .gridCell .projectDesc {
   margin: 0;
-  font-size: calc(16px + 0.35vw);
+  font-size: calc(16px + 0.25vw);
+}
+
+.showcasePage .grid .gridCell .projectDesc .line {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.showcasePage .grid .gridCell .projectDesc .line div {
   color: #ffffff;
   line-height: 1.7em;
   font-family: "Raleway";
   letter-spacing: 1px;
   font-weight: 400;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .showcasePage .contactSection {
   background-color: #1b1b1b;
   margin-top: 8vw;
   padding: 8vw 0 4vw 16vw;
+}
+
+.showcasePage .contactSection .lineContact {
+  overflow: hidden;
+}
+
+.showcasePage .contactSection .lineContact div {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .showcasePage .contactSection h3.subtitles {
@@ -111,15 +152,20 @@ body {
 
 .showcasePage .contactSection .contactInfo .contactGrid h3 {
   font-weight: 500;
-  font-size: calc(16 + 1vw);
-  color: #ffffff;
+  font-size: calc(16px + 0.1vw);
 }
 
-.showcasePage .contactSection .contactInfo .contactGrid p {
+.showcasePage .contactSection .contactInfo .contactGrid h6 .lineContact div {
   font-weight: 400;
-  font-family: "Montserrat";
+  font-family: "Raleway";
   letter-spacing: 1.5px;
-  color: #444;
+  color: #ffffff;
+  opacity: 0.3;
+  font-size: calc(16px + 0.05vw);
+}
+
+.showcasePage .contactSection .contactInfo .contactGrid #contact {
+  font-family: "Montserrat";
 }
 
 .showcasePage .contactSection .contactInfo .contactGrid .socials .socialsFlexbox {
@@ -132,9 +178,72 @@ body {
 }
 
 .showcasePage .contactSection .contactInfo .contactGrid .socials .socialsFlexbox a {
+  font-family: "Raleway";
   text-decoration: none;
   margin: 0 2vw 0 0;
   font-weight: 400;
-  color: #444;
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+.dark {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: none;
+  background-color: black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.dark.hideDark {
+  display: none;
+}
+
+.dark .closeWebsite {
+  margin: 0;
+  font-size: 4.6vw;
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: #fff;
+  white-space: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.dark svg#contactMeSvg {
+  position: absolute;
+  z-index: 999;
+  right: 10%;
+  bottom: 10%;
+  width: 180px;
+  cursor: pointer;
+  fill: #b2a3fc;
+  -webkit-animation: spin 8s linear infinite;
+          animation: spin 8s linear infinite;
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark svg#contactMeSvg:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 /*# sourceMappingURL=showcase.css.map */

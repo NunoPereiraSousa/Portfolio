@@ -149,4 +149,65 @@ body {
   height: 75vh;
   width: 28vw;
 }
+
+.dark {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: none;
+  background-color: black;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.dark.hideDark {
+  display: none;
+}
+
+.dark .closeWebsite {
+  margin: 0;
+  font-size: 4.6vw;
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: #fff;
+  white-space: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.dark svg#contactMeSvg {
+  position: absolute;
+  z-index: 999;
+  right: 10%;
+  bottom: 10%;
+  width: 180px;
+  cursor: pointer;
+  fill: #b2a3fc;
+  -webkit-animation: spin 8s linear infinite;
+          animation: spin 8s linear infinite;
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark svg#contactMeSvg:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
 /*# sourceMappingURL=aboutMe.css.map */
