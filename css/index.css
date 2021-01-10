@@ -255,7 +255,7 @@ body {
 }
 
 .loading .circle_wrap {
-  padding: 10.6vw 0 0 16vw;
+  padding: 12.6vw 0 0 16vw;
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -285,18 +285,6 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.loading .circle_wrap .circ:hover #description {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  opacity: 1;
-}
-
-.loading .circle_wrap .circ:hover .img_card {
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  opacity: 1;
-}
-
 .loading .circle_wrap .circ .center_text {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
@@ -318,16 +306,16 @@ body {
   text-shadow: -1px 4px 4px #444;
 }
 
-.loading .circle_wrap .circ .center_text .hide_categories {
+.loading .circle_wrap .circ .center_text .text_category {
+  margin: 1vw 0;
   overflow: hidden;
-  background: transparent;
+  color: #ffffff;
   font-weight: 600;
 }
 
-.loading .circle_wrap .circ .center_text .hide_categories .text_category {
+.loading .circle_wrap .circ .center_text .text_category div {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  color: #ffffff;
 }
 
 .loading .circle_wrap .circ .date {
@@ -453,16 +441,11 @@ body {
   color: #b2a3fc;
 }
 
-.loading .circle_wrap #description h6.descHeader {
-  margin: 0;
+.loading .circle_wrap #description .descLine {
   overflow: hidden;
-  background-color: transparent;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
-.loading .circle_wrap #description h6.descHeader .descLine {
+.loading .circle_wrap #description .descLine div {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
@@ -493,7 +476,7 @@ body {
   margin: 0;
   font-family: "Montserrat";
   color: #ffffff;
-  font-size: calc(16px + 5vw);
+  font-size: calc(16px + 4vw);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -637,10 +620,6 @@ body {
   background-color: transparent;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
-}
-
-.skills h2.mainTitles #smallT {
-  font-size: calc(16px + 0.5vw);
 }
 
 .skills h2.mainTitles .stroke {
@@ -810,7 +789,7 @@ body {
 .talkToMe {
   position: relative;
   height: auto;
-  padding: 8.6vw 0 10vw 14vw;
+  padding: 8.6vw 0 24vw 14vw;
   mix-blend-mode: difference;
 }
 
@@ -898,66 +877,19 @@ body {
           animation-play-state: paused;
 }
 
-footer {
-  background: red;
-  width: 100vw;
-  height: 50vh;
-  margin: 0;
-  -webkit-box-shadow: 0 1px 6px #ffffff;
-          box-shadow: 0 1px 6px #ffffff;
-  font-family: "Raleway";
-  position: relative;
-}
-
-footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-footer .container a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-footer .container a i {
-  color: #ffffff;
-  padding: 0 2vw 0 2vw;
-  font-size: 1.5vw;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-footer .container a i:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-footer .container .footer-copyright {
-  padding: 50px 0 30px 0;
-}
-
-footer .container .footer-copyright p {
-  font-size: 18px;
-  color: #ffffff;
-  letter-spacing: 1px;
-  font-weight: 600;
-  mix-blend-mode: difference;
-}
-
-footer .container .footer-copyright p span {
-  color: #ffffff;
-}
-
 .contactSection {
+  position: relative;
   background-color: #1b1b1b;
-  margin-top: 8vw;
   padding: 8vw 0 4vw 16vw;
+}
+
+.contactSection .lineContact {
+  overflow: hidden;
+}
+
+.contactSection .lineContact div {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .contactSection h3.subtitles {
@@ -990,16 +922,21 @@ footer .container .footer-copyright p span {
 
 .contactSection .contactInfo .contactGrid h3 {
   font-weight: 500;
-  font-size: calc(16 + 1vw);
+  font-size: calc(16px + 0.1vw);
   color: #ffffff;
 }
 
-.contactSection .contactInfo .contactGrid p {
+.contactSection .contactInfo .contactGrid h6 .lineContact div {
   font-weight: 400;
-  font-family: "Montserrat";
+  font-family: "Raleway";
   letter-spacing: 1.5px;
   color: #ffffff;
-  opacity: 0.5;
+  opacity: 0.3;
+  font-size: calc(16px + 0.05vw);
+}
+
+.contactSection .contactInfo .contactGrid #contact {
+  font-family: "Montserrat";
 }
 
 .contactSection .contactInfo .contactGrid .socials .socialsFlexbox {
@@ -1012,11 +949,12 @@ footer .container .footer-copyright p span {
 }
 
 .contactSection .contactInfo .contactGrid .socials .socialsFlexbox a {
+  font-family: "Raleway";
   text-decoration: none;
   margin: 0 2vw 0 0;
   font-weight: 400;
   color: #ffffff;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 @-webkit-keyframes roundandround {

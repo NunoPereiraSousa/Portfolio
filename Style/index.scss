@@ -249,7 +249,7 @@ body {
   }
 
   .circle_wrap {
-    padding: 10.6vw 0 0 16vw;
+    padding: 12.6vw 0 0 16vw;
     width: 100%;
     height: auto;
     display: flex;
@@ -274,16 +274,6 @@ body {
         transition: all 1s ease-in-out;
       }
 
-      &:hover #description {
-        transform: translateY(0%);
-        opacity: 1;
-      }
-
-      &:hover .img_card {
-        transform: translateY(50%);
-        opacity: 1;
-      }
-
       .center_text {
         position: absolute;
         transform: translate(-50%, -50%);
@@ -302,14 +292,14 @@ body {
           @include textShadow(-1px, 4px, 4px, $textShadowColorSoft);
         }
 
-        .hide_categories {
+        .text_category {
+          margin: 1vw 0;
           overflow: hidden;
-          background: transparent;
+          color: $textColor1;
           font-weight: 600;
 
-          .text_category {
+          div {
             transform: translateY(100%);
-            color: $textColor1;
           }
         }
       }
@@ -411,13 +401,10 @@ body {
         }
       }
 
-      h6.descHeader {
-        margin: 0;
+      .descLine {
         overflow: hidden;
-        background-color: transparent;
-        width: fit-content;
 
-        .descLine {
+        div {
           transform: translateY(100%);
         }
       }
@@ -449,7 +436,7 @@ body {
       margin: 0;
       font-family: $fontTitle;
       color: $textColor1;
-      font-size: calc(16px + 5vw);
+      font-size: calc(16px + 4vw);
       width: fit-content;
       transition: all 1s ease-in-out;
       height: fit-content;
@@ -568,10 +555,6 @@ body {
     overflow: hidden;
     background-color: transparent;
     transition: all 0.6s ease-in-out;
-
-    #smallT {
-      font-size: calc(16px + 0.5vw);
-    }
 
     .stroke {
       color: transparent;
@@ -725,7 +708,7 @@ body {
 .talkToMe {
   position: relative;
   height: auto;
-  padding: 8.6vw 0 10vw 14vw;
+  padding: 8.6vw 0 24vw 14vw;
   mix-blend-mode: difference;
 
   h2.longText {
@@ -803,77 +786,19 @@ body {
   }
 }
 
-footer {
-  background: red;
-  width: 100vw;
-  height: 50vh;
-  margin: 0;
-  box-shadow: 0 1px 6px $textColor1;
-  font-family: $fontText;
+.contactSection {
   position: relative;
+  background-color: #1b1b1b;
+  // margin-top: 10vw;
+  padding: 8vw 0 4vw 16vw;
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  .lineContact {
+    overflow: hidden;
 
-    a {
-      text-decoration: none;
-      cursor: pointer;
-
-      i {
-        color: $textColor1;
-        padding: 0 2vw 0 2vw;
-        font-size: 1.5vw;
-        transition: all 0.2s ease-in-out;
-
-        // &.fa-instagram:hover:before {
-        //     background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
-        //     background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
-        //     -webkit-background-clip: text;
-        //     -webkit-text-fill-color: transparent;
-        // }
-
-        // &.fa-facebook:hover:before {
-        //     color: #4267B2;
-        // }
-
-        // &.fa-linkedin-in:hover:before {
-        //     color: #2867B2;
-        // }
-
-        // &.fa-github:hover:before {
-        //     color: #24292e;
-        // }
-
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-    }
-
-    .footer-copyright {
-      padding: 50px 0 30px 0;
-
-      p {
-        font-size: 18px;
-        color: $textColor1;
-        letter-spacing: 1px;
-        font-weight: 600;
-        mix-blend-mode: difference;
-
-        span {
-          color: $textColor1;
-        }
-      }
+    div {
+      transform: translateY(100%);
     }
   }
-}
-
-.contactSection {
-  background-color: #1b1b1b;
-  margin-top: 8vw;
-  padding: 8vw 0 4vw 16vw;
 
   h3.subtitles {
     margin: 0;
@@ -900,16 +825,20 @@ footer {
 
       h3 {
         font-weight: 500;
-        font-size: calc(16 + 1vw);
+        font-size: calc(16px + 0.1vw);
         color: $textColor1;
       }
 
-      p {
+      h6 .lineContact div {
         font-weight: 400;
-        font-family: $fontTitle;
+        font-family: $fontText;
         letter-spacing: 1.5px;
         color: $textColor1;
-        opacity: 0.5;
+        opacity: 0.3;
+        font-size: calc(16px + 0.05vw);
+      }
+      #contact {
+        font-family: $fontTitle;
       }
 
       .socials {
@@ -918,11 +847,12 @@ footer {
           align-items: flex-start;
 
           a {
+            font-family: $fontText;
             text-decoration: none;
             margin: 0 2vw 0 0;
             font-weight: 400;
             color: $textColor1;
-            opacity: 0.5;
+            opacity: 0.3;
           }
         }
       }

@@ -46,7 +46,7 @@ body {
 }
 
 .showcasePage .grid {
-  padding: 8vw 14vw 0 14vw;
+  padding: 8vw 14vw 20vw 14vw;
   display: -ms-grid;
   display: grid;
   height: 100%;
@@ -108,8 +108,8 @@ body {
 }
 
 .showcasePage .contactSection {
+  position: relative;
   background-color: #1b1b1b;
-  margin-top: 8vw;
   padding: 8vw 0 4vw 16vw;
 }
 

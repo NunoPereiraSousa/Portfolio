@@ -83,9 +83,22 @@ gsap.to(".lineContact div", {
   scrollTrigger: {
     trigger: ".contactSection",
     start: "30% bottom",
-    markers: true
+    end: "top top",
+    pin: ".grid",
+    pinSpacing: false
   },
   y: "0%",
   stagger: 0.2,
   duration: 0.4
 });
+
+// gsap.to(".lineContact div", {
+//   scrollTrigger: {
+//     trigger: ".contactSection",
+//     start: "30% bottom",
+//     markers: true
+//   },
+//   y: "0%",
+//   stagger: 0.2,
+//   duration: 0.4
+// });

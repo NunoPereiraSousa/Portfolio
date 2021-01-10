@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
           }, 750);
         }
       },
-      "-=0.75"
+      "-=1"
     )
     .to(
       [".path"],
@@ -30,10 +30,11 @@ window.addEventListener("load", () => {
       "-=3"
     )
     .to(
-      [".text_category"],
+      [".text_category div"],
       {
         y: "15%",
-        duration: 0.6
+        duration: 0.9,
+        stagger: 0.2
       },
       "-=0.75"
     )
@@ -61,14 +62,15 @@ window.addEventListener("load", () => {
         y: "0%",
         duration: 1
       },
-      "-=1.75"
+      "-=0.75"
     )
     .to(
-      [".descLine"],
+      [".descLine div"],
       {
         opacity: 1,
         y: "15%",
-        duration: 1
+        duration: 0.9,
+        stagger: 0.2
       },
       "-=0.75"
     )
@@ -200,27 +202,27 @@ document.querySelectorAll(".longTextDiv").forEach((element, i) => {
   });
 });
 
-gsap.to(".contactSection", {
+gsap.to(".lineContact div", {
   scrollTrigger: {
     trigger: ".contactSection",
     toggleActions: "restart none none none",
-    start: "top 100%",
-    end: "top 30%",
+    start: "30% bottom",
+    end: "top top",
     pin: ".talkToMe",
     pinSpacing: false
-    // markers: true
   },
-  y: "10%",
-  duration: 1
+  y: "0%",
+  stagger: 0.2,
+  duration: 0.4
 });
 
-document.querySelector(".outside").addEventListener("mouseenter", e => {
-  document.querySelector(".emoji").innerHTML = "📤";
-});
+// document.querySelector(".outside").addEventListener("mouseenter", e => {
+//   document.querySelector(".emoji").innerHTML = "📤";
+// });
 
-document.querySelector(".outside").addEventListener("mouseleave", e => {
-  document.querySelector(".emoji").innerHTML = "📥";
-});
+// document.querySelector(".outside").addEventListener("mouseleave", e => {
+//   document.querySelector(".emoji").innerHTML = "📥";
+// });
 
 function thingsWord() {
   gsap.to("#rotate", {
@@ -323,11 +325,6 @@ function hoverLanguages() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4a8aaf"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4a8aaf"
-      });
       tInWords();
     });
   });
@@ -337,11 +334,6 @@ function hoverLanguages() {
         webkitTextFillColor: "transparent",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4a8aaf"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4a8aaf"
       });
       tInWords();
     });
@@ -353,11 +345,6 @@ function hoverLanguages() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4a8aaf"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4a8aaf"
-      });
       tInWords();
     });
   });
@@ -367,11 +354,6 @@ function hoverLanguages() {
         webkitTextFillColor: "transparent",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #c47555"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #c47555"
       });
       tInWords();
     });
@@ -383,11 +365,6 @@ function hoverLanguages() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #c47555"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #c47555"
-      });
       tInWords();
     });
   });
@@ -397,11 +374,6 @@ function hoverLanguages() {
         webkitTextFillColor: "transparent",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4a8aaf"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4a8aaf"
       });
       tInWords();
     });
@@ -413,11 +385,6 @@ function hoverLanguages() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4e9c6b"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4e9c6b"
-      });
       tInWords();
     });
   });
@@ -428,11 +395,6 @@ function hoverLanguages() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #b44e81"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #b44e81"
-      });
       tInWords();
     });
   });
@@ -440,11 +402,6 @@ function hoverLanguages() {
     element.addEventListener("mouseleave", e => {
       gsap.to(".stroke", {
         webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "1.5px #fcfcfc"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "#fcfcfc",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #fcfcfc"
       });
@@ -465,11 +422,6 @@ function hoverFrameworks() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4a8aaf"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4a8aaf"
-      });
       tInWords();
     });
   });
@@ -479,11 +431,6 @@ function hoverFrameworks() {
         webkitTextFillColor: "transparent",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4a8aaf"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4a8aaf"
       });
       tInWords();
     });
@@ -495,11 +442,6 @@ function hoverFrameworks() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #c47555"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #c47555"
-      });
       tInWords();
     });
   });
@@ -509,11 +451,6 @@ function hoverFrameworks() {
         webkitTextFillColor: "transparent",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #c47555"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #c47555"
       });
       tInWords();
     });
@@ -525,11 +462,6 @@ function hoverFrameworks() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #4a8aaf"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #4a8aaf"
-      });
       tInWords();
     });
   });
@@ -539,11 +471,6 @@ function hoverFrameworks() {
         webkitTextFillColor: "transparent",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #c47555"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #c47555"
       });
       tInWords();
     });
@@ -555,11 +482,6 @@ function hoverFrameworks() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #b44e81"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #b44e81"
-      });
       tInWords();
     });
   });
@@ -570,11 +492,6 @@ function hoverFrameworks() {
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #b44e81"
       });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "0.5px #b44e81"
-      });
       tInWords();
     });
   });
@@ -582,11 +499,6 @@ function hoverFrameworks() {
     element.addEventListener("mouseleave", e => {
       gsap.to(".stroke", {
         webkitTextFillColor: "transparent",
-        textShadow: "-1px 4px 50px transparent",
-        webkitTextStroke: "1.5px #fcfcfc"
-      });
-      gsap.to("#smallT", {
-        webkitTextFillColor: "#fcfcfc",
         textShadow: "-1px 4px 50px transparent",
         webkitTextStroke: "1.5px #fcfcfc"
       });
