@@ -9,7 +9,6 @@ In this repository you will find all the coded used to this amazing website!
 * HTML5
 * CSS3 - SCSS
 * JavaScript
-* jQuery
 * GSAP
 
 ### URL
