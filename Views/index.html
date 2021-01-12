@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/showcase.css" />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/smallscreens.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
     <link rel="stylesheet" href="/css/mousecursor.css">
   </head>
 
@@ -20,17 +22,75 @@
     <audio autoplay id="myaudio">
       <source src="/Assets/Audios/Lewis Capaldi - Someone You Loved.mp3">
     </audio>
-    <dic class="cursor"></dic>
-    <!-- <div class="glass">
-      <h1>Stay Hard</h1>
-      <div class="behindBackground"></div>
-    </div> -->
+    <div class="cursor">
+      <h4 class="textCursor"></h4>
+    </div>
+    <div id="mobile" class="d-xl-none">
+      <div id="mobile-text">
+        <h3>
+          <div class="line">
+            <div>To Smal<span>!</span></div>
+          </div>
+        </h3>
+        <h5 id="mobile_subtitle">
+          <div class="line">
+            <div>You gotta dream</div>
+          </div>
+          <div class="line">
+            <div>bigger</div>
+          </div>
+        </h5>
+        <h5 id="mobile_p">
+          <div class="line">
+            <div>Go get yourself a bigger</div>
+          </div>
+          <div class="line">
+            <div>dream. What's the funny part</div>
+          </div>
+          <div class="line">
+            <div>about having a dream that</div>
+          </div>
+          <div class="line">
+            <div>doesn't fit your(-self) screen?</div>
+          </div>
+        </h5>
+      </div>
+      <div id="icon_wrap">
+        <div id="icon">
+          <div id="icon_btns">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div id="icon_arrow1" class="mobile_arrow"></div>
+          <div id="icon_arrow2" class="mobile_arrow"></div>
+        </div>
+      </div>
+    </div>
     <div class="header">
-      <a id="logo" class="selected" href="">Leave a Legacy</a>
+      <a id="logo" class="selected" href="/Views/index.html">
+        <div class="line">
+          <div>Leave a Legacy</div>
+        </div>
+      </a>
       <nav>
-        <a class="link" href="">About</a>
-        <a class="link" href="">Showcase</a>
-        <a class="link selected" href="">Home</a>
+        <a class="link" href="/Views/aboutMe.html">
+          <div class="line">
+            <div>
+              About
+            </div>
+          </div>
+        </a>
+        <a class="link" href="/Views/showcase.html">
+          <div class="line">
+            <div>Showcase</div>
+          </div>
+        </a>
+        <a class="link selected" href="/Views/index.html">
+          <div class="line">
+            <div>Home</div>
+          </div>
+        </a>
       </nav>
     </div>
     <div class="buttonHeader">
@@ -512,7 +572,7 @@
           <div class="longTextDiv">world? 🪐</div>
         </h2>
         <h2 class="longText">
-          <div class="longTextDiv"><a id="talk_btn" class="bigText">Let's <span class="strokeWord">talk.</span></a></div>
+          <div class="longTextDiv"><a id="talk_btn">Let's <span class="strokeWord">talk.</span></a></div>
         </h2>
         <svg id="rotatingContact" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.64 146.8">
           <defs>
@@ -574,7 +634,7 @@
               </h3>
               <h6>
                 <div class="lineContact">
-                  <div id="contact">(+351) 911 587 712</div>
+                  <div id="contact"><a href="tel:+911 587 712">(+351) 911 587 712</a></div>
                 </div>
               </h6>
             </div>
@@ -582,9 +642,9 @@
               <h3>
                 <div class="lineContact"><div>Send me an email</div></div>
               </h3>
-              <h6>
+              <h6 id="email">
                 <div class="lineContact">
-                  <div>nunopereirasousa00@gmail.com</div>
+                  <div id="emailTxt"><a href="mailto:nunopereirasousa00@gmail.com">nunopereirasousa00@gmail.com</a></div>
                 </div>
               </h6>
             </div>
@@ -595,7 +655,7 @@
                 </div>
               </h3>
               <h6>
-                <div class="lineContact"><div>oPorto, Portugal</div></div>
+                <div class="lineContact"><div><a href="https://maps.google.com/?q=Porto" target="blank">oPorto, Portugal</a></div></div>
               </h6>
             </div>
             <div class="socials">
@@ -605,13 +665,13 @@
                 </div>
               </h3>
               <div class="socialsFlexbox">
-                <a href="" target="_blank"
+                <a href="https://www.linkedin.com/in/nunopereirasous/" target="_blank"
                   ><div class="lineContact"><div>LIn</div></div></a
                 >
-                <a href="" target="_blank"
+                <a href="https://github.com/NunoPereiraSousa" target="_blank"
                   ><div class="lineContact"><div>GH</div></div></a
                 >
-                <a href="" target="_blank"
+                <a href="https://www.instagram.com/nunopereirasousa/" target="_blank"
                   ><div class="lineContact"><div>IG</div></div></a
                 >
                 <a href="" target="_blank"
@@ -620,243 +680,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="showcasePage hide">
-      <h1 class="title">Projects</h1>
-      <div class="grid">
-        <div class="left1 gridCell">
-          <div class="imageContainer"></div>
-          <h4 class="projectName">GoPorto</h4>
-          <p class="projectDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
-        </div>
-        <div class="right1 gridCell">
-          <div class="imageContainer"></div>
-          <h4 class="projectName">GoPorto</h4>
-          <p class="projectDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
-        </div>
-        <div class="left2 gridCell">
-          <div class="imageContainer"></div>
-          <h4 class="projectName">GoPorto</h4>
-          <p class="projectDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
-        </div>
-        <div class="right2 gridCell">
-          <div class="imageContainer"></div>
-          <h4 class="projectName">GoPorto</h4>
-          <p class="projectDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
-        </div>
-        <div class="left3 gridCell">
-          <div class="imageContainer"></div>
-          <h4 class="projectName">GoPorto</h4>
-          <p class="projectDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
-        </div>
-        <div class="right3 gridCell">
-          <div class="imageContainer"></div>
-          <h4 class="projectName">GoPorto</h4>
-          <p class="projectDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
-        </div>
-      </div>
-      <div class="contactSection">
-        <h3 class="subtitles">
-          <div>What do you think?</div>
-          <div>Let's talk!</div>
-        </h3>
-        <div class="contactInfo">
-          <div class="contactGrid">
-            <div class="phoneNumber">
-              <h3>Let's chat!</h3>
-              <p>(+351) 911 587 712</p>
-            </div>
-            <div class="email">
-              <h3>Send me an email</h3>
-              <p>nunopereirasousa00@gmail.com</p>
-            </div>
-            <div class="location">
-              <h3>Located in</h3>
-              <p>oPorto, Portugal</p>
-            </div>
-            <div class="socials">
-              <h3>Socials</h3>
-              <div class="socialsFlexbox">
-                <a href="" target="_blank">LIn</a>
-                <a href="" target="_blank">GH</a>
-                <a href="" target="_blank">IG</a>
-                <a href="" target="_blank">YT</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="introPage">
-      <h1 class="firstText">Looking for <span class="stroke">next-level</span> <br> experiences?</h1>
-      <h1 class="secondText">- - - You're talking to <br> the right person.</h1>
-      <h4 class="thirdText">- - Check my <span class="stroke">projects</span> down below!</h4>
-      <h5 id="hide_arrow">
-        <div id="arrowDown">↓</div>
-      </h5>
-    </div>
-    <div class="secondPage">
-      <h1 class="title">Projects</h1>
-      <div class="filters">
-        <button class="filtersBtn filterBtnEnabled frontEndBtn">Front-End</button>
-        <button class="filtersBtn backEndBtn">Back-End</button>
-        <button class="filtersBtn uiUxBtn">UI UX Design</button>
-        <button class="filtersBtn mobileDevBtn">Mobile Development</button>
-        <button class="filtersBtn gameDevBtn">Game Development</button>
-      </div>
-      <div class="categories">
-        <ul>
-          <li class="categoryEnabled">
-            <div class="categoryBtn">
-              <div class="categoryType"><span class="number">💻 01</span><span class="project">GoPorto <span
-                    class="category">Front-End</span></span></div>
-              <h3 class="arrowIcon"><i class="fas fa-caret-down rotateActivated"></i></h3>
-            </div>
-            <div class="content opened">
-              <p class="categoryDescription">Bringing together design, data and technology to deliver actionable
-                customer experience strategies that drive marketing and business outcomes. Win the present. Prepare for
-                the future!</p>
-              <div class="btnGroup">
-                <button class="linksBtn"><span class="btnIcons"><i class="fas fa-globe"></i></span>Website</button>
-                <button class="linksBtn"><span class="btnIcons"><i class="fab fa-github"></i></span>Code</button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="categoryBtn">
-              <div class="categoryType"><span class="number">💻 02</span><span class="project">Control Covid <span
-                    class="category">Front-End</span></span></div>
-              <h3 class="arrowIcon"><i class="fas fa-caret-down"></i></h3>
-            </div>
-            <div class="content">
-              <p class="categoryDescription">Bringing together design, data and technology to deliver actionable
-                customer experience strategies that drive marketing and business outcomes. Win the present. Prepare for
-                the future!</p>
-              <button class="linksBtn"><span class="btnIcons"><i class="fas fa-globe"></i></span>Website</button>
-              <button class="linksBtn"><span class="btnIcons"><i class="fab fa-github"></i></span>Code</button>
-            </div>
-          </li>
-          <li>
-            <div class="categoryBtn">
-              <div class="categoryType"><span class="number">💻 03</span><span class="project">Dutify <span
-                    class="category">Front-End</span></span></div>
-              <h3 class="arrowIcon"><i class="fas fa-caret-down"></i></h3>
-            </div>
-            <div class="content">
-              <p class="categoryDescription">Bringing together design, data and technology to deliver actionable
-                customer experience strategies that drive marketing and business outcomes. Win the present. Prepare for
-                the future!</p>
-              <button class="linksBtn"><span class="btnIcons"><i class="fas fa-globe"></i></span>Website</button>
-              <button class="linksBtn"><span class="btnIcons"><i class="fab fa-github"></i></span>Code</button>
-            </div>
-          </li>
-        </ul>
-      </div> -->
-    </div>
-    <div class="aboutMePage hide">
-      <div class="intro">
-        <div class="quote">
-          <h1>
-            <div>My goal is to inspire as many</div>
-            <div>people as I can. I will make sure</div>
-            <div>I leave a legacy in this world.</div>
-          </h1>
-        </div>
-        <!-- <div class="aboutMeFlexbox">
-          <div class="myInfo">
-            <p><span>My goal is to inspire as many</span></p>
-            <p><span>people as I can.</span></p>
-            <p><span>I will make sure I leave a legacy in this world.</span></p>
-          </div>
-          <div class="socialsInfo">
-            <a href="" target="_blank">
-                <h2 id="github">GitHub</h2>
-            </a>
-            <a href="" target="_blank">
-                <h2 id="linkedin">LinkedIn</h2>
-            </a>
-            <a href="" target="_blank">
-                <h2 id="instagram">Instagram</h2>
-            </a>
-          </div>
-        </div> -->
-        <h5 id="hide_arrow">
-          <div id="arrowDown">↓</div>
-        </h5>
-      </div>
-      <div class="socialsInfo">
-        <a href="https://github.com/NunoPereiraSousa" target="_blank">
-            <h2 id="github">GitHub</h2>
-        </a>
-        <a href="https://www.linkedin.com/in/nunopereirasous/" target="_blank">
-            <h2 id="linkedin">LinkedIn</h2>
-        </a>
-        <a href="https://www.instagram.com/nunopereirasousa/" target="_blank">
-            <h2 id="instagram">Instagram</h2>
-        </a>
-      </div>
-      <div class="accomplishmentsGrid">
-        <div class="awards">
-          <div class="image1"></div>
-          <p class="desc">CMRG 2013</p>
-          <h3>
-            <div class="title_achievement">Completed the 5 years musical</div>
-            <div class="title_achievement">school course - piano as the</div>
-            <div class="title_achievement">main musical instrument.</div>
-          </h3>
-        </div>
-        <div class="awards">
-          <div class="image1"></div>
-          <p class="desc">FINA 2015</p>
-          <h3>
-            <div class="title_achievement">3rd best european time in</div>
-            <div class="title_achievement">4x200mfreestyle relay. Multiple</div>
-            <div class="title_achievement">timesNational Champion.</div>
-          </h3>
-        </div>
-        <div class="awards">
-          <div class="image1"></div>
-          <p class="desc">ESMAD 2021</p>
-          <h3>
-            <div class="title_achievement">Currently the college student</div>
-            <div class="title_achievement">with the highest GPA in a web </div>
-            <div class="title_achievement">development degree - 4.33 / 5.</div>
-          </h3>
-        </div>
-        <div class="awards">
-          <div class="image1"></div>
-          <p class="desc">Nuno Pereira Sousa 2020 - Present</p>
-          <h3>
-            <div class="title_achievement">Teaching & Tutor programming</div>
-            <div class="title_achievement">to people all over the world</div>
-            <div class="title_achievement">with more than 80h already</div>
-            <div class="title_achievement">taught and tutored.</div>
-          </h3>
         </div>
       </div>
     </div>
@@ -995,25 +818,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
-    <script src="/JS/hover-effect.js"></script>
-    <script>
-      var myAnimation = new hoverEffect({
-          parent: document.querySelector('.image1'),
-          intensity: 0.5,
-          angle: Math.PI / 8,
-          angle1: Math.PI / 4,
-          angle2: Math.PI / 4,
-          speedIn: 1.5,
-          speedOut: 2,
-          image1: '/Assets/Images/swimming.jpg',
-          image2: '/Assets/Images/MeSunGlasses.jpeg',
-          displacementImage: '/Assets/Images/Displacements/6.jpg'
-      });
-  </script>
     
     <script src="/JS/words.js"></script>
     <script src="/JS/landingAnimations.js"></script>
     <script type="module" src="/JS/onOff.js"></script>
+    <script type="module" src="/JS/smallscreens.js"></script>
     <script src="/JS/currentDate.js"></script>
     <script type="module" src="/JS/mousecursor.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>

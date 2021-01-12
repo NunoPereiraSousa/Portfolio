@@ -12,28 +12,45 @@
   transition-property: background, width, height, transition, -webkit-transition;
 }
 
-.logo {
+.talkBtnCursor {
   height: 3em;
   width: 3em;
   background: #b2a3fc;
 }
 
-.introTextCursor,
-.bigTextCursor {
+.introTextCursor {
   height: 7em;
   width: 7em;
   background: #ffffff;
 }
 
-.powerBtnCursor {
-  height: 3em;
-  width: 3em;
+.bigTextCursor {
+  height: 5em;
+  width: 5em;
   background: #ffffff;
 }
 
 .contactBtnCursor {
   height: 6em;
   width: 6em;
+  background: #ffffff;
+}
+
+.textCursor {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Montserrat";
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+.projectsTitleCursor {
+  height: 7em;
+  width: 7em;
   background: #ffffff;
 }
 /*# sourceMappingURL=mousecursor.css.map */

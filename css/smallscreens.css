@@ -197,6 +197,8 @@
 @media screen and (max-width: 1024px) {
   .header,
   .buttonHeader,
+  .landingPage,
+  .aboutMePage,
   .showcasePage,
   .dark {
     display: none;

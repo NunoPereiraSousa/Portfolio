@@ -1,0 +1,74 @@
+@import "variables.scss";
+
+.contactSection {
+  position: relative;
+  background-color: #1b1b1b;
+  padding: 8vw 0 4vw 16vw;
+  user-select: text;
+
+  .lineContact {
+    overflow: hidden;
+
+    div {
+      transform: translateY(100%);
+    }
+  }
+
+  h3.subtitles {
+    margin: 0;
+    font-family: $fontTitle;
+    color: $textColor1;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    font-size: 2em;
+    width: fit-content;
+    transition: all 1s ease-in-out;
+    mix-blend-mode: difference;
+  }
+
+  .contactInfo {
+    margin-top: 6vw;
+
+    .contactGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2vw;
+
+      h3 {
+        font-weight: 500;
+        font-size: calc(16px + 0.1vw);
+        color: $textColor1;
+        mix-blend-mode: none;
+      }
+
+      h6 .lineContact div {
+        font-weight: 400;
+        font-family: $fontText;
+        letter-spacing: 1.5px;
+        color: $greyText;
+        font-size: calc(16px + 0.05vw);
+        mix-blend-mode: none;
+      }
+
+      #contact {
+        font-family: $fontTitle;
+      }
+
+      a {
+        font-family: $fontText;
+        text-decoration: none;
+        margin: 0 2vw 0 0;
+        font-weight: 400;
+        color: $greyText;
+      }
+
+      .socials {
+        .socialsFlexbox {
+          display: flex;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}

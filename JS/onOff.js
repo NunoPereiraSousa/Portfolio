@@ -86,3 +86,18 @@ function audioStatusMessage() {
     soundStatus.innerHTML = "Sound is now on";
   }
 }
+changeSelectedLink();
+function changeSelectedLink() {
+  let links = document.querySelectorAll(".link");
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      let selected = e.target;
+      console.log(e.target);
+
+      if (selected.classList.contains("selected")) {
+        alert(1);
+      }
+    });
+  });
+}

@@ -1,0 +1,84 @@
+.contactSection {
+  position: relative;
+  background-color: #1b1b1b;
+  padding: 8vw 0 4vw 16vw;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.contactSection .lineContact {
+  overflow: hidden;
+}
+
+.contactSection .lineContact div {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.contactSection h3.subtitles {
+  margin: 0;
+  font-family: "Montserrat";
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  font-size: 2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.contactSection .contactInfo {
+  margin-top: 6vw;
+}
+
+.contactSection .contactInfo .contactGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  row-gap: 2vw;
+}
+
+.contactSection .contactInfo .contactGrid h3 {
+  font-weight: 500;
+  font-size: calc(16px + 0.1vw);
+  color: #ffffff;
+  mix-blend-mode: none;
+}
+
+.contactSection .contactInfo .contactGrid h6 .lineContact div {
+  font-weight: 400;
+  font-family: "Raleway";
+  letter-spacing: 1.5px;
+  color: #585858;
+  font-size: calc(16px + 0.05vw);
+  mix-blend-mode: none;
+}
+
+.contactSection .contactInfo .contactGrid #contact {
+  font-family: "Montserrat";
+}
+
+.contactSection .contactInfo .contactGrid a {
+  font-family: "Raleway";
+  text-decoration: none;
+  margin: 0 2vw 0 0;
+  font-weight: 400;
+  color: #585858;
+}
+
+.contactSection .contactInfo .contactGrid .socials .socialsFlexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+/*# sourceMappingURL=contact.css.map */

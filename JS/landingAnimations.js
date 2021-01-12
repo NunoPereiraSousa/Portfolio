@@ -21,6 +21,23 @@ window.addEventListener("load", () => {
       "-=1"
     )
     .to(
+      [".line div"],
+      {
+        opacity: 1,
+        y: "0%",
+        duration: 0.95,
+        stagger: 0.25
+      },
+      "-=3"
+    )
+    .to(
+      [".svgsBtns"],
+      {
+        opacity: 1
+      },
+      "-=0.5"
+    )
+    .to(
       [".path"],
       {
         strokeDashoffset: 0,
@@ -162,7 +179,6 @@ gsap.to(".carouselLine", {
   scrollTrigger: {
     trigger: ".exp",
     start: "-0% 80%"
-    // markers: true
   },
   width: "100%",
   duration: 1.6
@@ -316,6 +332,13 @@ function tInWords() {
     webkitTextStroke: "0.2.5px transparent"
   });
 }
+document.querySelector(".carouselLine").addEventListener("mouseenter", e => {
+  gsap.to(".strokeText", {
+    webkitTextFillColor: "transparent",
+    textShadow: "-1px 4px 50px transparent",
+    webkitTextStroke: "1.5px #4a8aaf"
+  });
+});
 
 function hoverLanguages() {
   document.querySelectorAll(".js").forEach(element => {

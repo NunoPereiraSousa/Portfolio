@@ -31,6 +31,7 @@ body {
       mix-blend-mode: difference;
       background-color: transparent;
       overflow: hidden;
+      cursor: none;
 
       .stroke {
         color: transparent;
@@ -39,13 +40,26 @@ body {
       }
 
       div {
-        transform: translateX(100%);
+        transform: translateY(80%);
       }
     }
   }
 
+  .right1,
+  .left1 {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  .right2,
+  .left2,
+  .right3,
+  .left3 {
+    transform: translateY(5%);
+  }
+
   .grid {
-    padding: 8vw 14vw 20vw 14vw;
+    padding: 8vw 14vw 16vw 14vw;
     display: grid;
     height: 100%;
     grid-template-columns: repeat(2, 1fr);

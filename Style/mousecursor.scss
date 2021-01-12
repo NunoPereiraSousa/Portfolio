@@ -10,27 +10,45 @@
   transition-property: background, width, height, transition;
 }
 
-.logo {
+.talkBtnCursor {
   height: 3em;
   width: 3em;
   background: $secondaryColor;
 }
 
-.introTextCursor,
-.bigTextCursor {
+.introTextCursor {
   height: 7em;
   width: 7em;
   background: $textColor1;
 }
 
-.powerBtnCursor {
-  height: 3em;
-  width: 3em;
+.bigTextCursor {
+  height: 5em;
+  width: 5em;
   background: $textColor1;
 }
 
 .contactBtnCursor {
   height: 6em;
   width: 6em;
+  background: $textColor1;
+}
+
+.textCursor {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $fontTitle;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+// ------------ SHOWCASE ----------------
+
+.projectsTitleCursor {
+  height: 7em;
+  width: 7em;
   background: $textColor1;
 }

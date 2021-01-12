@@ -10,14 +10,20 @@
   flex-direction: column;
   justify-content: space-between;
 
+  .line {
+    overflow: hidden;
+    // background-color: red;
+    // opacity: 1;
+
+    div {
+      transform: translateY(100%);
+    }
+  }
+
   #logo {
     padding: 2vw 0 0 2.2vw;
     font-size: 1em;
     font-weight: 200;
-    // margin-bottom: auto;
-
-    &:hover {
-    }
   }
 
   a {
@@ -99,6 +105,7 @@ $glow-strength: 0.75; // how much they'll increase their brightness if animation
     border: none;
     padding: 0;
     z-index: 5;
+    opacity: 0;
 
     &:focus {
       outline: none;

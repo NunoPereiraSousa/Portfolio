@@ -18,6 +18,15 @@
           justify-content: space-between;
 }
 
+.header .line {
+  overflow: hidden;
+}
+
+.header .line div {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
 .header #logo {
   padding: 2vw 0 0 2.2vw;
   font-size: 1em;
@@ -112,6 +121,7 @@
   border: none;
   padding: 0;
   z-index: 5;
+  opacity: 0;
 }
 
 .buttonHeader button.svgsBtns:focus {

@@ -119,64 +119,8 @@ body {
 .loading {
   height: 100vh;
   width: 100%;
-  // overflow: hidden;
   position: relative;
   transition: all 1s ease;
-
-  // .notification {
-  //   position: absolute;
-  //   z-index: 500;
-  //   top: 10%;
-  //   right: 2%;
-  //   width: 10em;
-  //   height: 2em;
-  //   border-radius: 8px;
-  //   background-color: #000;
-  //   color: #fff;
-  //   text-align: center;
-  //   line-height: 2em;
-  //   font-size: 0.7vw;
-  // }
-
-  .middleText {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    font-size: 6vw;
-    letter-spacing: 10px;
-    font-weight: 500;
-    cursor: pointer;
-    white-space: nowrap;
-    /* animation: blinking 1s linear infinite; */
-  }
-
-  .heyText {
-    font-size: 22vw;
-    font-weight: 600;
-    letter-spacing: 10px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    animation: moveHey 1.5s ease-in-out infinite;
-  }
-
-  .commonText {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 6vw;
-    letter-spacing: 10px;
-    font-weight: 500;
-    cursor: pointer;
-  }
 
   .outsideSpaceTxt {
     padding: 7.4vw 0 0 16vw;
@@ -191,7 +135,6 @@ body {
       #fall {
         display: inline-block;
         transform-origin: top center;
-        // animation: fragile 3s linear infinite;
       }
 
       span.strokeWord {
@@ -200,21 +143,12 @@ body {
         @include textShadow(0, 0, 0, transparent);
       }
 
-      // #emoji {
-      //   font-size: calc(24px + 2.4vw);
-      //   display: inline-block;
-      //   vertical-align: middle;
-      //   margin-bottom: 0.35em;
-      // }
-
       h2#name,
       h2#name2 {
         font-size: calc(24px + 4.4vw);
         overflow: hidden;
         background: transparent;
         width: fit-content;
-        // padding: 0 0 6vw 0;
-        // text-transform: uppercase;
         font-weight: 600;
         margin: 0;
 
@@ -223,19 +157,11 @@ body {
           width: fit-content;
           transform: translateY(100%);
         }
-
-        // #text_name,
-        // #text_name2 {
-        //   transform: translateY(100%);
-        //   text-shadow: -1px 11px 10px #4d4d4d;
-        // }
       }
     }
   }
 
   #hide_arrow {
-    // overflow: hidden;
-    // background: transparent;
     position: absolute;
     right: 6.25vw;
     bottom: 0;
@@ -269,7 +195,6 @@ body {
         stroke: rgba(255, 255, 255, 1);
         stroke-dasharray: 1060;
         stroke-dashoffset: 1028;
-        // stroke-dashoffset: 0;
         opacity: 0;
         transition: all 1s ease-in-out;
       }
@@ -547,7 +472,7 @@ body {
     margin: 0 0 0 14vw;
     font-family: $fontTitle;
     color: $textColor1;
-    font-size: calc(16px + 5vw);
+    font-size: calc(16px + 4vw);
     text-transform: uppercase;
     font-weight: 700;
     width: fit-content;
@@ -782,80 +707,6 @@ body {
 
     &:hover {
       animation-play-state: paused;
-    }
-  }
-}
-
-.contactSection {
-  position: relative;
-  background-color: #1b1b1b;
-  // margin-top: 10vw;
-  padding: 8vw 0 4vw 16vw;
-
-  .lineContact {
-    overflow: hidden;
-
-    div {
-      transform: translateY(100%);
-    }
-  }
-
-  h3.subtitles {
-    margin: 0;
-    font-family: $fontTitle;
-    color: $textColor1;
-    font-weight: 500;
-    letter-spacing: 1px;
-    // @include textShadow(-1px, 11px, 10px, $textShadowColorSoft);
-    // text-transform: uppercase;
-    line-height: 1.4em;
-    font-size: 2em;
-    width: fit-content;
-    transition: all 1s ease-in-out;
-    mix-blend-mode: difference;
-  }
-
-  .contactInfo {
-    margin-top: 6vw;
-
-    .contactGrid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 2vw;
-
-      h3 {
-        font-weight: 500;
-        font-size: calc(16px + 0.1vw);
-        color: $textColor1;
-      }
-
-      h6 .lineContact div {
-        font-weight: 400;
-        font-family: $fontText;
-        letter-spacing: 1.5px;
-        color: $textColor1;
-        opacity: 0.3;
-        font-size: calc(16px + 0.05vw);
-      }
-      #contact {
-        font-family: $fontTitle;
-      }
-
-      .socials {
-        .socialsFlexbox {
-          display: flex;
-          align-items: flex-start;
-
-          a {
-            font-family: $fontText;
-            text-decoration: none;
-            margin: 0 2vw 0 0;
-            font-weight: 400;
-            color: $textColor1;
-            opacity: 0.3;
-          }
-        }
-      }
     }
   }
 }

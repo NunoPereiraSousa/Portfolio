@@ -63,11 +63,27 @@
       </div>
     </div>
     <div class="header">
-      <a id="logo" class="selected" href="">Leave a Legacy</a>
+      <a id="logo" class="selected" href="/Views/index.html">
+        <div class="line">
+          <div>Leave a Legacy</div>
+        </div>
+      </a>
       <nav>
-        <a class="link" href="">About</a>
-        <a class="link" href="">Showcase</a>
-        <a class="link selected" href="">Home</a>
+        <a class="link" href="/Views/aboutMe.html">
+          <div class="line">
+            <div>About</div>
+          </div>
+        </a>
+        <a class="link" href="/Views/showcase.html">
+          <div class="line">
+            <div>Showcase</div>
+          </div>
+        </a>
+        <a class="link selected" href="/Views/index.html">
+          <div class="line">
+            <div>Home</div>
+          </div>
+        </a>
       </nav>
     </div>
     <div class="buttonHeader">
@@ -160,7 +176,7 @@
     <div class="showcasePage">
       <div class="titleWrapper">
         <h1 class="title">
-          <div class="asd"><span class="stroke">Pro</span>jects</div>
+          <div class="projectsTitle"><span class="stroke">Pro</span>jects</div>
         </h1>
       </div>
       <div class="grid">
@@ -457,12 +473,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
     <script src="/JS/hover-effect.js"></script>
-
     <script type="module" src="/JS/onOff.js"></script>
     <script src="/JS/showcase.js"></script>
     <script src="/JS/smallscreens.js"></script>
-    <!-- <script type="module" src="/JS/mousecursor.js"></script> -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="module" src="/JS/mousecursor_showcase.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
     <!-- <script>
       let myAnimation = new hoverEffect({
         parent: document.querySelector(".imageContainer2"),
