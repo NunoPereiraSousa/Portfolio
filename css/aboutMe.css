@@ -43,14 +43,16 @@ body {
   color: #ffffff;
   line-height: 1.4;
   letter-spacing: 0.02em;
+  mix-blend-mode: difference;
+  cursor: none;
 }
 
-.aboutMePage .quote h1 div.line {
+.aboutMePage .quote h1 div.line1 {
   text-align: left;
   overflow: hidden;
 }
 
-.aboutMePage .quote h1 div.line div {
+.aboutMePage .quote h1 div.line1 div {
   -webkit-transform: translateY(80%);
           transform: translateY(80%);
 }

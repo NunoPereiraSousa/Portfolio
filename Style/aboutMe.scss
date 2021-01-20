@@ -6,8 +6,6 @@ body {
   color: $textColor1;
   user-select: none;
   background-color: #121212;
-  // background-image: linear-gradient(260deg, #cdd2e4, #cdd2e4, #ffe9b1);
-  // animation: gradient 60s ease infinite;
   overflow-x: hidden;
   touch-action: pan-y;
 }
@@ -35,8 +33,10 @@ body {
       color: $textColor1;
       line-height: 1.4;
       letter-spacing: 0.02em;
+      mix-blend-mode: difference;
+      cursor: none;
 
-      div.line {
+      div.line1 {
         text-align: left;
         overflow: hidden;
 

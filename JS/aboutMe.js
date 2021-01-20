@@ -3,13 +3,17 @@ let right1Text = document.querySelectorAll(".right1 h3 .title_achievement div");
 let left2Text = document.querySelectorAll(".left2 h3 .title_achievement div");
 let right2Text = document.querySelectorAll(".right2 h3 .title_achievement div");
 
-window.addEventListener("load", () => {
-  gsap.to([".line div"], {
-    opacity: 1,
-    y: "0%",
-    duration: 0.95,
-    stagger: 0.2
-  });
+gsap.to(".line div", {
+  opacity: 1,
+  y: "0%",
+  duration: 0.5,
+  stagger: 0.2
+});
+gsap.to(".line1 div", {
+  opacity: 1,
+  y: "5%",
+  duration: 0.95,
+  stagger: 0.2
 });
 
 gsap.to(left1Text, {

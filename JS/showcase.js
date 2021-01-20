@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
         y: "10%",
         duration: 1
       },
-      "-=2"
+      "-=0.5"
     )
     .to(
       [".right1", ".left1"],
@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
         stagger: 0.2,
         opacity: 1
       },
-      "-=1.5"
+      "-=0.5"
     );
 });
 

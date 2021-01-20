@@ -1,5 +1,13 @@
 @import "variables.scss";
 
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 #mobile {
   background-image: url("/Assets/Images/Nuno.png");
   background-size: cover;

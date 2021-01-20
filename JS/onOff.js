@@ -93,10 +93,9 @@ function changeSelectedLink() {
   links.forEach(link => {
     link.addEventListener("click", e => {
       let selected = e.target;
-      console.log(e.target);
 
       if (selected.classList.contains("selected")) {
-        alert(1);
+        // alert(1);
       }
     });
   });
