@@ -57,8 +57,8 @@ body {
 .showcasePage .left2,
 .showcasePage .right3,
 .showcasePage .left3 {
-  -webkit-transform: translateY(5%);
-          transform: translateY(5%);
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
 }
 
 .showcasePage .grid {

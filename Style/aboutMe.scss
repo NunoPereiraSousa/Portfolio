@@ -100,10 +100,14 @@ body {
   }
 
   .accomplishmentsGrid {
-    padding: 10vw 4vw 22vw 4vw;
+    padding: 10vw 4vw 16vw 4vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+
+    .awards {
+      transform: translateY(10%);
+    }
 
     .awards:nth-child(odd) {
       margin: 8em 0 2em 0;

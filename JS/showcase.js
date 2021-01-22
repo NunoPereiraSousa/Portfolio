@@ -1,15 +1,16 @@
-let tl = gsap.timeline({
+let tl2 = gsap.timeline({
   defaults: {
     ease: Power1.ease
   }
 });
 
 window.addEventListener("load", () => {
-  tl.to(["a .line div"], {
-    y: "0%",
-    duration: 0.9,
-    stagger: 0.1
-  })
+  tl2
+    .to(["a .line div"], {
+      y: "0%",
+      duration: 0.9,
+      stagger: 0.1
+    })
     .to(
       [".projectsTitle"],
       {

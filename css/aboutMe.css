@@ -115,12 +115,17 @@ body {
 }
 
 .aboutMePage .accomplishmentsGrid {
-  padding: 10vw 4vw 22vw 4vw;
+  padding: 10vw 4vw 16vw 4vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+}
+
+.aboutMePage .accomplishmentsGrid .awards {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
 }
 
 .aboutMePage .accomplishmentsGrid .awards:nth-child(odd) {

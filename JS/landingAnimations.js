@@ -1,5 +1,14 @@
 window.addEventListener("load", () => {
   document.querySelector(".slide-track").style.animationPlayState = "paused";
+});
+
+let tl = gsap.timeline({
+  defaults: {
+    ease: Power1.easeInOut
+  }
+});
+
+function landingLoad() {
   tl.to(["#text_name"], {
     opacity: 1,
     y: "15%",
@@ -99,138 +108,136 @@ window.addEventListener("load", () => {
       },
       "-=0.75"
     );
-});
+}
 
-hoverCategories();
-hoverLanguages();
-hoverFrameworks();
+function landingAnimations() {
+  document.querySelectorAll(".what").forEach(element => {
+    gsap.to(element, {
+      scrollTrigger: {
+        trigger: element,
+        // toggleActions: "resume pause resume resume",
+        start: "-150% 80%"
+      },
+      y: "10%",
+      duration: 1
+    });
+  });
 
-let tl = gsap.timeline({
-  defaults: {
-    ease: Power1.easeInOut
-  }
-});
+  document.querySelectorAll(".exp").forEach(element => {
+    gsap.to(element, {
+      scrollTrigger: {
+        trigger: element,
+        // toggleActions: "resume pause resume resume",
+        start: "-180% 80%",
+        // end: "center center",
+        markers: true
+        // scrub: true
+      },
+      y: "10%",
+      duration: 1
+    });
+  });
 
-ScrollTrigger.defaults({
-  toggleActions: "resume pause resume none"
-  // markers: true
-});
-
-document.querySelectorAll(".what").forEach(element => {
-  gsap.to(element, {
+  gsap.to(".paused1", {
     scrollTrigger: {
-      trigger: element,
-      // toggleActions: "resume pause resume resume",
+      trigger: ".paused1",
+      start: "-50% 80%",
+      onEnter: () => {
+        setTimeout(() => {
+          document.querySelector(".paused1").style.animationPlayState =
+            "running";
+        }, 1000);
+      }
+    },
+    duration: 1
+  });
+
+  gsap.to(".slide h3", {
+    scrollTrigger: {
+      trigger: ".slide h3",
+      start: "-175% 80%"
+    },
+    y: "10%",
+    duration: 1
+  });
+
+  // gsap.to(".exp", {
+  //   scrollTrigger: {
+  //     trigger: ".exp",
+  //     start: "-130% 80%",
+  //     markers: true
+  //   },
+  //   y: "10%",
+  //   duration: 1
+  // });
+
+  gsap.to(".carouselLine", {
+    scrollTrigger: {
+      trigger: ".exp",
+      start: "-0% 80%"
+    },
+    width: "100%",
+    duration: 1.6
+  });
+
+  gsap.to([".up", ".up2"], {
+    scrollTrigger: {
+      trigger: ".up",
       start: "-150% 80%"
     },
-    y: "10%",
+    y: "-10%",
     duration: 1
   });
-});
 
-document.querySelectorAll(".exp").forEach(element => {
-  gsap.to(element, {
+  gsap.to(".paused2", {
     scrollTrigger: {
-      trigger: element,
-      // toggleActions: "resume pause resume resume",
-      start: "-180% 80%",
-      // end: "center center",
-      markers: true
-      // scrub: true
+      trigger: ".paused2",
+      onEnter: () => {
+        setTimeout(() => {
+          document.querySelector(".paused2").style.animationPlayState =
+            "running";
+          document.querySelector(".paused3").style.animationPlayState =
+            "running";
+        }, 1000);
+      }
     },
-    y: "10%",
     duration: 1
   });
-});
 
-gsap.to(".paused1", {
-  scrollTrigger: {
-    trigger: ".paused1",
-    start: "-50% 80%",
-    onEnter: () => {
-      setTimeout(() => {
-        document.querySelector(".paused1").style.animationPlayState = "running";
-      }, 1500);
-    }
-  },
-  duration: 1
-});
+  document.querySelectorAll(".longTextDiv").forEach((element, i) => {
+    i++;
+    gsap.to(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "-125% 80%"
+      },
+      y: "0%",
+      duration: 1
+    });
+  });
 
-gsap.to(".slide h3", {
-  scrollTrigger: {
-    trigger: ".slide h3",
-    start: "-175% 80%"
-  },
-  y: "10%",
-  duration: 1
-});
-
-// gsap.to(".exp", {
-//   scrollTrigger: {
-//     trigger: ".exp",
-//     start: "-130% 80%",
-//     markers: true
-//   },
-//   y: "10%",
-//   duration: 1
-// });
-
-gsap.to(".carouselLine", {
-  scrollTrigger: {
-    trigger: ".exp",
-    start: "-0% 80%"
-  },
-  width: "100%",
-  duration: 1.6
-});
-
-gsap.to([".up", ".up2"], {
-  scrollTrigger: {
-    trigger: ".up",
-    start: "-150% 80%"
-  },
-  y: "-10%",
-  duration: 1
-});
-
-gsap.to(".paused2", {
-  scrollTrigger: {
-    trigger: ".paused2",
-    onEnter: () => {
-      setTimeout(() => {
-        document.querySelector(".paused2").style.animationPlayState = "running";
-        document.querySelector(".paused3").style.animationPlayState = "running";
-      }, 1000);
-    }
-  },
-  duration: 1
-});
-
-document.querySelectorAll(".longTextDiv").forEach((element, i) => {
-  i++;
-  gsap.to(element, {
+  gsap.to(".lineContact div", {
     scrollTrigger: {
-      trigger: element,
-      start: "-125% 80%"
+      trigger: ".contactSection",
+      toggleActions: "restart none none none",
+      start: "30% bottom",
+      end: "top top",
+      pin: ".talkToMe",
+      pinSpacing: false
     },
     y: "0%",
-    duration: 1
+    stagger: 0.2,
+    duration: 0.4
   });
-});
 
-gsap.to(".lineContact div", {
-  scrollTrigger: {
-    trigger: ".contactSection",
-    toggleActions: "restart none none none",
-    start: "30% bottom",
-    end: "top top",
-    pin: ".talkToMe",
-    pinSpacing: false
-  },
-  y: "0%",
-  stagger: 0.2,
-  duration: 0.4
-});
+  document.querySelector(".carouselLine").addEventListener("mouseenter", e => {
+    gsap.to(".strokeText", {
+      webkitTextFillColor: "transparent",
+      textShadow: "-1px 4px 50px transparent",
+      webkitTextStroke: "1.5px #4a8aaf"
+    });
+  });
+}
 
 // document.querySelector(".outside").addEventListener("mouseenter", e => {
 //   document.querySelector(".emoji").innerHTML = "📤";
@@ -332,13 +339,6 @@ function tInWords() {
     webkitTextStroke: "0.2.5px transparent"
   });
 }
-document.querySelector(".carouselLine").addEventListener("mouseenter", e => {
-  gsap.to(".strokeText", {
-    webkitTextFillColor: "transparent",
-    textShadow: "-1px 4px 50px transparent",
-    webkitTextStroke: "1.5px #4a8aaf"
-  });
-});
 
 function hoverLanguages() {
   document.querySelectorAll(".js").forEach(element => {
@@ -533,3 +533,17 @@ function hoverFrameworks() {
     });
   });
 }
+
+landingLoad();
+hoverCategories();
+hoverLanguages();
+hoverFrameworks();
+landingAnimations();
+
+export {
+  landingLoad,
+  hoverCategories,
+  hoverLanguages,
+  hoverFrameworks,
+  landingAnimations
+};
