@@ -55,17 +55,6 @@
           transform: translateY(10px);
 }
 
-.header a:not(.selected) {
-  text-shadow: -1px 1px 1px #444;
-  opacity: 0.2;
-  color: #ffffff;
-}
-
-.header a:not(.selected):hover {
-  opacity: 1;
-  text-shadow: -1px 3px 3px #444;
-}
-
 .header nav {
   width: 2vw;
   white-space: nowrap;

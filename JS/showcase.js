@@ -85,7 +85,7 @@ gsap.to(".right1 .projectDesc .line div", {
     start: "100% 80%"
     // markers: true
   },
-  y: "20%",
+  y: "14%",
   duration: 0.7,
   stagger: 0.2,
   ease: Power1.easeInOut
@@ -97,7 +97,7 @@ gsap.to(".left1 .projectDesc .line div", {
     // toggleActions: "resume pause resume resume",
     start: "120% 80%"
   },
-  y: "20%",
+  y: "14%",
   duration: 0.7,
   stagger: 0.2,
   ease: Power1.easeInOut
@@ -109,7 +109,7 @@ gsap.to(".right2 .projectDesc .line div", {
     // toggleActions: "resume pause resume resume",
     start: "100% 80%"
   },
-  y: "20%",
+  y: "14%",
   duration: 0.7,
   stagger: 0.2,
   ease: Power1.easeInOut
@@ -121,7 +121,7 @@ gsap.to(".left2 .projectDesc .line div", {
     // toggleActions: "resume pause resume resume",
     start: "120% 80%"
   },
-  y: "20%",
+  y: "14%",
   duration: 0.7,
   stagger: 0.2,
   ease: Power1.easeInOut
@@ -133,7 +133,7 @@ gsap.to(".right3 .projectDesc .line div", {
     // toggleActions: "resume pause resume resume",
     start: "100% 80%"
   },
-  y: "20%",
+  y: "14%",
   duration: 0.7,
   stagger: 0.2,
   ease: Power1.easeInOut
@@ -145,7 +145,7 @@ gsap.to(".left3 .projectDesc .line div", {
     // toggleActions: "resume pause resume resume",
     start: "120% 80%"
   },
-  y: "20%",
+  y: "14%",
   duration: 0.7,
   stagger: 0.2,
   ease: Power1.easeInOut

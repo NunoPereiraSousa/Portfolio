@@ -74,7 +74,7 @@ function soundControl() {
     }, 250);
   } else {
     setTimeout(() => {
-      audio.volume = 0.1;
+      audio.volume = 0.8;
     }, 250);
   }
 }
@@ -86,7 +86,9 @@ function audioStatusMessage() {
     soundStatus.innerHTML = "Sound is now on";
   }
 }
+
 changeSelectedLink();
+
 function changeSelectedLink() {
   let links = document.querySelectorAll(".link");
 

@@ -145,12 +145,14 @@ body {
   bottom: 0;
   font-size: 2vw;
   text-shadow: -1px 3px 3px #444;
+  overflow: hidden;
 }
 
 .loading #hide_arrow #arrowDown {
+  margin: 0;
   color: #ffffff;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
 }
 
 .loading .circle_wrap {
@@ -326,16 +328,19 @@ body {
 }
 
 .loading .circle_wrap #description .contact .contactText {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.loading .circle_wrap #description .contact a {
   font-size: 1.4vw;
   color: #ffffff;
   text-decoration: none;
   font-weight: 800;
   text-transform: uppercase;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
 }
 
-.loading .circle_wrap #description .contact .contactText:hover {
+.loading .circle_wrap #description .contact a:hover {
   text-shadow: -2px 3px 3px #444;
   color: #b2a3fc;
 }

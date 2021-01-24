@@ -1,6 +1,5 @@
 export function mouseCursor() {
   let cursor = document.querySelector(".cursor");
-  let cursorText = document.querySelector(".textCursor");
   let logo = document.getElementById("logo");
   let introText = document.querySelector(".introText");
   let powerBtn = document.getElementById("powerBtn");
@@ -8,7 +7,7 @@ export function mouseCursor() {
   let bigText = document.querySelectorAll(".longText");
   let talkBtn = document.querySelector("#talk_btn");
   let rotatingContact = document.querySelector("#rotatingContact");
-  let emailText = document.querySelector("#email");
+  let rotatingContact2 = document.querySelector("#contactMeSvg");
 
   window.addEventListener("mousemove", mouseCursor);
   cursor.style.opacity = 0;
@@ -73,6 +72,10 @@ export function mouseCursor() {
   rotatingContact.addEventListener("mouseover", () => {
     cursor.classList.add("rotatingContactCursor");
     cursor.style.opacity = 1;
+  });
+
+  rotatingContact2.addEventListener("click", () => {
+    sendMail();
   });
 
   function sendMail() {

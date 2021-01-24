@@ -120,10 +120,12 @@ body {
     bottom: 0;
     font-size: 2vw;
     @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+    overflow: hidden;
 
     #arrowDown {
+      margin: 0;
       color: $textColor1;
-      transform: translateY(-100%);
+      transform: translateY(-80%);
     }
   }
 
@@ -265,12 +267,14 @@ body {
         cursor: pointer;
 
         .contactText {
+          transform: translateY(100%);
+        }
+        a {
           font-size: 1.4vw;
           color: $textColor1;
           text-decoration: none;
           font-weight: 800;
           text-transform: uppercase;
-          transform: translateY(100%);
 
           &:hover {
             @include textShadow(-2px, 3px, 3px, $textShadowColorSoft);

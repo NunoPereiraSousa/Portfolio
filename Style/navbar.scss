@@ -12,8 +12,6 @@
 
   .line {
     overflow: hidden;
-    // background-color: red;
-    // opacity: 1;
 
     div {
       transform: translateY(100%);
@@ -43,16 +41,16 @@
       transform: translateY(10px);
     }
 
-    &:not(.selected) {
-      @include textShadow(-1px, 1px, 1px, $textShadowColorSoft);
-      opacity: 0.2;
-      color: $textColor1;
+    // &:not(.selected) {
+    //   @include textShadow(-1px, 1px, 1px, $textShadowColorSoft);
+    //   opacity: 0.2;
+    //   color: $textColor1;
 
-      &:hover {
-        opacity: 1;
-        @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
-      }
-    }
+    //   &:hover {
+    //     opacity: 1;
+    //     @include textShadow(-1px, 3px, 3px, $textShadowColorSoft);
+    //   }
+    // }
   }
 
   nav {

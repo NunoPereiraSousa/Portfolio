@@ -53,7 +53,7 @@ function landingLoad() {
         duration: 2,
         opacity: 1
       },
-      "-=3"
+      "-=2"
     )
     .to(
       [".text_category div"],
@@ -100,6 +100,12 @@ function landingLoad() {
       },
       "-=0.75"
     )
+    .to([".contact div"], {
+      opacity: 1,
+      y: "15%",
+      duration: 0.9,
+      stagger: 0.2
+    })
     .to(
       [".info_date"],
       {
@@ -107,6 +113,14 @@ function landingLoad() {
         duration: 0.6
       },
       "-=0.75"
+    )
+    .to(
+      ["#hide_arrow div"],
+      {
+        y: "0%",
+        duration: 0.75
+      },
+      "-=1.75"
     );
 }
 
