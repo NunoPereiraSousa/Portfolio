@@ -12,14 +12,11 @@
     <link rel="stylesheet" href="/css/aboutMe.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/mousecursor.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
     <link rel="stylesheet" href="/css/smallscreens.css" />
   </head>
 
   <body>
-    <audio autoplay id="myaudio">
-      <source src="/Assets/Audios/Claude Debussy Clair de lune.mp3" />
-    </audio>
-    <div class="cursor"></div>
     <div id="mobile" class="d-xl-none">
       <div id="mobile-text">
         <h3>
@@ -62,398 +59,436 @@
         </div>
       </div>
     </div>
-    <div class="header">
-      <a id="logo" class="selected" href="/Views/index.html">
-        <div class="line">
-          <div>Leave a Legacy</div>
-        </div>
-      </a>
-      <nav>
-        <a class="link" href="/Views/aboutMe.html">
+    <div class="aboutMePage">
+      <audio autoplay id="myaudio">
+        <source src="/Assets/Audios/Claude Debussy Clair de lune.mp3" />
+      </audio>
+      <div class="cursor"></div>
+      <div class="header">
+        <a id="logo" class="selected" href="/Views/index.html">
           <div class="line">
-            <div>About</div>
+            <div>Leave a Legacy</div>
           </div>
         </a>
-        <a class="link" href="/Views/showcase.html">
-          <div class="line">
-            <div>Showcase</div>
-          </div>
-        </a>
-        <a class="link selected" href="/Views/index.html">
-          <div class="line">
-            <div>Home</div>
-          </div>
-        </a>
-      </nav>
-    </div>
-    <div class="buttonHeader">
-      <div class="soundInfo">
-        <p class="soundStatus">asdasdasd</p>
+        <nav>
+          <a class="link" href="/Views/aboutMe.html">
+            <div class="line">
+              <div>About</div>
+            </div>
+          </a>
+          <a class="link" href="/Views/showcase.html">
+            <div class="line">
+              <div>Showcase</div>
+            </div>
+          </a>
+          <a class="link selected" href="/Views/index.html">
+            <div class="line">
+              <div>Home</div>
+            </div>
+          </a>
+        </nav>
       </div>
-      <button class="svgsBtns" id="soundBtn">
-        <svg
-          class="sound"
-          viewBox="0 -47 354.98667 354"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="soundPath"
-            d="m6.828125 102.894531c-3.773437 0-6.828125 3.054688-6.828125 6.824219v34.132812c0 3.773438 3.054688 6.828126 6.828125 6.828126 3.769531 0 6.824219-3.054688 6.824219-6.828126v-34.132812c0-3.769531-3.054688-6.824219-6.824219-6.824219zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m40.984375 74.941406c-3.769531 0-6.828125 3.058594-6.828125 6.828125v94.515625c0 3.773438 3.058594 6.828125 6.828125 6.828125s6.828125-3.054687 6.828125-6.828125v-94.515625c0-3.769531-3.058594-6.828125-6.828125-6.828125zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m75.09375 27.800781c-3.769531 0-6.828125 3.054688-6.828125 6.824219v191.148438c0 3.769531 3.058594 6.828124 6.828125 6.828124s6.828125-3.058593 6.828125-6.828124v-191.148438c0-3.769531-3.058594-6.824219-6.828125-6.824219zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m109.226562 61.933594c-3.769531 0-6.828124 3.054687-6.828124 6.828125v116.050781c0 3.769531 3.058593 6.828125 6.828124 6.828125 3.769532 0 6.828126-3.058594 6.828126-6.828125v-116.050781c0-3.773438-3.058594-6.828125-6.828126-6.828125zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m212.292969 45.40625c-3.769531 0-6.824219 3.054688-6.824219 6.828125v153.589844c0 3.769531 3.054688 6.824219 6.824219 6.824219s6.828125-3.054688 6.828125-6.824219v-153.589844c0-3.773437-3.058594-6.828125-6.828125-6.828125zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m279.894531 55.105469c-3.769531 0-6.828125 3.058593-6.828125 6.828125v136.53125c0 3.773437 3.058594 6.828125 6.828125 6.828125s6.824219-3.054688 6.824219-6.828125v-136.53125c0-3.769532-3.054688-6.828125-6.824219-6.828125zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m314.027344 89.238281c-3.769532 0-6.828125 3.058594-6.828125 6.828125v68.265625c0 3.769531 3.058593 6.828125 6.828125 6.828125 3.769531 0 6.824218-3.058594 6.824218-6.828125v-68.265625c0-3.769531-3.054687-6.828125-6.824218-6.828125zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m245.761719.492188c-3.773438 0-6.828125 3.058593-6.828125 6.828124v245.757813c0 3.773437 3.054687 6.828125 6.828125 6.828125 3.769531 0 6.824219-3.054688 6.824219-6.828125v-245.757813c0-3.769531-3.054688-6.828124-6.824219-6.828124zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m143.359375 109.71875c-3.769531 0-6.824219 3.058594-6.824219 6.828125v27.304687c0 3.773438 3.054688 6.828126 6.824219 6.828126s6.828125-3.054688 6.828125-6.828126v-27.304687c0-3.769531-3.058594-6.828125-6.828125-6.828125zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m348.160156 107.433594c-3.769531 0-6.828125 3.054687-6.828125 6.824218v29.539063c0 3.769531 3.058594 6.828125 6.828125 6.828125 3.769532 0 6.828125-3.058594 6.828125-6.828125v-29.539063c0-3.769531-3.058593-6.824218-6.828125-6.824218zm0 0"
-          />
-          <path
-            class="soundPath"
-            d="m176.851562 94.417969c-3.773437 0-6.828124 3.054687-6.828124 6.824219v55.570312c0 3.769531 3.054687 6.828125 6.828124 6.828125 3.769532 0 6.824219-3.058594 6.824219-6.828125v-55.570312c0-3.769532-3.054687-6.824219-6.824219-6.824219zm0 0"
-          />
-        </svg>
-      </button>
-      <button class="svgsBtns" id="powerBtn">
-        <?xml version="1.0" encoding="iso-8859-1"?>
-        <svg
-          class="power"
-          version="1.1"
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 198.715 198.715"
-          style="enable-background: new 0 0 198.715 198.715"
-          xml:space="preserve"
-        >
-          <g>
+      <div class="buttonHeader">
+        <div class="soundInfo">
+          <p class="soundStatus">asdasdasd</p>
+        </div>
+        <button class="svgsBtns" id="soundBtn">
+          <svg
+            class="sound"
+            viewBox="0 -47 354.98667 354"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              d="M161.463,48.763c-2.929-2.929-7.677-2.929-10.607,0c-2.929,2.929-2.929,7.677,0,10.606
+              class="soundPath"
+              d="m6.828125 102.894531c-3.773437 0-6.828125 3.054688-6.828125 6.824219v34.132812c0 3.773438 3.054688 6.828126 6.828125 6.828126 3.769531 0 6.824219-3.054688 6.824219-6.828126v-34.132812c0-3.769531-3.054688-6.824219-6.824219-6.824219zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m40.984375 74.941406c-3.769531 0-6.828125 3.058594-6.828125 6.828125v94.515625c0 3.773438 3.058594 6.828125 6.828125 6.828125s6.828125-3.054687 6.828125-6.828125v-94.515625c0-3.769531-3.058594-6.828125-6.828125-6.828125zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m75.09375 27.800781c-3.769531 0-6.828125 3.054688-6.828125 6.824219v191.148438c0 3.769531 3.058594 6.828124 6.828125 6.828124s6.828125-3.058593 6.828125-6.828124v-191.148438c0-3.769531-3.058594-6.824219-6.828125-6.824219zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m109.226562 61.933594c-3.769531 0-6.828124 3.054687-6.828124 6.828125v116.050781c0 3.769531 3.058593 6.828125 6.828124 6.828125 3.769532 0 6.828126-3.058594 6.828126-6.828125v-116.050781c0-3.773438-3.058594-6.828125-6.828126-6.828125zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m212.292969 45.40625c-3.769531 0-6.824219 3.054688-6.824219 6.828125v153.589844c0 3.769531 3.054688 6.824219 6.824219 6.824219s6.828125-3.054688 6.828125-6.824219v-153.589844c0-3.773437-3.058594-6.828125-6.828125-6.828125zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m279.894531 55.105469c-3.769531 0-6.828125 3.058593-6.828125 6.828125v136.53125c0 3.773437 3.058594 6.828125 6.828125 6.828125s6.824219-3.054688 6.824219-6.828125v-136.53125c0-3.769532-3.054688-6.828125-6.824219-6.828125zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m314.027344 89.238281c-3.769532 0-6.828125 3.058594-6.828125 6.828125v68.265625c0 3.769531 3.058593 6.828125 6.828125 6.828125 3.769531 0 6.824218-3.058594 6.824218-6.828125v-68.265625c0-3.769531-3.054687-6.828125-6.824218-6.828125zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m245.761719.492188c-3.773438 0-6.828125 3.058593-6.828125 6.828124v245.757813c0 3.773437 3.054687 6.828125 6.828125 6.828125 3.769531 0 6.824219-3.054688 6.824219-6.828125v-245.757813c0-3.769531-3.054688-6.828124-6.824219-6.828124zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m143.359375 109.71875c-3.769531 0-6.824219 3.058594-6.824219 6.828125v27.304687c0 3.773438 3.054688 6.828126 6.824219 6.828126s6.828125-3.054688 6.828125-6.828126v-27.304687c0-3.769531-3.058594-6.828125-6.828125-6.828125zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m348.160156 107.433594c-3.769531 0-6.828125 3.054687-6.828125 6.824218v29.539063c0 3.769531 3.058594 6.828125 6.828125 6.828125 3.769532 0 6.828125-3.058594 6.828125-6.828125v-29.539063c0-3.769531-3.058593-6.824218-6.828125-6.824218zm0 0"
+            />
+            <path
+              class="soundPath"
+              d="m176.851562 94.417969c-3.773437 0-6.828124 3.054687-6.828124 6.824219v55.570312c0 3.769531 3.054687 6.828125 6.828124 6.828125 3.769532 0 6.824219-3.058594 6.824219-6.828125v-55.570312c0-3.769532-3.054687-6.824219-6.824219-6.824219zm0 0"
+            />
+          </svg>
+        </button>
+        <button class="svgsBtns" id="powerBtn">
+          <?xml version="1.0" encoding="iso-8859-1"?>
+          <svg
+            class="power"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 198.715 198.715"
+            style="enable-background: new 0 0 198.715 198.715"
+            xml:space="preserve"
+          >
+            <g>
+              <path
+                d="M161.463,48.763c-2.929-2.929-7.677-2.929-10.607,0c-2.929,2.929-2.929,7.677,0,10.606
             c13.763,13.763,21.342,32.062,21.342,51.526c0,19.463-7.579,37.761-21.342,51.523c-14.203,14.204-32.857,21.305-51.516,21.303
             c-18.659-0.001-37.322-7.104-51.527-21.309c-28.405-28.405-28.402-74.625,0.005-103.032c2.929-2.929,2.929-7.678,0-10.606
             c-2.929-2.929-7.677-2.929-10.607,0C2.956,83.029,2.953,138.766,37.206,173.019c17.132,17.132,39.632,25.697,62.135,25.696
             c22.497-0.001,44.997-8.564,62.123-25.69c16.595-16.594,25.734-38.659,25.734-62.129C187.199,87.425,178.059,65.359,161.463,48.763
             z"
-            />
-            <path
-              d="M99.332,97.164c4.143,0,7.5-3.358,7.5-7.5V7.5c0-4.142-3.357-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v82.164
+              />
+              <path
+                d="M99.332,97.164c4.143,0,7.5-3.358,7.5-7.5V7.5c0-4.142-3.357-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v82.164
             C91.832,93.807,95.189,97.164,99.332,97.164z"
-            />
-          </g>
-        </svg>
-      </button>
-    </div>
-    <div class="aboutMePage">
-      <div class="intro">
-        <div class="quote">
-          <h1>
-            <div class="line1">
-              <div>My goal is to inspire as many</div>
-            </div>
-            <div class="line1">
-              <div>people as I can. I will make sure</div>
-            </div>
-            <div class="line1">
-              <div>I leave a legacy in this world.</div>
-            </div>
-          </h1>
-        </div>
-        <h5 id="hide_arrow">
-          <div id="arrowDown">↓</div>
-        </h5>
+              />
+            </g>
+          </svg>
+        </button>
       </div>
-      <div class="accomplishmentsGrid">
-        <div class="awards left1">
-          <div class="image1"></div>
-          <p class="desc">CMRG 2013</p>
-          <h3>
-            <div class="title_achievement">
-              <div>Completed the 5 years musical</div>
-            </div>
-            <div class="title_achievement">
-              <div>school course - piano as the</div>
-            </div>
-            <div class="title_achievement">
-              <div>main musical instrument.</div>
-            </div>
-          </h3>
-        </div>
-        <div class="awards right1">
-          <div class="image1"></div>
-          <p class="desc">FINA 2015</p>
-          <h3>
-            <div class="title_achievement">
-              <div>3rd best european time in</div>
-            </div>
-            <div class="title_achievement">
-              <div>4x200m freestyle relay. Multiple</div>
-            </div>
-            <div class="title_achievement">
-              <div>times National Champion.</div>
-            </div>
-          </h3>
-        </div>
-        <div class="awards left2">
-          <div class="image1"></div>
-          <p class="desc">ESMAD 2021</p>
-          <h3>
-            <div class="title_achievement">
-              <div>Currently the college student</div>
-            </div>
-            <div class="title_achievement">
-              <div>with the highest GPA in a web</div>
-            </div>
-            <div class="title_achievement">
-              <div>development degree - 4.33 / 5.</div>
-            </div>
-          </h3>
-        </div>
-        <div class="awards right2">
-          <div class="image1"></div>
-          <p class="desc">Nuno Pereira Sousa 2020 - Present</p>
-          <h3>
-            <div class="title_achievement">
-              <div>Teaching & Tutor programming</div>
-            </div>
-            <div class="title_achievement">
-              <div>to people all over the world</div>
-            </div>
-            <div class="title_achievement">
-              <div>with more than 100h already</div>
-            </div>
-            <div class="title_achievement">
-              <div>taught and tutored.</div>
-            </div>
-          </h3>
-        </div>
-      </div>
-      <div class="contactSection">
-        <h3 class="subtitles">
-          <div class="lineContact">
-            <div>What do you think?</div>
+      <div class="aboutMePage">
+        <div class="intro">
+          <div class="quote">
+            <h1>
+              <div class="line1">
+                <div>My goal is to inspire as many</div>
+              </div>
+              <div class="line1">
+                <div>people as I can. I will make sure</div>
+              </div>
+              <div class="line1">
+                <div>I leave a legacy in this world.</div>
+              </div>
+            </h1>
           </div>
-          <div class="lineContact">
-            <div>Let's talk!</div>
+          <h5 id="hide_arrow">
+            <div id="arrowDown">↓</div>
+          </h5>
+        </div>
+        <div class="accomplishmentsGrid">
+          <div class="awards left1">
+            <div class="image1"></div>
+            <p class="desc">Nuno Pereira Sousa 2020 - Present</p>
+            <h3>
+              <div class="title_achievement">
+                <div>Teaching & Tutor programming</div>
+              </div>
+              <div class="title_achievement">
+                <div>to people all over the world</div>
+              </div>
+              <div class="title_achievement">
+                <div>with more than 100h already</div>
+              </div>
+              <div class="title_achievement">
+                <div>taught and tutored.</div>
+              </div>
+            </h3>
           </div>
-        </h3>
-        <div class="contactInfo">
-          <div class="contactGrid">
-            <div class="phoneNumber">
-              <h3>
-                <div class="lineContact"><div>Let's chat!</div></div>
-              </h3>
-              <h6>
-                <div class="lineContact">
-                  <div id="contact">(+351) 911 587 712</div>
-                </div>
-              </h6>
+          <div class="awards right1">
+            <div class="image2"></div>
+            <p class="desc">FINA 2015</p>
+            <h3>
+              <div class="title_achievement">
+                <div>3rd best european time in</div>
+              </div>
+              <div class="title_achievement">
+                <div>4x200m freestyle relay. Multiple</div>
+              </div>
+              <div class="title_achievement">
+                <div>times National Champion.</div>
+              </div>
+            </h3>
+          </div>
+          <div class="awards left2">
+            <div class="image3"></div>
+            <p class="desc">ESMAD 2021</p>
+            <h3>
+              <div class="title_achievement">
+                <div>Currently the college student</div>
+              </div>
+              <div class="title_achievement">
+                <div>with the highest GPA in a web</div>
+              </div>
+              <div class="title_achievement">
+                <div>development degree - 4.33 / 5.</div>
+              </div>
+            </h3>
+          </div>
+          <div class="awards right2">
+            <div class="image4"></div>
+            <p class="desc">CMRG 2013</p>
+            <h3>
+              <div class="title_achievement">
+                <div>Completed the 5 years musical</div>
+              </div>
+              <div class="title_achievement">
+                <div>school course - piano as the</div>
+              </div>
+              <div class="title_achievement">
+                <div>main musical instrument.</div>
+              </div>
+            </h3>
+          </div>
+        </div>
+        <div class="contactSection">
+          <h3 class="subtitles">
+            <div class="lineContact">
+              <div>What do you think?</div>
             </div>
-            <div class="email">
-              <h3>
-                <div class="lineContact"><div>Send me an email</div></div>
-              </h3>
-              <h6>
-                <div class="lineContact">
-                  <div>nunopereirasousa00@gmail.com</div>
-                </div>
-              </h6>
+            <div class="lineContact">
+              <div>Let's talk!</div>
             </div>
-            <div class="location">
-              <h3>
-                <div class="lineContact">
-                  <div>Located in</div>
+          </h3>
+          <div class="contactInfo">
+            <div class="contactGrid">
+              <div class="phoneNumber">
+                <h3>
+                  <div class="lineContact"><div>Let's chat!</div></div>
+                </h3>
+                <h6>
+                  <div class="lineContact">
+                    <div id="contact">
+                      <a href="tel:+911 587 712">(+351) 911 587 712</a>
+                    </div>
+                  </div>
+                </h6>
+              </div>
+              <div class="email">
+                <h3>
+                  <div class="lineContact"><div>Send me an email</div></div>
+                </h3>
+                <h6 id="email">
+                  <div class="lineContact">
+                    <div id="emailTxt">
+                      <a href="mailto:nunopereirasousa00@gmail.com"
+                        >nunopereirasousa00@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                </h6>
+              </div>
+              <div class="location">
+                <h3>
+                  <div class="lineContact">
+                    <div>Located in</div>
+                  </div>
+                </h3>
+                <h6>
+                  <div class="lineContact">
+                    <div>
+                      <a href="https://maps.google.com/?q=Porto" target="blank"
+                        >oPorto, Portugal</a
+                      >
+                    </div>
+                  </div>
+                </h6>
+              </div>
+              <div class="socials">
+                <h3>
+                  <div class="lineContact">
+                    <div>Socials</div>
+                  </div>
+                </h3>
+                <div class="socialsFlexbox">
+                  <a
+                    href="https://www.linkedin.com/in/nunopereirasous/"
+                    target="_blank"
+                    ><div class="lineContact"><div>LIn</div></div></a
+                  >
+                  <a href="https://github.com/NunoPereiraSousa" target="_blank"
+                    ><div class="lineContact"><div>GH</div></div></a
+                  >
+                  <a
+                    href="https://www.instagram.com/nunopereirasousa/"
+                    target="_blank"
+                    ><div class="lineContact"><div>IG</div></div></a
+                  >
+                  <a href="https://github.com/NunoPereiraSousa" target="_blank"
+                    ><div class="lineContact"><div>YT</div></div></a
+                  >
                 </div>
-              </h3>
-              <h6>
-                <div class="lineContact"><div>oPorto, Portugal</div></div>
-              </h6>
-            </div>
-            <div class="socials">
-              <h3>
-                <div class="lineContact">
-                  <div>Socials</div>
-                </div>
-              </h3>
-              <div class="socialsFlexbox">
-                <a
-                  href="https://www.linkedin.com/in/nunopereirasous/"
-                  target="_blank"
-                  ><div class="lineContact"><div>LIn</div></div></a
-                >
-                <a href="https://github.com/NunoPereiraSousa" target="_blank"
-                  ><div class="lineContact"><div>GH</div></div></a
-                >
-                <a
-                  href="https://www.instagram.com/nunopereirasousa/"
-                  target="_blank"
-                  ><div class="lineContact"><div>IG</div></div></a
-                >
-                <a href="https://github.com/NunoPereiraSousa" target="_blank"
-                  ><div class="lineContact"><div>YT</div></div></a
-                >
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="hideDark dark">
+        <svg
+          id="contactMeSvg"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 171.64 146.8"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                font-family: Montserrat-Bold, Montserrat;
+                font-weight: 700;
+              }
+            </style>
+          </defs>
+          <text
+            class="cls-1"
+            transform="matrix(0.76, -0.65, 0.65, 0.76, 46.04, 30.28)"
+          >
+            C
+          </text>
+          <text class="cls-1" transform="translate(53.99 23.48) rotate(-30.01)">
+            o
+          </text>
+          <text class="cls-1" transform="translate(62.17 18.62) rotate(-19.71)">
+            n
+          </text>
+          <text class="cls-1" transform="translate(71.81 15.26) rotate(-11.09)">
+            t
+          </text>
+          <text class="cls-1" transform="translate(77.87 13.92) rotate(-3.11)">
+            a
+          </text>
+          <text
+            class="cls-1"
+            transform="matrix(0.99, 0.11, -0.11, 0.99, 86.94, 13.38)"
+          >
+            c
+          </text>
+          <text class="cls-1" transform="translate(95.71 14.35) rotate(14)">
+            t
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(101.94 15.94) rotate(19.51)"
+          ></text>
+          <text class="cls-1" transform="translate(105.57 16.68) rotate(28.99)">
+            M
+          </text>
+          <text class="cls-1" transform="translate(117.86 23.66) rotate(41.03)">
+            e
+          </text>
+          <text class="cls-1" transform="translate(22.05 50.75) rotate(100.26)">
+            C
+          </text>
+          <text class="cls-1" transform="translate(19.95 63.03) rotate(90.01)">
+            o
+          </text>
+          <text class="cls-1" transform="translate(20.02 74.55) rotate(79.71)">
+            n
+          </text>
+          <text class="cls-1" transform="translate(22.36 86.23) rotate(71.07)">
+            t
+          </text>
+          <text class="cls-1" transform="translate(24.84 93.58) rotate(63.08)">
+            a
+          </text>
+          <text
+            class="cls-1"
+            transform="matrix(0.59, 0.81, -0.81, 0.59, 29.84, 103.23)"
+          >
+            c
+          </text>
+          <text class="cls-1" transform="translate(36.07 111.53) rotate(45.97)">
+            t
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(41.34 116.86) rotate(40.46)"
+          ></text>
+          <text class="cls-1" transform="translate(45.29 120.7) rotate(31.01)">
+            M
+          </text>
+          <text class="cls-1" transform="translate(59.61 128.84) rotate(18.97)">
+            e
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(102.57 132.17) rotate(-19.74)"
+          >
+            C
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(114.25 127.85) rotate(-29.99)"
+          >
+            o
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(124.19 122.04) rotate(-40.29)"
+          >
+            n
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(133.14 114.16) rotate(-48.93)"
+          >
+            t
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(138.27 108.34) rotate(-56.92)"
+          >
+            a
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(144.12 99.19) rotate(-66.07)"
+          >
+            c
+          </text>
+          <text
+            class="cls-1"
+            transform="matrix(0.28, -0.96, 0.96, 0.28, 148.19, 89.65)"
+          >
+            t
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(150.17 82.41) rotate(-79.54)"
+          ></text>
+          <text
+            class="cls-1"
+            transform="matrix(0.02, -1, 1, 0.02, 151.53, 77.07)"
+          >
+            M
+          </text>
+          <text
+            class="cls-1"
+            transform="translate(151.42 60.6) rotate(-101.03)"
+          >
+            e
+          </text>
+        </svg>
+        <h1 class="closeWebsite">Enjoy your day 🤟</h1>
+      </div>
     </div>
-    <div class="hideDark dark">
-      <svg
-        id="contactMeSvg"
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 171.64 146.8"
-      >
-        <defs>
-          <style>
-            .cls-1 {
-              font-family: Montserrat-Bold, Montserrat;
-              font-weight: 700;
-            }
-          </style>
-        </defs>
-        <text
-          class="cls-1"
-          transform="matrix(0.76, -0.65, 0.65, 0.76, 46.04, 30.28)"
-        >
-          C
-        </text>
-        <text class="cls-1" transform="translate(53.99 23.48) rotate(-30.01)">
-          o
-        </text>
-        <text class="cls-1" transform="translate(62.17 18.62) rotate(-19.71)">
-          n
-        </text>
-        <text class="cls-1" transform="translate(71.81 15.26) rotate(-11.09)">
-          t
-        </text>
-        <text class="cls-1" transform="translate(77.87 13.92) rotate(-3.11)">
-          a
-        </text>
-        <text
-          class="cls-1"
-          transform="matrix(0.99, 0.11, -0.11, 0.99, 86.94, 13.38)"
-        >
-          c
-        </text>
-        <text class="cls-1" transform="translate(95.71 14.35) rotate(14)">
-          t
-        </text>
-        <text
-          class="cls-1"
-          transform="translate(101.94 15.94) rotate(19.51)"
-        ></text>
-        <text class="cls-1" transform="translate(105.57 16.68) rotate(28.99)">
-          M
-        </text>
-        <text class="cls-1" transform="translate(117.86 23.66) rotate(41.03)">
-          e
-        </text>
-        <text class="cls-1" transform="translate(22.05 50.75) rotate(100.26)">
-          C
-        </text>
-        <text class="cls-1" transform="translate(19.95 63.03) rotate(90.01)">
-          o
-        </text>
-        <text class="cls-1" transform="translate(20.02 74.55) rotate(79.71)">
-          n
-        </text>
-        <text class="cls-1" transform="translate(22.36 86.23) rotate(71.07)">
-          t
-        </text>
-        <text class="cls-1" transform="translate(24.84 93.58) rotate(63.08)">
-          a
-        </text>
-        <text
-          class="cls-1"
-          transform="matrix(0.59, 0.81, -0.81, 0.59, 29.84, 103.23)"
-        >
-          c
-        </text>
-        <text class="cls-1" transform="translate(36.07 111.53) rotate(45.97)">
-          t
-        </text>
-        <text
-          class="cls-1"
-          transform="translate(41.34 116.86) rotate(40.46)"
-        ></text>
-        <text class="cls-1" transform="translate(45.29 120.7) rotate(31.01)">
-          M
-        </text>
-        <text class="cls-1" transform="translate(59.61 128.84) rotate(18.97)">
-          e
-        </text>
-        <text class="cls-1" transform="translate(102.57 132.17) rotate(-19.74)">
-          C
-        </text>
-        <text class="cls-1" transform="translate(114.25 127.85) rotate(-29.99)">
-          o
-        </text>
-        <text class="cls-1" transform="translate(124.19 122.04) rotate(-40.29)">
-          n
-        </text>
-        <text class="cls-1" transform="translate(133.14 114.16) rotate(-48.93)">
-          t
-        </text>
-        <text class="cls-1" transform="translate(138.27 108.34) rotate(-56.92)">
-          a
-        </text>
-        <text class="cls-1" transform="translate(144.12 99.19) rotate(-66.07)">
-          c
-        </text>
-        <text
-          class="cls-1"
-          transform="matrix(0.28, -0.96, 0.96, 0.28, 148.19, 89.65)"
-        >
-          t
-        </text>
-        <text
-          class="cls-1"
-          transform="translate(150.17 82.41) rotate(-79.54)"
-        ></text>
-        <text
-          class="cls-1"
-          transform="matrix(0.02, -1, 1, 0.02, 151.53, 77.07)"
-        >
-          M
-        </text>
-        <text class="cls-1" transform="translate(151.42 60.6) rotate(-101.03)">
-          e
-        </text>
-      </svg>
-      <h1 class="closeWebsite">Enjoy your day 🤟</h1>
-    </div>
-
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -463,24 +498,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
     <script src="/JS/hover-effect.js"></script>
+    <script type="module" src="/JS/smallscreens.js"></script>
     <script src="/JS/aboutMe.js"></script>
-    <!-- <script>
-      var myAnimation = new hoverEffect({
-        parent: document.querySelector(".image1"),
-        intensity: 0.5,
-        angle: Math.PI / 8,
-        angle1: Math.PI / 4,
-        angle2: Math.PI / 4,
-        speedIn: 1.5,
-        speedOut: 2,
-        image1: "/Assets/Images/swimming.jpg",
-        image2: "/Assets/Images/MeSunGlasses.jpeg",
-        displacementImage: "/Assets/Images/Displacements/6.jpg"
-      });
-    </script> -->
-
+    <script src="/JS/aboutImages.js"></script>
     <script src="/JS/onOff.js"></script>
     <script src="/JS/mousecursor_aboutme.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </body>
 </html>

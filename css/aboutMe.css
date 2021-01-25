@@ -164,91 +164,12 @@ body {
   font-size: calc(16px + 0.25vw);
 }
 
-.aboutMePage .accomplishmentsGrid .image1 {
-  background-image: url("/Assets/Images/swimming.jpg");
-  background-size: cover;
-  background-position: 40% 100%;
-  height: 68vh;
+.aboutMePage .accomplishmentsGrid .image1,
+.aboutMePage .accomplishmentsGrid .image2,
+.aboutMePage .accomplishmentsGrid .image3,
+.aboutMePage .accomplishmentsGrid .image4 {
+  height: 60vh;
   width: 26vw;
-}
-
-.aboutMePage .contactSection {
-  position: relative;
-  background-color: #1b1b1b;
-  padding: 8vw 0 4vw 16vw;
-}
-
-.aboutMePage .contactSection .lineContact {
-  overflow: hidden;
-}
-
-.aboutMePage .contactSection .lineContact div {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-}
-
-.aboutMePage .contactSection h3.subtitles {
-  margin: 0;
-  font-family: "Montserrat";
-  color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 1.4em;
-  font-size: 2em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  mix-blend-mode: difference;
-}
-
-.aboutMePage .contactSection .contactInfo {
-  margin-top: 6vw;
-}
-
-.aboutMePage .contactSection .contactInfo .contactGrid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  row-gap: 2vw;
-}
-
-.aboutMePage .contactSection .contactInfo .contactGrid h3 {
-  font-weight: 500;
-  font-size: calc(16px + 0.1vw);
-}
-
-.aboutMePage .contactSection .contactInfo .contactGrid h6 .lineContact div {
-  font-weight: 400;
-  font-family: "Raleway";
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  opacity: 0.3;
-  font-size: calc(16px + 0.05vw);
-}
-
-.aboutMePage .contactSection .contactInfo .contactGrid #contact {
-  font-family: "Montserrat";
-}
-
-.aboutMePage .contactSection .contactInfo .contactGrid .socials .socialsFlexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.aboutMePage .contactSection .contactInfo .contactGrid .socials .socialsFlexbox a {
-  font-family: "Raleway";
-  text-decoration: none;
-  margin: 0 2vw 0 0;
-  font-weight: 400;
-  color: #ffffff;
-  opacity: 0.3;
 }
 
 .dark {
@@ -301,8 +222,8 @@ body {
   width: 180px;
   cursor: pointer;
   fill: #b2a3fc;
-  -webkit-animation: spin 8s linear infinite;
-          animation: spin 8s linear infinite;
+  -webkit-animation: spin2 8s linear infinite;
+          animation: spin2 8s linear infinite;
   -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -310,5 +231,19 @@ body {
 .dark svg#contactMeSvg:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+}
+
+@-webkit-keyframes spin2 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=aboutMe.css.map */

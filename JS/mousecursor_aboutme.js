@@ -1,5 +1,6 @@
 let cursor = document.querySelector(".cursor");
 let quote = document.querySelector(".quote h1");
+let rotatingContact = document.querySelector("#contactMeSvg");
 
 window.addEventListener("mousemove", mouseCursor);
 cursor.style.opacity = 0;
@@ -20,14 +21,6 @@ quote.addEventListener("mouseover", () => {
 
 rotatingContact.addEventListener("click", () => {
   sendMail();
-});
-rotatingContact.addEventListener("mouseleave", () => {
-  cursor.classList.remove("rotatingContactCursor");
-  cursor.style.opacity = 0;
-});
-rotatingContact.addEventListener("mouseover", () => {
-  cursor.classList.add("rotatingContactCursor");
-  cursor.style.opacity = 1;
 });
 
 function sendMail() {

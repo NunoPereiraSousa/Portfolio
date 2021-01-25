@@ -29,13 +29,19 @@ tl2
       stagger: 0.2
     },
     "-=0.4"
+  )
+  .to(
+    [".svgsBtns"],
+    {
+      opacity: 1
+    },
+    "-=0.5"
   );
 
 gsap.to(".right1", {
   scrollTrigger: {
     trigger: ".right1",
-    start: "-0% 80%",
-    markers: true
+    start: "-0% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -45,8 +51,7 @@ gsap.to(".right1", {
 gsap.to(".left1", {
   scrollTrigger: {
     trigger: ".left1",
-    start: "-20% 80%",
-    markers: true
+    start: "-20% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -56,8 +61,7 @@ gsap.to(".left1", {
 gsap.to(".right2", {
   scrollTrigger: {
     trigger: ".right2",
-    start: "-20% 80%",
-    markers: true
+    start: "-20% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -67,8 +71,7 @@ gsap.to(".right2", {
 gsap.to(".left2", {
   scrollTrigger: {
     trigger: ".left2",
-    start: "-20% 80%",
-    markers: true
+    start: "-20% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -78,8 +81,7 @@ gsap.to(".left2", {
 gsap.to(left1Text, {
   scrollTrigger: {
     trigger: ".left1",
-    // toggleActions: "resume pause resume resume",
-    start: "60% 50%"
+    start: "14% 50%"
   },
   y: "16%",
   duration: 0.9,
@@ -90,8 +92,7 @@ gsap.to(left1Text, {
 gsap.to(right1Text, {
   scrollTrigger: {
     trigger: ".right1",
-    // toggleActions: "resume pause resume resume",
-    start: "45% 80%"
+    start: "14% 80%"
   },
   y: "16%",
   duration: 0.9,
@@ -102,8 +103,7 @@ gsap.to(right1Text, {
 gsap.to(left2Text, {
   scrollTrigger: {
     trigger: ".left2",
-    // toggleActions: "resume pause resume resume",
-    start: "60% 50%"
+    start: "14% 50%"
   },
   y: "16%",
   duration: 0.9,
@@ -114,8 +114,7 @@ gsap.to(left2Text, {
 gsap.to(right2Text, {
   scrollTrigger: {
     trigger: ".right2",
-    // toggleActions: "resume pause resume resume",
-    start: "45% 80%"
+    start: "14% 80%"
   },
   y: "16%",
   duration: 0.9,
@@ -130,8 +129,7 @@ gsap.to(".lineContact div", {
     start: "30% bottom",
     end: "top top",
     pin: ".accomplishmentsGrid",
-    pinSpacing: false,
-    markers: true
+    pinSpacing: false
   },
   y: "0%",
   stagger: 0.2,

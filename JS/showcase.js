@@ -12,6 +12,13 @@ window.addEventListener("load", () => {
       stagger: 0.1
     })
     .to(
+      [".svgsBtns"],
+      {
+        opacity: 1
+      },
+      "-=0.5"
+    )
+    .to(
       [".projectsTitle"],
       {
         opacity: 1,
@@ -37,8 +44,7 @@ let images = document.querySelectorAll(".gridCell");
 gsap.to(".right2", {
   scrollTrigger: {
     trigger: ".right2",
-    start: "-20% 80%",
-    markers: true
+    start: "-20% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -48,8 +54,7 @@ gsap.to(".right2", {
 gsap.to(".left2", {
   scrollTrigger: {
     trigger: ".left2",
-    start: "-20% 80%",
-    markers: true
+    start: "-20% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -59,8 +64,7 @@ gsap.to(".left2", {
 gsap.to(".right3", {
   scrollTrigger: {
     trigger: ".right3",
-    start: "-20% 80%",
-    markers: true
+    start: "-20% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -70,8 +74,7 @@ gsap.to(".right3", {
 gsap.to(".left3", {
   scrollTrigger: {
     trigger: ".left3",
-    start: "-20% 80%",
-    markers: true
+    start: "-20% 80%"
   },
   y: "0%",
   duration: 0.7,
@@ -81,9 +84,7 @@ gsap.to(".left3", {
 gsap.to(".right1 .projectDesc .line div", {
   scrollTrigger: {
     trigger: ".imageContainer1",
-    // toggleActions: "resume pause resume resume",
-    start: "100% 80%"
-    // markers: true
+    start: "75% 80%"
   },
   y: "14%",
   duration: 0.7,
@@ -94,8 +95,7 @@ gsap.to(".right1 .projectDesc .line div", {
 gsap.to(".left1 .projectDesc .line div", {
   scrollTrigger: {
     trigger: ".imageContainer2",
-    // toggleActions: "resume pause resume resume",
-    start: "120% 80%"
+    start: "75% 80%"
   },
   y: "14%",
   duration: 0.7,
@@ -106,8 +106,7 @@ gsap.to(".left1 .projectDesc .line div", {
 gsap.to(".right2 .projectDesc .line div", {
   scrollTrigger: {
     trigger: ".imageContainer3",
-    // toggleActions: "resume pause resume resume",
-    start: "100% 80%"
+    start: "75% 80%"
   },
   y: "14%",
   duration: 0.7,
@@ -118,8 +117,7 @@ gsap.to(".right2 .projectDesc .line div", {
 gsap.to(".left2 .projectDesc .line div", {
   scrollTrigger: {
     trigger: ".imageContainer4",
-    // toggleActions: "resume pause resume resume",
-    start: "120% 80%"
+    start: "75% 80%"
   },
   y: "14%",
   duration: 0.7,
@@ -130,8 +128,7 @@ gsap.to(".left2 .projectDesc .line div", {
 gsap.to(".right3 .projectDesc .line div", {
   scrollTrigger: {
     trigger: ".imageContainer5",
-    // toggleActions: "resume pause resume resume",
-    start: "100% 80%"
+    start: "75% 80%"
   },
   y: "14%",
   duration: 0.7,
@@ -142,8 +139,7 @@ gsap.to(".right3 .projectDesc .line div", {
 gsap.to(".left3 .projectDesc .line div", {
   scrollTrigger: {
     trigger: ".imageContainer6",
-    // toggleActions: "resume pause resume resume",
-    start: "120% 80%"
+    start: "75% 80%"
   },
   y: "14%",
   duration: 0.7,

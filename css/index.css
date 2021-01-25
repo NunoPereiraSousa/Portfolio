@@ -322,7 +322,7 @@ body {
   width: fit-content;
   position: absolute;
   z-index: 99;
-  top: 43%;
+  top: 40%;
   left: -4vw;
   cursor: pointer;
 }

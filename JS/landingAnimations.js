@@ -129,7 +129,6 @@ function landingAnimations() {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        // toggleActions: "resume pause resume resume",
         start: "-150% 80%"
       },
       y: "10%",
@@ -141,11 +140,7 @@ function landingAnimations() {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        // toggleActions: "resume pause resume resume",
-        start: "-180% 80%",
-        // end: "center center",
-        markers: true
-        // scrub: true
+        start: "-180% 80%"
       },
       y: "10%",
       duration: 1
@@ -174,16 +169,6 @@ function landingAnimations() {
     y: "10%",
     duration: 1
   });
-
-  // gsap.to(".exp", {
-  //   scrollTrigger: {
-  //     trigger: ".exp",
-  //     start: "-130% 80%",
-  //     markers: true
-  //   },
-  //   y: "10%",
-  //   duration: 1
-  // });
 
   gsap.to(".carouselLine", {
     scrollTrigger: {
@@ -252,14 +237,6 @@ function landingAnimations() {
     });
   });
 }
-
-// document.querySelector(".outside").addEventListener("mouseenter", e => {
-//   document.querySelector(".emoji").innerHTML = "📤";
-// });
-
-// document.querySelector(".outside").addEventListener("mouseleave", e => {
-//   document.querySelector(".emoji").innerHTML = "📥";
-// });
 
 function thingsWord() {
   gsap.to("#rotate", {

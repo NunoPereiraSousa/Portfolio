@@ -18,58 +18,54 @@
     <link rel="stylesheet" href="/css/mousecursor.css" />
   </head>
 
-  <body data-barba="wrapper">
-    <main
-      class="showcasePage"
-      data-barba="container"
-      data-barba-namespace="showcase"
-    >
+  <body>
+    <div id="mobile" class="d-xl-none">
+      <div id="mobile-text">
+        <h3>
+          <div class="line">
+            <div>To Smal<span>!</span></div>
+          </div>
+        </h3>
+        <h5 id="mobile_subtitle">
+          <div class="line">
+            <div>You gotta dream</div>
+          </div>
+          <div class="line">
+            <div>bigger</div>
+          </div>
+        </h5>
+        <h5 id="mobile_p">
+          <div class="line">
+            <div>Go get yourself a bigger</div>
+          </div>
+          <div class="line">
+            <div>dream. What's the funny part</div>
+          </div>
+          <div class="line">
+            <div>about having a dream that</div>
+          </div>
+          <div class="line">
+            <div>doesn't fit your(-self) screen?</div>
+          </div>
+        </h5>
+      </div>
+      <div id="icon_wrap">
+        <div id="icon">
+          <div id="icon_btns">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div id="icon_arrow1" class="mobile_arrow"></div>
+          <div id="icon_arrow2" class="mobile_arrow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="showcasePage">
       <audio autoplay id="myaudio">
         <source src="/Assets/Audios/Claude Debussy Clair de lune.mp3" />
       </audio>
       <div class="cursor"></div>
-      <div id="mobile" class="d-xl-none">
-        <div id="mobile-text">
-          <h3>
-            <div class="line">
-              <div>To Smal<span>!</span></div>
-            </div>
-          </h3>
-          <h5 id="mobile_subtitle">
-            <div class="line">
-              <div>You gotta dream</div>
-            </div>
-            <div class="line">
-              <div>bigger</div>
-            </div>
-          </h5>
-          <h5 id="mobile_p">
-            <div class="line">
-              <div>Go get yourself a bigger</div>
-            </div>
-            <div class="line">
-              <div>dream. What's the funny part</div>
-            </div>
-            <div class="line">
-              <div>about having a dream that</div>
-            </div>
-            <div class="line">
-              <div>doesn't fit your(-self) screen?</div>
-            </div>
-          </h5>
-        </div>
-        <div id="icon_wrap">
-          <div id="icon">
-            <div id="icon_btns">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div id="icon_arrow1" class="mobile_arrow"></div>
-            <div id="icon_arrow2" class="mobile_arrow"></div>
-          </div>
-        </div>
-      </div>
       <div class="header">
         <a id="logo" class="selected" href="/Views/index.html">
           <div class="line">
@@ -188,7 +184,12 @@
       </div>
       <div class="grid">
         <div class="left1 gridCell">
-          <div class="image imageContainer2"></div>
+          <a
+            href="https://github.com/NunoPereiraSousa/Galactic-Tetris"
+            target="_blank"
+          >
+            <div class="image imageContainer2"></div>
+          </a>
           <h4 class="projectName">Galactic Tetris</h4>
           <h4 class="projectDesc">
             <div class="line">
@@ -198,27 +199,57 @@
               <div>taste of galaxy? An tutorial is</div>
             </div>
             <div class="line">
-              <div>also included in this game.</div>
+              <div>also included in this game</div>
             </div>
           </h4>
         </div>
         <div class="right1 gridCell">
-          <div class="image imageContainer1"></div>
-          <h4 class="projectName">Mundo dos Minorcas</h4>
+          <a
+            href="https://github.com/NunoPereiraSousa/NewGoPorto"
+            target="_blank"
+          >
+            <div class="image imageContainer1"></div>
+          </a>
+          <h4 class="projectName">GoPorto</h4>
           <h4 class="projectDesc">
             <div class="line">
-              <div>Website where kids can learn more</div>
+              <div>Website where tourists can create</div>
             </div>
             <div class="line">
-              <div>about geography, with quizzes</div>
+              <div>routes based on their interests,</div>
             </div>
             <div class="line">
-              <div>and more awesome features.</div>
+              <div>time, gastronomy and availability</div>
             </div>
           </h4>
         </div>
         <div class="left2 gridCell">
-          <div class="image imageContainer4"></div>
+          <a
+            href="https://github.com/NunoPereiraSousa/Pong-Game"
+            target="_blank"
+          >
+            <div class="image imageContainer4"></div>
+          </a>
+          <h4 class="projectName">Pong Game</h4>
+          <h4 class="projectDesc">
+            <div class="line">
+              <div>The traditional Pong game created</div>
+            </div>
+            <div class="line">
+              <div>in Python, using pygame library to</div>
+            </div>
+            <div class="line">
+              <div>get the game physics on point</div>
+            </div>
+          </h4>
+        </div>
+        <div class="right2 gridCell">
+          <a
+            href="https://github.com/NunoPereiraSousa/NodeJS-DB-Connections"
+            target="_blank"
+          >
+            <div class="image imageContainer3"></div>
+          </a>
           <h4 class="projectName">Back-end projects</h4>
           <h4 class="projectDesc">
             <div class="line">
@@ -228,52 +259,42 @@
               <div>Node.js, Sequelize, MySQL, MongoDB,</div>
             </div>
             <div class="line">
-              <div>JWT Authentication, GraphQL and more.</div>
-            </div>
-          </h4>
-        </div>
-        <div class="right2 gridCell">
-          <div class="image imageContainer3"></div>
-          <h4 class="projectName">GoPorto</h4>
-          <h4 class="projectDesc">
-            <div class="line">
-              <div>Lorem ipsum dolor sit amet, consectetur</div>
-            </div>
-            <div class="line">
-              <div>Lorem ipsum dolor sit amet, consectetur</div>
-            </div>
-            <div class="line">
-              <div>Lorem ipsum dolor sit amet, consectetur</div>
+              <div>JWT Authentication, GraphQL and more</div>
             </div>
           </h4>
         </div>
         <div class="left3 gridCell">
-          <div class="image imageContainer6"></div>
-          <h4 class="projectName">Pong Game</h4>
+          <a
+            href="https://github.com/NunoPereiraSousa/MundoDosMinorcas"
+            target="_blank"
+          >
+            <div class="image imageContainer6"></div>
+          </a>
+          <h4 class="projectName">Mundo dos Minorcas</h4>
           <h4 class="projectDesc">
             <div class="line">
-              <div>The traditional Pong game created</div>
+              <div>Website where kids can learn more</div>
             </div>
             <div class="line">
-              <div>in Python using pygame library to</div>
+              <div>about geography, with quizzes</div>
             </div>
             <div class="line">
-              <div>take the experiences to the next level</div>
+              <div>and more awesome features</div>
             </div>
           </h4>
         </div>
         <div class="right3 gridCell">
           <div class="image imageContainer5"></div>
-          <h4 class="projectName">Control Covid</h4>
+          <h4 class="projectName">Truck!ng</h4>
           <h4 class="projectDesc">
             <div class="line">
-              <div>A website where you can check all</div>
+              <div>A mobile app design focused</div>
             </div>
             <div class="line">
-              <div>the covid stats globally live,</div>
+              <div>on helping people to move their</div>
             </div>
             <div class="line">
-              <div>with all the countries. Stay safe.</div>
+              <div>stuff easily and in a practical way</div>
             </div>
           </h4>
         </div>
@@ -295,7 +316,9 @@
               </h3>
               <h6>
                 <div class="lineContact">
-                  <div id="contact">(+351) 911 587 712</div>
+                  <div id="contact">
+                    <a href="tel:+911 587 712">(+351) 911 587 712</a>
+                  </div>
                 </div>
               </h6>
             </div>
@@ -303,9 +326,13 @@
               <h3>
                 <div class="lineContact"><div>Send me an email</div></div>
               </h3>
-              <h6>
+              <h6 id="email">
                 <div class="lineContact">
-                  <div>nunopereirasousa00@gmail.com</div>
+                  <div id="emailTxt">
+                    <a href="mailto:nunopereirasousa00@gmail.com"
+                      >nunopereirasousa00@gmail.com</a
+                    >
+                  </div>
                 </div>
               </h6>
             </div>
@@ -316,7 +343,13 @@
                 </div>
               </h3>
               <h6>
-                <div class="lineContact"><div>oPorto, Portugal</div></div>
+                <div class="lineContact">
+                  <div>
+                    <a href="https://maps.google.com/?q=Porto" target="blank"
+                      >oPorto, Portugal</a
+                    >
+                  </div>
+                </div>
               </h6>
             </div>
             <div class="socials">
@@ -347,7 +380,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </div>
     <div class="hideDark dark">
       <svg
         id="contactMeSvg"
@@ -484,23 +517,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
     <script src="/JS/hover-effect.js"></script>
+    <script src="/JS/smallscreens.js"></script>
     <script type="module" src="/JS/onOff.js"></script>
     <script src="/JS/showcase.js"></script>
-    <script src="/JS/smallscreens.js"></script>
     <script type="module" src="/JS/mousecursor_showcase.js"></script>
-    <!-- <script>
-      let myAnimation = new hoverEffect({
-        parent: document.querySelector(".imageContainer2"),
-        intensity: 0.5,
-        angle: Math.PI / 8,
-        angle1: Math.PI / 4,
-        angle2: Math.PI / 4,
-        speedIn: 1.5,
-        speedOut: 2,
-        image1: "/Assets/Images/swimming.jpg",
-        image2: "/Assets/Images/MeSunGlasses.jpeg",
-        displacementImage: "/Assets/Images/Displacements/6.jpg"
-      });
-    </script> -->
+    <script type="module" src="/JS/showcaseImages.js"></script>
   </body>
 </html>

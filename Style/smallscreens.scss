@@ -12,11 +12,12 @@
   background-image: url("/Assets/Images/Nuno.png");
   background-size: cover;
   background-position: 20% 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 999;
   display: none;
 
   #mobile-text {

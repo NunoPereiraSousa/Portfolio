@@ -18,55 +18,55 @@
     <link rel="stylesheet" href="/css/mousecursor.css">
   </head>
 
-  <body data-barba="wrapper">
-    <main class="landingPage" data-barba="container" data-barba-namespace="home">
+  <body>
+    <div id="mobile" class="d-xl-none">
+      <div id="mobile-text">
+        <h3>
+          <div class="line">
+            <div>To Smal<span>!</span></div>
+          </div>
+        </h3>
+        <h5 id="mobile_subtitle">
+          <div class="line">
+            <div>You gotta dream</div>
+          </div>
+          <div class="line">
+            <div>bigger</div>
+          </div>
+        </h5>
+        <h5 id="mobile_p">
+          <div class="line">
+            <div>Go get yourself a bigger</div>
+          </div>
+          <div class="line">
+            <div>dream. What's the funny part</div>
+          </div>
+          <div class="line">
+            <div>about having a dream that</div>
+          </div>
+          <div class="line">
+            <div>doesn't fit your(-self) screen?</div>
+          </div>
+        </h5>
+      </div>
+      <div id="icon_wrap">
+        <div id="icon">
+          <div id="icon_btns">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div id="icon_arrow1" class="mobile_arrow"></div>
+          <div id="icon_arrow2" class="mobile_arrow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="landingPage">
       <audio autoplay id="myaudio">
         <source src="/Assets/Audios/Claude Debussy Clair de lune.mp3" />
       </audio>
       <div class="cursor">
         <h4 class="textCursor"></h4>
-      </div>
-      <div id="mobile" class="d-xl-none">
-        <div id="mobile-text">
-          <h3>
-            <div class="line">
-              <div>To Smal<span>!</span></div>
-            </div>
-          </h3>
-          <h5 id="mobile_subtitle">
-            <div class="line">
-              <div>You gotta dream</div>
-            </div>
-            <div class="line">
-              <div>bigger</div>
-            </div>
-          </h5>
-          <h5 id="mobile_p">
-            <div class="line">
-              <div>Go get yourself a bigger</div>
-            </div>
-            <div class="line">
-              <div>dream. What's the funny part</div>
-            </div>
-            <div class="line">
-              <div>about having a dream that</div>
-            </div>
-            <div class="line">
-              <div>doesn't fit your(-self) screen?</div>
-            </div>
-          </h5>
-        </div>
-        <div id="icon_wrap">
-          <div id="icon">
-            <div id="icon_btns">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div id="icon_arrow1" class="mobile_arrow"></div>
-            <div id="icon_arrow2" class="mobile_arrow"></div>
-          </div>
-        </div>
       </div>
       <div class="header">
         <a id="logo" class="selected" href="/Views/index.html">
@@ -702,7 +702,7 @@
       </svg>
       <h1 class="closeWebsite">Enjoy your day 🤟</h1>
     </div>
-    </main>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -711,13 +711,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
-    <script type="module" src="/JS/onOff.js"></script>
     <script type="module" src="/JS/smallscreens.js"></script>
+    <script type="module" src="/JS/onOff.js"></script>
     <script src="/JS/currentDate.js"></script>
     <script type="module" src="/JS/mousecursor.js"></script>
     <script type="module" src="/JS/landingAnimations.js"></script>
-
-    <script src="https://unpkg.com/@barba/core"></script>
-    <!-- <script type="module" src="/JS/transitions.js"></script> -->
   </body>
 </html>
