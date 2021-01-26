@@ -107,6 +107,11 @@ body {
 
     .awards {
       transform: translateY(10%);
+
+      div {
+        filter: brightness(1.1);
+        filter: sepia(0.5);
+      }
     }
 
     .awards:nth-child(odd) {

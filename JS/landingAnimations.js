@@ -85,7 +85,7 @@ function landingLoad() {
       [".contactText"],
       {
         opacity: 1,
-        y: "0%",
+        y: "10%",
         duration: 1
       },
       "-=0.75"

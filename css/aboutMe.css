@@ -128,6 +128,13 @@ body {
           transform: translateY(10%);
 }
 
+.aboutMePage .accomplishmentsGrid .awards div {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+  -webkit-filter: sepia(0.5);
+          filter: sepia(0.5);
+}
+
 .aboutMePage .accomplishmentsGrid .awards:nth-child(odd) {
   margin: 8em 0 10em 0;
 }
