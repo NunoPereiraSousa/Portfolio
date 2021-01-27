@@ -1,10 +1,14 @@
-window.addEventListener("load", soundControl);
-
 const powerButton = document.querySelector(".power");
 const soundBtn = document.querySelector("#soundBtn");
 const soundPath = document.querySelector(".soundPath");
 const soundPathList = document.querySelectorAll(".soundPath");
 const soundStatus = document.querySelector(".soundStatus");
+let audio = document.getElementById("myaudio");
+
+window.addEventListener("load", () => {
+  audio.play();
+  audio.volume = 0.8;
+});
 
 powerButton.addEventListener("click", () => {
   document.querySelector(".dark").classList.toggle("hideDark");
@@ -25,8 +29,6 @@ let tl = gsap.timeline({
     ease: Power1.easeInOut
   }
 });
-
-let audio = document.getElementById("myaudio");
 
 soundBtn.addEventListener("click", () => {
   // soundPathList;
@@ -85,20 +87,4 @@ function audioStatusMessage() {
   } else {
     soundStatus.innerHTML = "Sound is now on";
   }
-}
-
-changeSelectedLink();
-
-function changeSelectedLink() {
-  let links = document.querySelectorAll(".link");
-
-  links.forEach(link => {
-    link.addEventListener("click", e => {
-      let selected = e.target;
-
-      if (selected.classList.contains("selected")) {
-        // alert(1);
-      }
-    });
-  });
 }
